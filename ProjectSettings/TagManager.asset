@@ -7,6 +7,7 @@ TagManager:
   - Destination
   - OutOfPath
   - Text
+  - UIPanel
   layers:
   - Default
   - TransparentFX

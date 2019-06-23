@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
     public NavMeshAgent agent;
     public NavMeshSurface navMeshSurface;
+    public GameObject endPanel;
 
     private GameObject outOfPathBlock;
     private GameObject invisibleBlock;
@@ -16,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private bool passageAllowed;
     private bool wasPassageAllowed;
 
-
     private void Start()
     {
         outOfPathBlock = GameObject.FindWithTag("OutOfPath");
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         textObject = GameObject.FindWithTag("Text");
         text = textObject.GetComponent<Text>();
         destination = GameObject.FindWithTag("Destination").transform.position;
+        cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class PlayerController : MonoBehaviour
         bool camDirection = CheckCameraDirection();
         bool camPosition = CheckCameraPosition();
 
-        //text.text = "DIRECTION: "+camDirection+" | POSITION: "+camPosition;
+        text.text = "DIRECTION: "+camDirection+" | POSITION: "+camPosition;
 
         Debug.Log("Cam Direction: " + camDirection + " | Cam Position: " + camPosition);
 
@@ -71,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
         var dot = Vector3.Dot(outOfPathBlock.transform.right.normalized, cam.transform.forward.normalized);
         Debug.Log("Dot product: "+dot);
-        return dot == -1;
+        return dot > -1.1 && dot < -0.97;
     }
 
     bool CheckCameraPosition()
@@ -79,10 +81,10 @@ public class PlayerController : MonoBehaviour
         var deltaY = outOfPathBlock.transform.position.y - cam.transform.position.y;
         var deltaZ = outOfPathBlock.transform.position.z - cam.transform.position.z;
 
-        //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
+        Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
 
-        bool Ypass = Mathf.Abs(deltaY) < 0.5;
-        bool Zpass = Mathf.Abs(deltaZ) < 0.3;
+        bool Ypass = Mathf.Abs(deltaY) < 0.1;
+        bool Zpass = Mathf.Abs(deltaZ) < 0.1;
 
         return Ypass && Zpass;
     }
@@ -100,7 +102,15 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //Debug.Log("already on destination");
+            LevelCompleted();
         }
+    }
+
+    private void LevelCompleted()
+    {
+        Debug.Log("level completed!");
+        endPanel.SetActive(true);
+        cam.GetComponent<CameraScript>().enabled = false;
+        text.text = "LEVEL COMPLETED";
     }
 }
