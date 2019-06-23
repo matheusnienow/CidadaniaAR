@@ -1,0 +1,2 @@
+C:\Users\mnnienow\Documents\Projects\TCC-prototype-final\obj\Debug\NavMeshComponents.csprojAssemblyReference.cache
+C:\Users\mnnienow\Documents\Projects\TCC-prototype-final\obj\Debug\NavMeshComponents.csproj.CoreCompileInputs.cache
