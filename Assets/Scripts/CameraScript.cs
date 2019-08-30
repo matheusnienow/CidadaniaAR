@@ -19,6 +19,7 @@ public class CameraScript : MonoBehaviour
 
     float x = 0.0f;
     float y = 0.0f;
+    private bool rightClicked;
 
     // Use this for initialization
     void Start()
@@ -36,9 +37,22 @@ public class CameraScript : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            rightClicked = true;
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            rightClicked = false;
+        }
+    }
+
     void LateUpdate()
     {
-        if (target)
+        if (target && rightClicked)
         {
             x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;

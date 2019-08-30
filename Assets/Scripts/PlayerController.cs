@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         text.text = "DIRECTION: "+camDirection+" | POSITION: "+camPosition;
 
-        Debug.Log("Cam Direction: " + camDirection + " | Cam Position: " + camPosition);
+        //Debug.Log("Cam Direction: " + camDirection + " | Cam Position: " + camPosition);
 
         passageAllowed = camDirection && camPosition;
         if (passageAllowed)
@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(cam.transform.position, cam.transform.forward * 1, Color.red);
 
         var dot = Vector3.Dot(outOfPathBlock.transform.right.normalized, cam.transform.forward.normalized);
-        Debug.Log("Dot product: "+dot);
-        return dot > -1.1 && dot < -0.97;
+        //Debug.Log("Dot product: "+dot);
+        return Mathf.Abs(dot) < 1.1 && Mathf.Abs(dot) > 0.97;
     }
 
     bool CheckCameraPosition()
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         var deltaY = outOfPathBlock.transform.position.y - cam.transform.position.y;
         var deltaZ = outOfPathBlock.transform.position.z - cam.transform.position.z;
 
-        Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
+        //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
 
         bool Ypass = Mathf.Abs(deltaY) < 0.1;
         bool Zpass = Mathf.Abs(deltaZ) < 0.1;
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
     private void LevelCompleted()
     {
-        Debug.Log("level completed!");
+        //Debug.Log("level completed!");
         endPanel.SetActive(true);
         cam.GetComponent<CameraScript>().enabled = false;
         text.text = "LEVEL COMPLETED";
