@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateActionScript : MonoBehaviour {
+public class RotateActionScript : MonoBehaviour, ActionScript {
 
     private float rotationTarget;
 
@@ -15,7 +15,7 @@ public class RotateActionScript : MonoBehaviour {
 		
 	}
 
-    public void Activate()
+    public void Execute()
     {
         Debug.Log("Calling Activate()");
         rotationTarget = transform.rotation.y == 90 ? 180 : 90;
