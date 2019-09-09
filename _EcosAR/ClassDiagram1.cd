@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Fire" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWWaterChunk" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWWaterChunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoundingBoxGenerator" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAABAgAAAAAAIAAAFAAAAAkAgQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BoundingBox\BoundingBoxGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawBoundingBox" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAACQDCEAAAAYAAAAAAAIQgAAAAAABAiAACBAAAg=</HashCode>
+      <FileName>Assets\Scripts\BoundingBox\DrawBoundingBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CloudController" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAIAgAEEAAAAAAMAAEAABAAEAQQAEAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Cloud\CloudController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManager" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\SceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationController" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQIAAIAICkAAAAAAAAAAAAAACAkAAABQAAIAAAEAEA=</HashCode>
+      <FileName>Assets\Scripts\Controller\SimulationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DayNightCycleController" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAEAAABAAEAAAAEABAAABBAARBJAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DayNightCycle\DayNightCycleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanvasController" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAgAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAkAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\CanvasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CloseButtonAfterSeconds" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAEAEABAAAAAABAAAAABAAAAAAAAoAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Menu\CloseButtonAfterSeconds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpButtonManager" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAiAISACAAAAAAAgAAAAAAAAAAAAAAAgAAAADAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\HelpButtonManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuSceneController" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\MenuSceneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneChangerController" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\SceneChangerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RainController" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAEgAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Rain\RainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneTargetVirtualButtonManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAIAAAAAYAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Scene\SceneTargetVirtualButtonManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SnowController" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAAAABAAAAAAAAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Snow\SnowController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperatureController">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgRAAAAAAhAAAAAAAAAkACAAAAAAgAAAAAFACAAEQAE=</HashCode>
+      <FileName>Assets\Scripts\Temperature\TemperatureController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperatureTargetVirtualButtonManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAIAAAAAQAAAAAAAUAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Temperature\TemperatureTargetVirtualButtonManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TemperatureTextManager" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAACABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Temperature\TemperatureTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainController" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAQAAAAAAAAAAGACAAEABQAAAABAQAgAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Terrain\TerrainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tree" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQBACEAAARAAQIiCAAQAAAUQAIBAACAgIACAAE=</HashCode>
+      <FileName>Assets\Scripts\Trees\Tree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TreeGrowthStateController" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IARAAAAAACgAAAAAAAAEBAAAAABAAAAAAAAAAQAAAAU=</HashCode>
+      <FileName>Assets\Scripts\Trees\TreeGrowthStateController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VuforiaTools" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\VuforiaTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Water" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEAAAAADAEAAAAAAACAAAAAACQAAAAoAAAhAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Water\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaterController" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Water\WaterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindController" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBQAQAAAgDACAAAAAIAAAANAAAQhAAICAEABAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Wind\WindController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindTargetVirtualButtonManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAIAAAAAQAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Wind\WindTargetVirtualButtonManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindTextManager" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAEABAAAAAAAACABAAAI=</HashCode>
+      <FileName>Assets\Scripts\Wind\WindTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LowPolyWaterv2Demo.DemoFreeFlyCamera" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAIAAACAAAAAAAACAAAAAAAAgAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Demos\Scripts\DemoFreeFlyCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LowPolyWaterScript" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAaBBggAEAlAAELgAAAABAAQACAAMAAMAASKIlDUCAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\LowPolyWaterScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LPWDepthEffect" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAAAAAIACAABAAQBAAAAAAAAAIAAIAAACAgAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWDepthEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.Displacement" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAJCAwAEACAAgBCAEAIAAAAAAMAAAAAAAAQAERAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWDisplace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LPWHiddenProps" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAIAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWHiddenProps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LPWNoise" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAIAAAAAcAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWNoise.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LPWNormalSolver" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACAgIAUAAAAQAAAAABAAAAAAJEABAAAEQAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWNormalSolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LPWReflectionParams" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgAAAAgDAAgIAgACIQAAQAAAEAQAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWReflection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LPWAsset.LPWReflection" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAkACAAAJAAAAAIAAAAAAAAAAAAIAAIAEACAgAAAAQ=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWReflection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SceneState" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Scene\SceneState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TreeGrowthState" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAgAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Trees\TreeGrowthState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LPWAsset.WaterMode" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEEAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\LowPolyWaterv2\Scripts\src\LPWReflection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
