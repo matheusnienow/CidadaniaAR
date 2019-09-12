@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Fire">
+    <Position X="10.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoundingBoxGenerator">
+    <Position X="0.5" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAABAgAAAAAAIAAAFAAAAAkAgQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BoundingBox\BoundingBoxGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawBoundingBox">
+    <Position X="14.75" Y="11.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AARAAACQDCEAAAAYAAAAAAAIQgAAAAAABAiAACBAAAg=</HashCode>
+      <FileName>Assets\Scripts\BoundingBox\DrawBoundingBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CloudController">
+    <Position X="10" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIQAIAgAEEAAAAAAMAAEAABAAEAQQAEAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Cloud\CloudController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManager">
+    <Position X="13" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\SceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationController">
+    <Position X="6.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>CAQIAAIAICkAAAAAAAAAAAAAACAkAAABQAAIAAAEAEA=</HashCode>
+      <FileName>Assets\Scripts\Controller\SimulationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DayNightCycleController">
+    <Position X="7.75" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAEAAABAAEAAAAEABAAABBAARBJAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DayNightCycle\DayNightCycleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CanvasController">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>JAgAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAkAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\CanvasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CloseButtonAfterSeconds">
+    <Position X="3.25" Y="16.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gABAEAEABAAAAAABAAAAABAAAAAAAAoAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Menu\CloseButtonAfterSeconds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpButtonManager">
+    <Position X="3.25" Y="12.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAiAISACAAAAAAAgAAAAAAAAAAAAAAAgAAAADAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\HelpButtonManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuSceneController">
+    <Position X="6.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\MenuSceneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneChangerController">
+    <Position X="13.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\SceneChangerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RainController">
+    <Position X="11" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAEgAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Rain\RainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneTargetVirtualButtonManager" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="13.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAIAAAAAYAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Scene\SceneTargetVirtualButtonManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SnowController">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAAAABAAAAAAAAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Snow\SnowController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperatureController">
+    <Position X="13" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AgRAAAAAAhAAAAAAAAAkACAAAAAAgAAAAAFACAAEQAE=</HashCode>
+      <FileName>Assets\Scripts\Temperature\TemperatureController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TemperatureTargetVirtualButtonManager" BaseTypeListCollapsed="true">
+    <Position X="15" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAIAAAAAQAAAAAAAUAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Temperature\TemperatureTargetVirtualButtonManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TemperatureTextManager">
+    <Position X="5.75" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAACABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Temperature\TemperatureTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainController">
+    <Position X="8.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAQAAAAAAAAAAGACAAEABQAAAABAQAgAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Terrain\TerrainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tree">
+    <Position X="7.25" Y="12.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQBACEAAARAAQIiCAAQAAAUQAIBAACAgIACAAE=</HashCode>
+      <FileName>Assets\Scripts\Trees\Tree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TreeGrowthStateController">
+    <Position X="2.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IARAAAAAACgAAAAAAAAEBAAAAABAAAAAAAAAAQAAAAU=</HashCode>
+      <FileName>Assets\Scripts\Trees\TreeGrowthStateController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Water">
+    <Position X="0.5" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAEAAAAADAEAAAAAAACAAAAAACQAAAAoAAAhAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Water\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaterController">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Water\WaterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindController">
+    <Position X="4" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IBQAQAAAgDACAAAAAIAAAANAAAQhAAICAEABAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Wind\WindController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindTargetVirtualButtonManager" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="10" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAIAAAAAQAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Wind\WindTargetVirtualButtonManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindTextManager">
+    <Position X="4.25" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAEABAAAAAAAACABAAAI=</HashCode>
+      <FileName>Assets\Scripts\Wind\WindTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SceneState">
+    <Position X="11.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Scene\SceneState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TreeGrowthState">
+    <Position X="13" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAgAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Trees\TreeGrowthState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
