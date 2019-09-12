@@ -61,14 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ActionScript.cs" />
+    <Compile Include="Assets\Scripts\Action\ActionScript.cs" />
+    <Compile Include="Assets\Scripts\Action\NavMeshBuilderScript.cs" />
+    <Compile Include="Assets\Scripts\Action\RotateActionScript.cs" />
+    <Compile Include="Assets\Scripts\Action\ShowActionScript.cs" />
     <Compile Include="Assets\Scripts\ActuatorButtonScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
-    <Compile Include="Assets\Scripts\HintController.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\RotateActionScript.cs" />
-    <Compile Include="Assets\Scripts\ShowActionScript.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\PuzzleBrokenObject.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\PuzzleIncompletePath.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
