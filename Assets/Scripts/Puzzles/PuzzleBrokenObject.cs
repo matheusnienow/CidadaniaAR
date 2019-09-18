@@ -25,7 +25,6 @@ public class PuzzleBrokenObject : MonoBehaviour
         textHint = textHintObject.GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckCam();
@@ -74,7 +73,7 @@ public class PuzzleBrokenObject : MonoBehaviour
         var deltaY = brokenObject.transform.position.y - cam.transform.position.y;
         var deltaZ = brokenObject.transform.position.z - cam.transform.position.z;
 
-        Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
+        //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
 
         bool Ypass = Mathf.Abs(deltaY) > 0.0 && Mathf.Abs(deltaY) < 0.4;
         bool Zpass = Mathf.Abs(deltaZ) > 8.4 && Mathf.Abs(deltaZ) < 8.6;

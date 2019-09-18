@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public Camera cam;
-    public NavMeshAgent agent;
+    private Camera cam;
+    private NavMeshAgent agent;
+
     public NavMeshSurface navMeshSurface;
     public GameObject endPanel;
 
@@ -25,7 +26,8 @@ public class PlayerController : MonoBehaviour
         textObject = GameObject.FindWithTag("Text");
         text = textObject.GetComponent<Text>();
         destination = GameObject.FindWithTag("Destination").transform.position;
-        cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        cam = GameObject.Find("MainCamera").GetComponent<Camera>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
