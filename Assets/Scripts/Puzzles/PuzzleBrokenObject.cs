@@ -16,6 +16,8 @@ public class PuzzleBrokenObject : MonoBehaviour
     private Text textMonkey;
     private Text textHint;
 
+    private float timer = 0.0f;
+
     private void Start()
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
@@ -44,12 +46,19 @@ public class PuzzleBrokenObject : MonoBehaviour
             if (!wasOk)
             {
                 textMonkey.text = "MONKEY VISIBLE (target: "+ brokenObject.name+")";
+            }
+
+            timer += Time.deltaTime;
+            var seconds = timer % 60;
+            if (seconds > 2)
+            {
                 target.GetComponent<ShowActionScript>().Execute();
                 gameObject.SetActive(false);
             }
         }
         else
         {
+            timer = 0.0f;
             if (wasOk)
             {
                 textMonkey.text = "MONKEY NOT VISIBLE";
@@ -65,19 +74,20 @@ public class PuzzleBrokenObject : MonoBehaviour
 
         var dot = Vector3.Dot(brokenObject.transform.forward.normalized, cam.transform.forward.normalized);
         //Debug.Log("Dot product: "+dot);
-        return Mathf.Abs(dot) < 1.1 && Mathf.Abs(dot) > 0.97;
+        return Mathf.Abs(dot) < 1.3 && Mathf.Abs(dot) > 0.90;
     }
 
     bool CheckCameraPosition()
     {
         var deltaY = brokenObject.transform.position.y - cam.transform.position.y;
-        var deltaZ = brokenObject.transform.position.z - cam.transform.position.z;
+        //var deltaZ = brokenObject.transform.position.z - cam.transform.position.z;
 
         //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
 
-        bool Ypass = Mathf.Abs(deltaY) > 0.0 && Mathf.Abs(deltaY) < 0.4;
-        bool Zpass = Mathf.Abs(deltaZ) > 8.4 && Mathf.Abs(deltaZ) < 8.6;
+        bool Ypass = Mathf.Abs(deltaY) > 0.0 && Mathf.Abs(deltaY) < 1;
+        //bool Zpass = Mathf.Abs(deltaZ) > 8.4 && Mathf.Abs(deltaZ) < 8.6;
 
-        return Ypass && Zpass;
+        //return Ypass && Zpass;
+        return Ypass;
     }
 }

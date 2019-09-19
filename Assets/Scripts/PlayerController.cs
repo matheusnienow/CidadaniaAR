@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         textObject = GameObject.FindWithTag("Text");
         text = textObject.GetComponent<Text>();
         destination = GameObject.FindWithTag("Destination").transform.position;
-        cam = GameObject.Find("MainCamera").GetComponent<Camera>();
+        cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         agent = GetComponent<NavMeshAgent>();
     }
 

@@ -22,7 +22,7 @@ public class PuzzleIncompletePath : MonoBehaviour
 
     private void Start()
     {
-        cam = GameObject.Find("MainCamera").GetComponent<Camera>();
+        cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         textObject = GameObject.Find("DotText");
         text = textObject.GetComponent<Text>();
     }
