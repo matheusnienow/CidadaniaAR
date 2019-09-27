@@ -52,7 +52,7 @@ public class PuzzleBrokenObject : MonoBehaviour
             var seconds = timer % 60;
             if (seconds > 2)
             {
-                target.GetComponent<ShowActionScript>().Execute();
+                target.GetComponent<ActivateEntityCommand>().Execute();
                 gameObject.SetActive(false);
             }
         }

@@ -20,7 +20,7 @@ public class ActuatorButtonScript : MonoBehaviour {
 
     private void Activate()
     {
-        Target.GetComponent<RotateActionScript>().Execute();
+        Target.GetComponent<RotateEntityCommand>().Execute();
     }
 
     bool IsClicked()

@@ -11,7 +11,7 @@ public class PuzzleIncompletePath : MonoBehaviour
 
     public GameObject outOfPathBlock;
     public GameObject invisibleBlock;
-    public ActionScript action;
+    public Command buildNavMeshCommand;
     public GameObject actionHolder;
 
     private GameObject textObject;
@@ -25,6 +25,9 @@ public class PuzzleIncompletePath : MonoBehaviour
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         textObject = GameObject.Find("DotText");
         text = textObject.GetComponent<Text>();
+
+        NavMeshSurface navMeshSurface = GameObject.Find("NavMeshSurface").GetComponent<NavMeshSurface>();
+        buildNavMeshCommand = new BuildNavMeshCommand(navMeshSurface);
     }
 
     // Update is called once per frame
@@ -49,7 +52,7 @@ public class PuzzleIncompletePath : MonoBehaviour
             {
                 text.text = "PASSAGE ALLOWED";
                 invisibleBlock.layer = 9;//path
-                actionHolder.GetComponent<ActionScript>().Execute();
+                buildNavMeshCommand.Execute();
             }
         }
         else

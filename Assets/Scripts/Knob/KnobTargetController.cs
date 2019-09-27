@@ -10,12 +10,11 @@ public class KnobTargetController : MonoBehaviour
     public GameObject KnobSubject;
 
     private GameObject _knob;
+    private GameObject _cam;
     private Transform _knobTransform;
     private KnobTextManager textManager;
     private WaitForSeconds _waitForSeconds;
-
     private float _lastAngleFromTarget;
-
     private const string targetName = "KnobTarget";
 
     public void Start()
@@ -23,9 +22,9 @@ public class KnobTargetController : MonoBehaviour
         textManager = new KnobTextManager();
 
         _knob = GameObject.Find(targetName);
+        _cam = GameObject.FindWithTag("MainCamera");
         _knobTransform = _knob.transform;
         _waitForSeconds = new WaitForSeconds(1f);
-        _lastAngleFromTarget = 0f;
     }
 
     public void Update()
@@ -38,14 +37,17 @@ public class KnobTargetController : MonoBehaviour
         bool isBeingTracked = VuforiaTools.IsBeingTracked(targetName);
         if (isBeingTracked)
         {
-            Angle = _knobTransform.rotation.eulerAngles.y;
-            //var mappedAngle = Map(targetAngle, 0, 280, 0, 50);
+            var targetAngle = _knobTransform.localRotation.eulerAngles.y;
+            var mappedAngle = Map(targetAngle, 0, 360, 0, 360);
 
-            TargetAngle = Angle;
-            _lastAngleFromTarget = Angle;
+            if (_lastAngleFromTarget != mappedAngle && targetAngle <= 360)
+            {
+                Angle = mappedAngle;
 
-            textManager.UpdateTargetText(TargetAngle);
-            RotateSubject(Angle);
+                _lastAngleFromTarget = Angle;
+                textManager.UpdateTargetText(Angle);
+            }
+            //RotateSubject(Angle);
         }
     }
 
