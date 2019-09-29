@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivateEntityCommand : Command {
+public class ActivateEntityCommand : ICommand {
 
     public GameObject target;
 
@@ -11,7 +11,7 @@ public class ActivateEntityCommand : Command {
         this.target = target;
     }
 
-    public override void Execute()
+    public void Execute()
     {
         if (target != null)
         {
@@ -19,7 +19,7 @@ public class ActivateEntityCommand : Command {
         }
     }
 
-    public override void Undo()
+    public void Undo()
     {
         if (target != null)
         {

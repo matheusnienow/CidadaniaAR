@@ -1,21 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Assets.Scripts.Puzzles;
+using Assets.Scripts.Enum;
+using System;
+using Assets.Scripts.Observer;
 
-public class PuzzleIncompletePath : MonoBehaviour
+public class PuzzleIncompletePath : OneTimePuzzle
 {
-    private Camera cam;
+    [SerializeField, Range(0, 1f)]
+    public float CameraDirectionThreshold;
+
+    [SerializeField, Range(0, 1f)]
+    public float CameraPositionThreshold;
 
     public GameObject outOfPathBlock;
-    public GameObject invisibleBlock;
-    public Command buildNavMeshCommand;
-    public GameObject actionHolder;
+    [SerializeField]
+    public DirectionEnum outOfPathBlockDirection;
 
-    private GameObject textObject;
-    private Text text;
+    public GameObject invisibleBlock;
+    public GameObject NavMesh;
+
+    private Camera cam;
+    private Text text;    
+    private ICommand buildNavMeshCommand;
 
     private bool passageAllowed;
     private bool wasPassageAllowed;
@@ -23,70 +31,94 @@ public class PuzzleIncompletePath : MonoBehaviour
     private void Start()
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-        textObject = GameObject.Find("DotText");
-        text = textObject.GetComponent<Text>();
+        text = GameObject.Find("DebugText").GetComponent<Text>();
 
-        NavMeshSurface navMeshSurface = GameObject.Find("NavMeshSurface").GetComponent<NavMeshSurface>();
+        NavMeshSurface navMeshSurface = NavMesh.GetComponent<NavMeshSurface>();
         buildNavMeshCommand = new BuildNavMeshCommand(navMeshSurface);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        CheckNavMesh();
-    }
-
-    void CheckNavMesh()
-    {
-        bool camDirection = CheckCameraDirection();
-        bool camPosition = CheckCameraPosition();
-
-        text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
-
-        //Debug.Log("Cam Direction: " + camDirection + " | Cam Position: " + camPosition);
-
-        passageAllowed = camDirection && camPosition;
-        if (passageAllowed)
-        {
-            if (!wasPassageAllowed)
-            {
-                text.text = "PASSAGE ALLOWED";
-                invisibleBlock.layer = 9;//path
-                buildNavMeshCommand.Execute();
-            }
-        }
-        else
-        {
-            if (wasPassageAllowed)
-            {
-                text.text = "PASSAGE FORBIDDEN";
-                invisibleBlock.layer = 0;//default
-            }
-        }
-        wasPassageAllowed = passageAllowed;
     }
 
     bool CheckCameraDirection()
     {
-        Debug.DrawRay(outOfPathBlock.transform.position, outOfPathBlock.transform.right * 1, Color.red);
-        Debug.DrawRay(cam.transform.position, cam.transform.forward * 1, Color.red);
+        var camDirectionVector = cam.transform.forward;
+        var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
 
-        var dot = Vector3.Dot(outOfPathBlock.transform.right.normalized, cam.transform.forward.normalized);
-        //Debug.Log("Dot product: "+dot);
-        return Mathf.Abs(dot) < 1.1 && Mathf.Abs(dot) > 0.97;
+        Debug.DrawRay(outOfPathBlock.transform.position, outOfPathBlockDirectionVector * 10, Color.red);
+        Debug.DrawRay(cam.transform.position, camDirectionVector * 10, Color.red);
+
+        var dotAbs = Mathf.Abs(Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized));
+
+        var maxValue = (1 + CameraDirectionThreshold);
+        var minValue = (1 - CameraDirectionThreshold);
+
+        return dotAbs < maxValue && dotAbs > minValue;
+    }
+
+    private Vector3 GetDirection(GameObject outOfPathBlock, DirectionEnum outOfPathBlockDirection)
+    {
+        switch (outOfPathBlockDirection)
+        {
+            case DirectionEnum.FORWARD:
+                return outOfPathBlock.transform.forward;
+            case DirectionEnum.BACKWARD:
+                return outOfPathBlock.transform.forward * -1;
+            case DirectionEnum.RIGHT:
+                return outOfPathBlock.transform.right;
+            case DirectionEnum.LEFT:
+                return outOfPathBlock.transform.right * -1;
+        }
+
+        return new Vector3();
     }
 
     bool CheckCameraPosition()
     {
         var deltaY = outOfPathBlock.transform.position.y - cam.transform.position.y;
-        var deltaZ = outOfPathBlock.transform.position.z - cam.transform.position.z;
+        bool Ypass = Mathf.Abs(deltaY) < CameraPositionThreshold;
 
-        //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
+        return Ypass;
+    }
 
-        bool Ypass = Mathf.Abs(deltaY) < 0.1;
-        bool Zpass = Mathf.Abs(deltaZ) < 0.1;
+    protected override bool IsConditionMet()
+    {
+        bool camDirection = CheckCameraDirection();
+        bool camPosition = CheckCameraPosition();
 
-        return Ypass && Zpass;
+        Debug.Log("DIRECTION: " + camDirection + " | POSITION: " + camPosition);
+
+        return camDirection && camPosition;
+    }
+
+    protected override void OnConditionMet()
+    {
+        if (!wasPassageAllowed)
+        {
+            text.text = "PASSAGE ALLOWED";
+            BuilNavMesh(9);
+        }
+
+        wasPassageAllowed = true;
+    }
+
+    protected override void OnConditionNotMet()
+    {
+        if (wasPassageAllowed)
+        {
+            text.text = "PASSAGE NOT ALLOWED";
+            BuilNavMesh(0);
+        }
+
+        wasPassageAllowed = false;
+    }
+
+    private void BuilNavMesh(int layer)
+    {
+        invisibleBlock.layer = layer;
+        buildNavMeshCommand.Execute();
+    }
+
+    internal override Message GetOnNextMessage()
+    {
+        throw new NotImplementedException();
     }
 }
 

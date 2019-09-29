@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BuildNavMeshCommand : Command {
+public class BuildNavMeshCommand : ICommand {
 
     public NavMeshSurface NavMeshSurface { get; set; }
 
@@ -12,7 +12,7 @@ public class BuildNavMeshCommand : Command {
         NavMeshSurface = navMeshSurface;
     }
 
-    public override void Execute()
+    public void Execute()
     {
         if (NavMeshSurface != null)
         {
@@ -20,7 +20,7 @@ public class BuildNavMeshCommand : Command {
         }
     }
 
-    public override void Undo()
+    public void Undo()
     {
         
     }

@@ -1,43 +1,107 @@
 ﻿using Assets.Scripts.Observer;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class PlayerMovementController : MonoBehaviour
+public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDestinationReached>
 {
-    private NavMeshAgent agent;
-    private Vector3 destination;
+    public NavMeshAgent agent;
+    public GameObject Destination { get; set; }
 
-    public delegate void OnDestinationReached();
-    public static event OnDestinationReached onDestinationReached;
+    private List<IObserver<EventPlayerDestinationReached>> observers;
 
     private void Start()
     {
-        destination = GameObject.FindWithTag("Destination").transform.position;
         agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        CheckDestination();
     }
 
-    void Move()
+    public void Move()
     {
-        var playerPosition = Mathf.Round(transform.position.z);
-        var destinationPosition = Mathf.Round(destination.z);
-
-        //Debug.Log("player: " + playerPosition + ", destination: " + destinationPosition);
-        if (playerPosition != destinationPosition)
+        if (agent == null)
         {
-            //Debug.Log("setting destination");
-            agent.SetDestination(destination);
+            agent = GetComponent<NavMeshAgent>();
         }
-        else
+
+        Debug.Log("MOVING THE PLAYER TO DESTINATION: "+Destination.name);
+        var destinationPosition = Destination.transform.position;
+        agent.SetDestination(destinationPosition);
+    }
+
+    void CheckDestination()
+    {
+        if (Destination == null)
         {
-            onDestinationReached?.Invoke();
+            return;
+        }
+
+        var currentPosition = transform.position;
+        var destinationPosition = Destination.transform.position;
+
+        var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
+        Debug.Log("result: " + (distance < 0.5));
+
+        if (distance < 0.5)
+        {
+            Debug.Log("destination rechead");
+            agent.isStopped = true;
+            agent.ResetPath();
+            NotifyDestinationReached();
+        }
+    }
+
+    private void NotifyDestinationReached()
+    {
+        Debug.Log("NOTIFYING DESTINATION REACHED");
+        if (observers == null || observers.Count == 0)
+        {
+            Debug.Log("OBSERVERS NULL");
+            return;
+        }
+
+        observers.ForEach(o =>
+        {
+            o.OnNext(new EventPlayerDestinationReached(Destination));
+            o.OnCompleted();
+        });
+    }
+
+    public IDisposable Subscribe(IObserver<EventPlayerDestinationReached> observer)
+    {
+        if (observers == null)
+        {
+            observers = new List<IObserver<EventPlayerDestinationReached>>();
+        }
+
+        if (!observers.Contains(observer))
+        {
+            observers.Add(observer);
+        }
+
+        return new Unsubscriber(observers, observer);
+    }
+
+    private class Unsubscriber : IDisposable
+    {
+        private List<IObserver<EventPlayerDestinationReached>> _observers;
+        private IObserver<EventPlayerDestinationReached> _observer;
+
+        public Unsubscriber(List<IObserver<EventPlayerDestinationReached>> observers, IObserver<EventPlayerDestinationReached> observer)
+        {
+            this._observers = observers;
+            this._observer = observer;
+        }
+
+        public void Dispose()
+        {
+            if (!(_observer == null)) _observers.Remove(_observer);
         }
     }
 }

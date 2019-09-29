@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateEntityCommand : Command {
+public class RotateEntityCommand : ICommand {
 
     public GameObject Target { get; set; }
 
@@ -11,7 +11,7 @@ public class RotateEntityCommand : Command {
         Target = target;
     }
 
-    public override void Execute()
+    public void Execute()
     {
         if (Target == null)
         {
@@ -22,7 +22,7 @@ public class RotateEntityCommand : Command {
         Target.transform.Rotate(0, rotationTarget, 0, Space.Self);
     }
 
-    public override void Undo()
+    public void Undo()
     {
         Execute();
     }
