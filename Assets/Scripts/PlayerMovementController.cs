@@ -30,7 +30,7 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
             agent = GetComponent<NavMeshAgent>();
         }
 
-        Debug.Log("MOVING THE PLAYER TO DESTINATION: "+Destination.name);
+        Debug.Log("PlayerMovementController: MOVING THE PLAYER TO DESTINATION: " + Destination.name);
         var destinationPosition = Destination.transform.position;
         agent.SetDestination(destinationPosition);
     }
@@ -46,23 +46,29 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
         var destinationPosition = Destination.transform.position;
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        Debug.Log("result: " + (distance < 0.5));
+        Debug.Log("PlayerMovementController: Player to Destination distance: " + (distance < 0.5));
 
         if (distance < 0.5)
         {
-            Debug.Log("destination rechead");
-            agent.isStopped = true;
-            agent.ResetPath();
-            NotifyDestinationReached();
+            OnDestinationReached();
         }
+    }
+
+    private void OnDestinationReached()
+    {
+        Debug.Log("PlayerMovementController: Destination rechead");
+        agent.isStopped = true;
+        agent.ResetPath();
+        Destination = null;
+        NotifyDestinationReached();
     }
 
     private void NotifyDestinationReached()
     {
-        Debug.Log("NOTIFYING DESTINATION REACHED");
+        Debug.Log("PlayerMovementController: NOTIFYING DESTINATION REACHED");
         if (observers == null || observers.Count == 0)
         {
-            Debug.Log("OBSERVERS NULL");
+            Debug.Log("PlayerMovementController: OBSERVERS NULL");
             return;
         }
 

@@ -8,40 +8,37 @@ namespace Assets.Scripts.LevelManager
     public class Level4Manager : MonoBehaviour, IObserver<EventPlayerDestinationReached>
     {
         public GameObject EndPanel;
-
         public PlayerMovementController PlayerController;
-
         public IDisposable PlayerControlerUnsubscriber { get; private set; }
+
+        public int checkPointIndex = 0;
 
         private void Start()
         {
             PlayerControlerUnsubscriber = PlayerController.Subscribe(this);
-            SetFirstCheckPoint();
+            SetNextCheckPoint(checkPointIndex);
         }
 
-        private void SetFirstCheckPoint()
+        private bool SetNextCheckPoint(int index)
         {
-            Debug.Log("SETTING FIRST CHECKPOINT");
-            PlayerController.Destination = GameObject.Find("FirstCheckPoint");
-            PlayerController.Move();
-        }
-
-        private void SetSecondCheckPoint()
-        {
-            PlayerController.Destination = GameObject.Find("SecondCheckPoint");
-            PlayerController.Move();
-        }
-
-        private void CheckFirstCheckpoint()
-        {
-            //IncompletePath
-
-
+            var destination = GameObject.Find("CheckPoint" + (checkPointIndex+1));
+            if (destination != null)
+            {
+                Debug.Log("Level4Manager: SETTING CHECKPOINT " + ++checkPointIndex);
+                PlayerController.Destination = GameObject.Find("CheckPoint" + checkPointIndex);
+                PlayerController.Move();
+                return true;
+            } else
+            {
+                return false;
+            }
+            
         }
 
         void IObserver<EventPlayerDestinationReached>.OnNext(EventPlayerDestinationReached value)
         {
-            if (value.Destination.name == "FirstCheckPoint")
+            var result = SetNextCheckPoint(checkPointIndex);
+            if (!result)
             {
                 GameManager.OnLevelCompleted(EndPanel);
             }
@@ -49,12 +46,12 @@ namespace Assets.Scripts.LevelManager
 
         void IObserver<EventPlayerDestinationReached>.OnCompleted()
         {
-            throw new NotImplementedException();
+            
         }
 
         void IObserver<EventPlayerDestinationReached>.OnError(Exception error)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
