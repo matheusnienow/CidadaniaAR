@@ -1,13 +1,19 @@
-﻿using Assets.Scripts.Observer;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Assets.Scripts.Observer;
 using UnityEngine;
 
-namespace Assets.Scripts.Puzzles
+namespace Puzzles.Base
 {
     public abstract class Puzzle : MonoBehaviour, IObservable<Message>
     {
         private List<IObserver<Message>> observers;
+
+        protected void Start()
+        {
+            this.observers = new List<IObserver<Message>>();
+            
+        }
 
         public IDisposable Subscribe(IObserver<Message> observer)
         {
@@ -34,18 +40,13 @@ namespace Assets.Scripts.Puzzles
 
         public void NotifyOnCompleted()
         {
-            if (observers == null)
-            {
-                return;
-            }
-
-            observers.ForEach(o =>
+            observers?.ForEach(o =>
             {
                 o.OnCompleted();
             });
         }
 
-        internal abstract Message GetOnNextMessage();
+        protected abstract Message GetOnNextMessage();
 
         protected abstract bool IsConditionMet();
 

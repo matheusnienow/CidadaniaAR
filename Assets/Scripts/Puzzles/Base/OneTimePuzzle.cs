@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace Assets.Scripts.Puzzles
+﻿namespace Puzzles.Base
 {
     public abstract class OneTimePuzzle : Puzzle
     {
-        private bool isCompleted = false;
+        private bool isCompleted;
 
         protected void Update()
         {
@@ -19,11 +12,13 @@ namespace Assets.Scripts.Puzzles
             }
 
             var isResolved = IsConditionMet();
-            if (isResolved)
+            if (!isResolved)
             {
-                isCompleted = true;
-                OnConditionMet();
+                return;
             }
+            
+            isCompleted = true;
+            OnConditionMet();
         }
     }
 }

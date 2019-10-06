@@ -3,7 +3,6 @@
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
 public class CameraScript : MonoBehaviour
 {
-
     public Transform target;
     public float distance = 5.0f;
     public float xSpeed = 120.0f;
@@ -17,14 +16,14 @@ public class CameraScript : MonoBehaviour
 
     private Rigidbody rig;
 
-    float x = 0.0f;
-    float y = 0.0f;
+    private float x = 0.0f;
+    private float y = 0.0f;
     private bool rightClicked;
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
-        Vector3 angles = transform.eulerAngles;
+        var angles = transform.eulerAngles;
         x = angles.y;
         y = angles.x;
 
@@ -50,33 +49,34 @@ public class CameraScript : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    public void LateUpdate()
     {
-        if (target && rightClicked)
+        if (!target || !rightClicked)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-
-            y = ClampAngle(y, yMinLimit, yMaxLimit);
-
-            Quaternion rotation = Quaternion.Euler(y, x, 0);
-
-            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
-
-            RaycastHit hit;
-            if (Physics.Linecast(target.position, transform.position, out hit))
-            {
-                distance -= hit.distance;
-            }
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + target.position;
-
-            transform.rotation = rotation;
-            transform.position = position;
+            return;
         }
+        
+        x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+        y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+
+        y = ClampAngle(y, yMinLimit, yMaxLimit);
+
+        var rotation = Quaternion.Euler(y, x, 0);
+
+        distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+
+        if (Physics.Linecast(target.position, transform.position, out var hit))
+        {
+            distance -= hit.distance;
+        }
+        var negDistance = new Vector3(0.0f, 0.0f, -distance);
+        var position = rotation * negDistance + target.position;
+
+        transform.rotation = rotation;
+        transform.position = position;
     }
 
-    public static float ClampAngle(float angle, float min, float max)
+    private static float ClampAngle(float angle, float min, float max)
     {
         if (angle < -360F)
             angle += 360F;

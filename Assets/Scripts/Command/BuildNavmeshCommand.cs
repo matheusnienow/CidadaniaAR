@@ -1,27 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
+﻿using UnityEngine.AI;
 
-public class BuildNavMeshCommand : ICommand {
+namespace Command
+{
+    public class BuildNavMeshCommand : ICommand {
+        private NavMeshSurface NavMeshSurface { get; set; }
 
-    public NavMeshSurface NavMeshSurface { get; set; }
-
-    public BuildNavMeshCommand(NavMeshSurface navMeshSurface)
-    {
-        NavMeshSurface = navMeshSurface;
-    }
-
-    public void Execute()
-    {
-        if (NavMeshSurface != null)
+        public BuildNavMeshCommand(NavMeshSurface navMeshSurface)
         {
-            NavMeshSurface.BuildNavMesh();
+            NavMeshSurface = navMeshSurface;
         }
-    }
 
-    public void Undo()
-    {
+        public void Execute()
+        {
+            if (NavMeshSurface != null)
+            {
+                NavMeshSurface.BuildNavMesh();
+            }
+        }
+
+        public void Undo()
+        {
         
+        }
     }
 }

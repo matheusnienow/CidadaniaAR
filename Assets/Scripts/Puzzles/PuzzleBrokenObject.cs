@@ -1,47 +1,76 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Observer;
+using Puzzles.Base;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class PuzzleBrokenObject : MonoBehaviour
+namespace Puzzles
 {
-    private Camera cam;
-
-    public Transform brokenObject;
-    public Transform target;
-
-    bool isOk;
-    bool wasOk;
-
-    private GameObject textObject;
-    private GameObject textHintObject;
-    private Text textMonkey;
-    private Text textHint;
-
-    private float timer = 0.0f;
-
-    private void Start()
+    public class PuzzleBrokenObject : OneTimePuzzle
     {
-        cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-        textObject = GameObject.Find("MonkeyText");
-        textHintObject = GameObject.Find("DotText");
-        textMonkey = textObject.GetComponent<Text>();
-        textHint = textHintObject.GetComponent<Text>();
-    }
+        private Camera cam;
 
-    void Update()
-    {
-        CheckCam();
-    }
+        public Transform brokenObject;
+        public Transform target;
 
-    void CheckCam()
-    {
-        bool camDirection = CheckCameraDirection();
-        bool camPosition = CheckCameraPosition();
+        private bool isOk;
+        private bool wasOk;
 
-        textMonkey.text = "TDIRECTION: "+camDirection+" | POSITION: "+camPosition+" OBJECT: "+ brokenObject.name;
-        //Debug.Log("Cam Direction: " + camDirection + " | Cam Position: " + camPosition);
+        private GameObject textObject;
+        private GameObject textHintObject;
+        private Text textMonkey;
+        private Text textHint;
 
-        isOk = camDirection && camPosition;
-        if (isOk)
+        private float timer = 0.0f;
+
+        private new void Start()
+        {
+            base.Start();
+            cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+            textObject = GameObject.Find("MonkeyText");
+            textHintObject = GameObject.Find("DotText");
+            textMonkey = textObject.GetComponent<Text>();
+            textHint = textHintObject.GetComponent<Text>();
+        }
+
+        private bool IsCameraDirectionCorrect()
+        {
+            //Debug.DrawRay(target.transform.position, target.transform.forward * 1, Color.red);
+            //Debug.DrawRay(cam.transform.position, cam.transform.forward * 1, Color.red);
+
+            var dot = Vector3.Dot(brokenObject.transform.forward.normalized, cam.transform.forward.normalized);
+            //Debug.Log("Dot product: "+dot);
+            return Mathf.Abs(dot) < 1.3 && Mathf.Abs(dot) > 0.90;
+        }
+
+        private bool IsCameraPositionCorrect()
+        {
+            var deltaY = brokenObject.transform.position.y - cam.transform.position.y;
+            //var deltaZ = brokenObject.transform.position.z - cam.transform.position.z;
+
+            //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
+
+            var isYPositionCorrect = Mathf.Abs(deltaY) > 0.0 && Mathf.Abs(deltaY) < 1;
+            //bool Zpass = Mathf.Abs(deltaZ) > 8.4 && Mathf.Abs(deltaZ) < 8.6;
+
+            //return Ypass && Zpass;
+            return isYPositionCorrect;
+        }
+
+        protected override Message GetOnNextMessage()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override bool IsConditionMet()
+        {
+            var camDirection = IsCameraDirectionCorrect();
+            var camPosition = IsCameraPositionCorrect();
+            Debug.Log("Cam Direction: " + camDirection + " | Cam Position: " + camPosition);
+
+            return camDirection && camPosition;
+        }
+
+        protected override void OnConditionMet()
         {
             if (!wasOk)
             {
@@ -50,44 +79,27 @@ public class PuzzleBrokenObject : MonoBehaviour
 
             timer += Time.deltaTime;
             var seconds = timer % 60;
-            if (seconds > 2)
+
+            if (seconds < 2)
             {
-                target.GetComponent<ActivateEntityCommand>().Execute();
-                gameObject.SetActive(false);
+                return;
             }
+        
+            target.GetComponent<ActivateEntityCommand>().Execute();
+            gameObject.SetActive(false);
+
+            wasOk = true;
         }
-        else
+
+        protected override void OnConditionNotMet()
         {
             timer = 0.0f;
             if (wasOk)
             {
                 textMonkey.text = "MONKEY NOT VISIBLE";
             }
+
+            wasOk = false;
         }
-        wasOk = isOk;
-    }
-
-    bool CheckCameraDirection()
-    {
-        //Debug.DrawRay(target.transform.position, target.transform.forward * 1, Color.red);
-        //Debug.DrawRay(cam.transform.position, cam.transform.forward * 1, Color.red);
-
-        var dot = Vector3.Dot(brokenObject.transform.forward.normalized, cam.transform.forward.normalized);
-        //Debug.Log("Dot product: "+dot);
-        return Mathf.Abs(dot) < 1.3 && Mathf.Abs(dot) > 0.90;
-    }
-
-    bool CheckCameraPosition()
-    {
-        var deltaY = brokenObject.transform.position.y - cam.transform.position.y;
-        //var deltaZ = brokenObject.transform.position.z - cam.transform.position.z;
-
-        //Debug.Log("DeltaY: "+deltaY+" | DeltaZ: "+deltaZ);
-
-        bool Ypass = Mathf.Abs(deltaY) > 0.0 && Mathf.Abs(deltaY) < 1;
-        //bool Zpass = Mathf.Abs(deltaZ) > 8.4 && Mathf.Abs(deltaZ) < 8.6;
-
-        //return Ypass && Zpass;
-        return Ypass;
     }
 }

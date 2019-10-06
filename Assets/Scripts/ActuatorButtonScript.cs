@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Command;
 using UnityEngine;
 
 public class ActuatorButtonScript : MonoBehaviour {

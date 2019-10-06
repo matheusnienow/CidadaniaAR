@@ -1,29 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public class RotateEntityCommand : ICommand {
+namespace Command
+{
+    public class RotateEntityCommand : ICommand {
+        private const double Tolerance = 1;
+        private GameObject Target { get; set; }
 
-    public GameObject Target { get; set; }
-
-    public RotateEntityCommand(GameObject target)
-    {
-        Target = target;
-    }
-
-    public void Execute()
-    {
-        if (Target == null)
+        public RotateEntityCommand(GameObject target)
         {
-            return;
+            Target = target;
         }
 
-        var rotationTarget = Target.transform.rotation.y == 90 ? 180 : 90;
-        Target.transform.Rotate(0, rotationTarget, 0, Space.Self);
-    }
+        public void Execute()
+        {
+            if (Target == null)
+            {
+                return;
+            }
 
-    public void Undo()
-    {
-        Execute();
+            var rotationTarget = Math.Abs(Target.transform.rotation.y - 90) < Tolerance ? 180 : 90;
+            Target.transform.Rotate(0, rotationTarget, 0, Space.Self);
+        }
+
+        public void Undo()
+        {
+            Execute();
+        }
     }
 }
