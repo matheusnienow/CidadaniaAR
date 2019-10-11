@@ -2,60 +2,824 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b430f5f-ffcc-4460-8b13-9267ec594cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImageTarget.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Knob.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/knobtargettext.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/knowscripts.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/vuforiatools.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/VuforiaConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VuforiaConfiguration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/Inspector_scaled_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/Inspector_scaled_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/Lixeira_scaled_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/Lixeira_scaled_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/SceneTarget_scaled_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/SceneTarget_scaled_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/Scene_scaled_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/Scene_scaled_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/TemperatureTarget_scaled_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/TemperatureTarget_scaled_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/WindTarget_scaled_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/WindTarget_scaled_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/lixeira_scaled.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Vuforia/ImageTargetTextures/tcc/lixeira_scaled.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/CLI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/CLI/augmented_image_cli_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/CLI/augmented_image_cli_linux.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/CLI/augmented_image_cli_osx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/CLI/augmented_image_cli_osx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/CLI/augmented_image_cli_win.exe.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Configurations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Configurations/DefaultCameraConfigFilter.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Configurations/DefaultCameraConfigFilter.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Configurations/DefaultSessionConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Configurations/DefaultSessionConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Editor/ARCoreiOSDependencies.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Editor/ARCoreiOSDependencies.template.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Configurations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Configurations/AugmentedFaceSessionConfiguration.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Configurations/AugmentedFaceSessionConfiguration.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FaceOccluderMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FaceOccluderMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FoxEarMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FoxEarMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FoxFaceMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FoxFaceMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FoxNoiseMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/FoxNoiseMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Shaders/AugmentedFaceOccluder.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Shaders/AugmentedFaceOccluder.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/ear_fur.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/ear_fur.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/eyelashes_alpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/eyelashes_alpha.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/fox_face_mesh_texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/fox_face_mesh_texture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/highlighter_screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/highlighter_screen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/nose_fur.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/nose_fur.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/shadows_multiply.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Materials/Textures/shadows_multiply.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Models/canonical_face_mesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Models/canonical_face_mesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Models/fox_sample.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Models/fox_sample.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scenes/AugmentedFaces.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scenes/AugmentedFaces.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts/ARCoreAugmentedFaceMeshFilter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts/ARCoreAugmentedFaceMeshFilter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts/ARCoreAugmentedFaceRig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts/ARCoreAugmentedFaceRig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts/AugmentedFacesExampleController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedFaces/Scripts/AugmentedFacesExampleController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Configurations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Configurations/AugmentedImagesSessionConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Configurations/AugmentedImagesSessionConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/000.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/001.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/002.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/003.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/004.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/005.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/006.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/007.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/008.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/009.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/Example Database.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Images/Example Database.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame/Frame Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame/Frame Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame/FrameLowerLeft.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame/FrameLowerRight.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame/FrameUpperLeft.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Materials/Frame/FrameUpperRight.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Prefabs/AugmentedImageVisualizer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Prefabs/AugmentedImageVisualizer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scenes/AugmentedImage.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scenes/AugmentedImage.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageExampleController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageExampleController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageVisualizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageVisualizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Textures/fit_to_scan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Textures/fit_to_scan.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Textures/frame_base.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/AugmentedImage/Textures/frame_base.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Configurations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Configurations/CloudAnchorsSessionConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Configurations/CloudAnchorsSessionConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Images/introduction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Images/introduction.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials/StarDiffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials/StarDiffuse.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials/StarDiffuseMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials/StarDiffuseMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials/StarMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Materials/StarMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Models/Star_01.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Models/Star_01.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Models/Star_01.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Models/cloud_anchor.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Models/cloud_anchor.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Anchor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Anchor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Row.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Row.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Star.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Prefabs/Star.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scenes/CloudAnchors.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scenes/CloudAnchors.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/ARCoreWorldOriginHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/ARCoreWorldOriginHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/ARKitHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/ARKitHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/AnchorController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/AnchorController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/CloudAnchorsExampleController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/CloudAnchorsExampleController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/CloudAnchorsNetworkManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/CloudAnchorsNetworkManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/LocalPlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/LocalPlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/NetworkManagerUIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/NetworkManagerUIController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/StarController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/Scripts/StarController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/CloudAnchors/circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/ARCore_pawn.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/ARCore_pawn.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PawnBlue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PawnBlue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PawnGreen.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PawnGreen.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PawnYellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PawnYellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PlaneGrid.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PlaneGrid.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PointCloud.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/PointCloud.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/MobileDiffuseWithLightEstimation.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/MobileDiffuseWithLightEstimation.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/MobileSpecularWithLightEstimation.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/MobileSpecularWithLightEstimation.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/PlaneGrid.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/PlaneGrid.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/PointCloud.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/PointCloud.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/TransparentShadow.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Shaders/TransparentShadow.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/ShadowPlane.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/ShadowPlane.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/AugmentedFaceIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/AugmentedFaceIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/AugmentedImageIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/AugmentedImageIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/CloudAnchorIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/CloudAnchorIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/ComputerVisionIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/ComputerVisionIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/HelloARIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/HelloARIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/ObjectManipulationIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/ObjectManipulationIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/TriGrid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Materials/Textures/TriGrid.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/ARCorePawn.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/ARCorePawn.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/DetectedPlaneVisualizer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/DetectedPlaneVisualizer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/PlaneDiscovery.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/PlaneDiscovery.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/PointCloud.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Prefabs/PointCloud.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Roboto-Regular.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneVisualizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneVisualizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/Editor/PointcloudVisualizerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/Editor/PointcloudVisualizerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/PlaneDiscoveryGuide.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/PlaneDiscoveryGuide.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/PointcloudVisualizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/PointcloudVisualizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/RawImageVideoPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/RawImageVideoPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/SafeAreaScaler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Scripts/SafeAreaScaler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/Surface.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/Surface.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/VideoRenderTexture.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/VideoRenderTexture.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Textures/transparent.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Videos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Videos/hand_oem.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/Common/Videos/hand_oem.webm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Materials/EdgeDetectionBackground.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Materials/EdgeDetectionBackground.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Materials/EdgeDetectionBackgroundMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Materials/EdgeDetectionBackgroundMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/libarcore_camera_utility.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/libarcore_camera_utility.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/src.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/src/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/src/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/src/arcore_camera_utility.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Plugins/src/arcore_camera_utility.zip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/ComputerVisionController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/ComputerVisionController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/EdgeDetector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/EdgeDetector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/PointClickHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/PointClickHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/TextureReader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/TextureReader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/TextureReaderApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ComputerVision/Scripts/TextureReaderApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/DottedLineMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/DottedLineMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/dottedline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/dottedline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/footprint.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/footprint.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Materials/footprint.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/ElevationVisualization.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/ElevationVisualization.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/ManipulationSystem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/ManipulationSystem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/Manipulator.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/Manipulator.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/SelectionVisualization.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Prefabs/SelectionVisualization.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scenes/ObjectManipulation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scenes/ObjectManipulation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/DragGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/DragGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/DragGestureRecognizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/DragGestureRecognizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/Gesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/Gesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/GestureRecognizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/GestureRecognizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/GestureTouchesUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/GestureTouchesUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/PinchGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/PinchGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/PinchGestureRecognizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/PinchGestureRecognizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TapGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TapGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TapGestureRecognizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TapGestureRecognizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TransformationUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TransformationUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwistGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwistGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwistGestureRecognizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwistGestureRecognizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwoFingerDragGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwoFingerDragGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwoFingerDragGestureRecognizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Gestures/TwoFingerDragGestureRecognizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/ManipulationSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/ManipulationSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/ElevationManipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/ElevationManipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/Manipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/Manipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/RotationManipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/RotationManipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/ScaleManipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/ScaleManipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/SelectionManipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/SelectionManipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/TranslationManipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/Manipulators/TranslationManipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/ObjectManipulationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/ObjectManipulationController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/PawnManipulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/ObjectManipulation/Scripts/PawnManipulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Prefabs/ARCore Device.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Prefabs/ARCore Device.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Prefabs/Environmental Light.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Prefabs/Environmental Light.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/BuildResources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/BuildResources/cloud_anchor_manifest.aartemplate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/BuildResources/cloud_anchor_manifest.aartemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/Info.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/MacOS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/MacOS/arcore_instant_preview_unity_plugin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/MacOS/arcore_instant_preview_unity_plugin.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/_CodeSignature.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/_CodeSignature/CodeResources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.bundle/Contents/_CodeSignature/CodeResources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Plugins/x86_64/arcore_instant_preview_unity_plugin.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/Editor/InstantPreviewBugReport.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/Editor/InstantPreviewBugReport.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreview.apk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewTrackedPoseDriver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/InstantPreview/Scripts/InstantPreviewTrackedPoseDriver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Materials/ARBackground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Materials/ARBackground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Materials/ARBackground.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Materials/ARBackground.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/Google.Protobuf.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_arkit_integration.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_arkit_integration.mm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_client.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_client.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_rendering_utils.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_rendering_utils.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_unity.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/arcore_unity.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/google_ar_optional.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/google_ar_optional.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/google_ar_required.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/google_ar_required.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/unityandroidpermissions.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/unityandroidpermissions.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/unitygar.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Plugins/unitygar.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Resources/ViewInARIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Resources/ViewInARIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreCameraConfigFilter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreCameraConfigFilter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreSession.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreSession.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreSessionConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreSessionConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Anchor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Anchor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AndroidPermissionsManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AndroidPermissionsManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AndroidPermissionsRequestResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AndroidPermissionsRequestResult.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/NativeSession.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/NativeSession.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiApkInstallStatusExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiApkInstallStatusExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiApkInstallationStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiApkInstallationStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiArStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiArStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiArStatusExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiArStatusExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAugmentedFaceMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAugmentedFaceMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAugmentedFaceRegionType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAugmentedFaceRegionType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAvailability.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAvailability.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAvailabilityExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiAvailabilityExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraConfigFacingDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraConfigFacingDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraConfigFacingDirectionExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraConfigFacingDirectionExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraConfigTargetFps.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraConfigTargetFps.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraFocusMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraFocusMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraMetadata.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCameraMetadata.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCloudAnchorMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCloudAnchorMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCloudAnchorState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCloudAnchorState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCloudAnchorStateExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCloudAnchorStateExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiConstants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiConstants.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCoordinates2dType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiCoordinates2dType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiDisplayUvCoords.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiDisplayUvCoords.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiDisplayUvCoordsExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiDisplayUvCoordsExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiFeaturePointOrientationMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiFeaturePointOrientationMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiFeaturePointOrientationModeExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiFeaturePointOrientationModeExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimateState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimateState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimateStateExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimateStateExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimationMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimationMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimationModeExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiLightEstimationModeExtension.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPlaneFindingMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPlaneFindingMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPlaneType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPlaneType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPlaneTypeExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPlaneTypeExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPoseData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPoseData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoDeviceCameraDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoDeviceCameraDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoStatusExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiPrestoStatusExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackableType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackableType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingFailureReason.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingFailureReason.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingFailureReasonExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingFailureReasonExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingStateExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingStateExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingStateXPExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiTrackingStateXPExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiUpdateMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Types/ApiUpdateMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AnchorApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AnchorApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AugmentedFaceApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AugmentedFaceApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AugmentedImageApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AugmentedImageApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AugmentedImageDatabaseApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/AugmentedImageDatabaseApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraConfigApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraConfigApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraConfigFilterApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraConfigFilterApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraConfigListApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraConfigListApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraMetadataApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/CameraMetadataApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/FrameApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/FrameApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/HitTestApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/HitTestApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/ImageApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/ImageApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/LightEstimateApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/LightEstimateApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PlaneApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PlaneApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PointApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PointApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PointCloudApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PointCloudApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PoseApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/PoseApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/SessionApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/SessionApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/SessionConfigApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/SessionConfigApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/TrackableApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/TrackableApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/TrackableListApi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/Wrappers/TrackableListApi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ApkAvailabilityStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ApkAvailabilityStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ApkInstallationStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ApkInstallationStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Async.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Async/WaitForTaskCompletionYieldInstruction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Async/WaitForTaskCompletionYieldInstruction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AsyncTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AsyncTask.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedFace.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedFace.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedFaceMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedFaceMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedFaceRegion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedFaceRegion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImageDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImageDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImageDatabaseEntry.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImageDatabaseEntry.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImageTrackingMethod.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/AugmentedImageTrackingMethod.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraFocusMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraFocusMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraImageBytes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraImageBytes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraIntrinsics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraIntrinsics.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraMetadataTag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraMetadataTag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraMetadataValue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CameraMetadataValue.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CloudAnchorResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CloudAnchorResult.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CloudServiceResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/CloudServiceResponse.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated/TrackedPlane.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated/TrackedPlane.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated/TrackedPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated/TrackedPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated/TrackedPointOrientationMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Deprecated/TrackedPointOrientationMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DetectedPlane.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DetectedPlane.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DetectedPlaneFindingMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DetectedPlaneFindingMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DetectedPlaneType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DetectedPlaneType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DeviceCameraDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DeviceCameraDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DisplayUvCoordinateType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DisplayUvCoordinateType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DisplayUvCoordinateTypeExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DisplayUvCoordinateTypeExtension.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DisplayUvCoords.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/DisplayUvCoords.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalytics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalytics.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalyticsGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalyticsGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalyticsPreferences.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalyticsPreferences.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalyticsProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreAnalyticsProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreIOSSupportHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreIOSSupportHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreIOSSupportPreprocessBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreIOSSupportPreprocessBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreProjectSettingsGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreProjectSettingsGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreProjectSettingsProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreProjectSettingsProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreProjectSettingsWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreProjectSettingsWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreSupportedPreprocessBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ARCoreSupportedPreprocessBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/Analytics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/Analytics/ArcoreClearcut.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/Analytics/ArcoreClearcut.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/Analytics/ArcoreSdkLog.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/Analytics/ArcoreSdkLog.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AndroidDependenciesHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AndroidDependenciesHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AssetHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AssetHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AugmentedImageDatabaseContextMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AugmentedImageDatabaseContextMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AugmentedImageDatabaseInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AugmentedImageDatabaseInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AugmentedImageDatabasePreprocessBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/AugmentedImageDatabasePreprocessBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/BackgroundJobExecutor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/BackgroundJobExecutor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/CloudAnchorPreprocessBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/CloudAnchorPreprocessBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ExampleBuildHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ExampleBuildHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ExamplePreprocessBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/ExamplePreprocessBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/HelpAttributeDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/HelpAttributeDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/LogRequestUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/LogRequestUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/PreprocessBuildBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/PreprocessBuildBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/RequiredOptionalPreprocessBuild.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Editor/RequiredOptionalPreprocessBuild.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/EnvironmentalLight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/EnvironmentalLight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ExperimentSupport.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ExperimentSupport/ExperimentBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ExperimentSupport/ExperimentBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ExperimentSupport/ExperimentManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ExperimentSupport/ExperimentManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/FeaturePoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/FeaturePoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/FeaturePointOrientationMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/FeaturePointOrientationMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Frame.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Frame.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LightEstimate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LightEstimate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LightEstimateState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LightEstimateState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LightEstimationMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LightEstimationMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LostTrackingReason.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/LostTrackingReason.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ARCoreAndroidLifecycleManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ARCoreAndroidLifecycleManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ARCoreIOSLifecycleManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ARCoreIOSLifecycleManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ARPrestoCallbackManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ARPrestoCallbackManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/CloudServiceManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/CloudServiceManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ILifecycleManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/ILifecycleManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/LifecycleManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/LifecycleManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/PointCloudManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/PointCloudManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/TrackableManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Managers/TrackableManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/PointCloudPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/PointCloudPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Session.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Session.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/SessionStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/SessionStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/SessionStatusExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/SessionStatusExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Trackable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Trackable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackableHit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackableHit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackableHitFlags.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackableHitFlags.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackableQueryFilter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackableQueryFilter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/TrackingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ARCoreProjectSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ARCoreProjectSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ARDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ARDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/AndroidNativeHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/AndroidNativeHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ConversionHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ConversionHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/DllImportNoop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/DllImportNoop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/HelpAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/HelpAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/IntPtrEqualityComparer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/IntPtrEqualityComparer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/MarshalingHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/MarshalingHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ShellHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ShellHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/SuppressMemoryAllocationErrorAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/SuppressMemoryAllocationErrorAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ThrottledLogMessage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Utility/ThrottledLogMessage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/VersionInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/VersionInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPAnchor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPAnchor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPSession.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPSession.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPSessionStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPSessionStatus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPTrackingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/XPTrackingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.122.0.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.122.0.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.122.0.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.122.0.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.122.0.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.122.0.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.122.0.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.122.0.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActuatorButtonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActuatorButtonScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/ActivateEntityCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/ActivateEntityCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/BuildNavmeshCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/BuildNavmeshCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/RotateEntityCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/RotateEntityCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/AlwaysOnPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/AlwaysOnPuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4/NavMesh-NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4/NavMesh-NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4/NavMesh-NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4/NavMesh-NavMesh.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.dat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.dat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Vuforia/tcc.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/128e987d567d4e2c824d754223b3f3b0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/128e987d567d4e2c824d754223b3f3b0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/1e3b057af24249748ff873be7fafee47" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/1e3b057af24249748ff873be7fafee47" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/273396fdefc228d478ff464dd011f82d" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/273396fdefc228d478ff464dd011f82d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/3f5b5dff67a942289a9defa416b206f3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/3f5b5dff67a942289a9defa416b206f3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/48bb5f55d8670e349b6e614913f9d910" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/48bb5f55d8670e349b6e614913f9d910" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/68e6db2ebdc24f95958faec2be5558d6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/68e6db2ebdc24f95958faec2be5558d6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/79459efec17a4d00a321bdcc27bbc385" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/79459efec17a4d00a321bdcc27bbc385" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/85187c2149c549c5b33f0cdb02836b17" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/85187c2149c549c5b33f0cdb02836b17" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/NavMeshComponents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/NavMeshComponents.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.SpatialTracking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.SpatialTracking.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.UI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/VuforiaScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/VuforiaScripts.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Resources/unity_builtin_extra" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Resources/unity_builtin_extra" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/a02a7d8c237544f1962732b55a9aebf1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/a02a7d8c237544f1962732b55a9aebf1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/bc1ede39bf3643ee8e493720e4259791" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/bc1ede39bf3643ee8e493720e4259791" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/boot.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/c41005c129ba4d66911b75229fd70b45" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/c41005c129ba4d66911b75229fd70b45" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/cf81c85f95fe47e1a27f6ae460cf182c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/cf81c85f95fe47e1a27f6ae460cf182c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/dd89cf5b9246416f84610a006f916af7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/dd89cf5b9246416f84610a006f916af7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/e73a58f6e2794ae7b1b7e50b7fb811b0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/e73a58f6e2794ae7b1b7e50b7fb811b0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/f7ada0af4f174f0694ca6a487b8f543d" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/f7ada0af4f174f0694ca6a487b8f543d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/f952c082cb03451daed3ee968ac6c63e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/f952c082cb03451daed3ee968ac6c63e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/sharedassets0.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Mono.Security.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Mono.Security.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/NavMeshComponents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/NavMeshComponents.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/System.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/System.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/System.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/System.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Networking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpatialTracking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpatialTracking.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Timeline.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Vuforia.UnityExtensions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/Vuforia.UnityExtensions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/VuforiaScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/VuforiaScripts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/mscorlib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Managed/mscorlib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/Resources/unity_builtin_extra" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/boot.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/globalgamemanagers.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level0.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level0.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level1.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level1.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/level2.resS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/resources.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/resources.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/resources.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets1.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/Data/sharedassets2.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Win64/ScriptLayoutHashes.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponents.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponentsEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponentsEditor.dll" afterDir="false" />
@@ -63,94 +827,17 @@
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaEditorScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaEditorScripts.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaScripts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptMapper" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptMapper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/0c/0c992a0ad3f958446b3b2fd88cea4667.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/0c/0c992a0ad3f958446b3b2fd88cea4667.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/12/128e987d567d4e2c824d754223b3f3b0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/12/128e987d567d4e2c824d754223b3f3b0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1b/1b2d001c51171d449b4203bfe281d9bc.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1b/1b2d001c51171d449b4203bfe281d9bc.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1b/1b8d251f9af63b746bf2f7ffe00ebb9b.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1b/1b8d251f9af63b746bf2f7ffe00ebb9b.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1c32167dbf3314852b6006a288eb449b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1c/1c32167dbf3314852b6006a288eb449b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1ca7e933a0379865a2235d3c40d9662b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1c/1ca7e933a0379865a2235d3c40d9662b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1d/1d214ea2059394d59a1960df0cad1c62.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1d/1d214ea2059394d59a1960df0cad1c62.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1e/1e3b057af24249748ff873be7fafee47" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1e/1e3b057af24249748ff873be7fafee47" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1e/1e3fdca004f2d45fe8abbed571a8abd5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1e/1e3fdca004f2d45fe8abbed571a8abd5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/22/2212c039dd5f11644b44fe8ed58b38e7.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/22/2212c039dd5f11644b44fe8ed58b38e7.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2e/2e9b38b0a13ba442b98571aeeb6f3849.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2e/2e9b38b0a13ba442b98571aeeb6f3849.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/35/35e95dc5ff2b64380880dd7ac5922847" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/35/35e95dc5ff2b64380880dd7ac5922847" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/39/39b5609400a05a84e995360825533192" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/39/39b5609400a05a84e995360825533192" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/48/48bb5f55d8670e349b6e614913f9d910" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/48/48bb5f55d8670e349b6e614913f9d910" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/4d/4d0ca2aa938b30e4f924df3ddad177f5.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/4d/4d0ca2aa938b30e4f924df3ddad177f5.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/4e/4e2b87aac2e72fe489c0cbbdf86976f4.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/4e/4e2b87aac2e72fe489c0cbbdf86976f4.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/51/5163fa28d877a314586d0e54cde1534d.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/51/5163fa28d877a314586d0e54cde1534d.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/51/516d3f9c325f4c541bf247fb0a0166f2.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/51/516d3f9c325f4c541bf247fb0a0166f2.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/56/5613254ed413b8c4a82f03f9b250e56a.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/56/5613254ed413b8c4a82f03f9b250e56a.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/63/630924d0f6ba6f6448d249af761d4229" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/63/630924d0f6ba6f6448d249af761d4229.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/63/636ee7b12201a254cb2fb4fec2165d8f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/63/636ee7b12201a254cb2fb4fec2165d8f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/65/658ef14483bb4437baeced0fce0ae78a.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/65/658ef14483bb4437baeced0fce0ae78a.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/68/68e6db2ebdc24f95958faec2be5558d6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/68/68e6db2ebdc24f95958faec2be5558d6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/69/69946beaed8c7e64f9e71858f2c774e1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/69/69946beaed8c7e64f9e71858f2c774e1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6d/6daafcd4686925745b97ae49e802fd88.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6d/6daafcd4686925745b97ae49e802fd88.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6e/6e3ac25fe5c94d7d956f50c7c0df72e3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6e/6e3ac25fe5c94d7d956f50c7c0df72e3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6e/6eeb5dc026fdf4b488bc7ae0138ab719" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6e/6eeb5dc026fdf4b488bc7ae0138ab719" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6f/6fa04b4743e3947eba4d7b9e5832ea69" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6f/6fa04b4743e3947eba4d7b9e5832ea69" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/77/77fba670b979046f18d52d751e0d4659" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/77/77fba670b979046f18d52d751e0d4659" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/78/78eb5653c5b77844196a06006d678259.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/78/78eb5653c5b77844196a06006d678259.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/79/79459efec17a4d00a321bdcc27bbc385.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/79/79459efec17a4d00a321bdcc27bbc385.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/7a/7a5ac11cc976e418e8d13136b07e1f52" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/7a/7a5ac11cc976e418e8d13136b07e1f52" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/7e/7e6d3c0df88f3ab458512f8282e449af" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/7e/7e6d3c0df88f3ab458512f8282e449af" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/83/8354bbadee0a7df47b179737b2e88d95.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/83/8354bbadee0a7df47b179737b2e88d95.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/85/85187c2149c549c5b33f0cdb02836b17" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/85/85187c2149c549c5b33f0cdb02836b17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/86/86c9d8e67265f41469be06142c397d17" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/86/86c9d8e67265f41469be06142c397d17" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/8a/8a480f61699d7de48b5b7ce4f0ca6cf6.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8a/8a480f61699d7de48b5b7ce4f0ca6cf6.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/8c/8c4dd21966739024fbd72155091d199e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8c/8c4dd21966739024fbd72155091d199e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/8c/8cbcadf066fcc344fa3a3039aab0e866.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8c/8cbcadf066fcc344fa3a3039aab0e866.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/91/91265c8d5428c9b41be0044ecf1baab6.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/91/91265c8d5428c9b41be0044ecf1baab6.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/9a/9a5b4feed6d113e4b8def4c2bfd7e063.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9a/9a5b4feed6d113e4b8def4c2bfd7e063.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/9e/9e22adda0192f014e9ee1a7a23c4d9c0.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9e/9e22adda0192f014e9ee1a7a23c4d9c0.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a0/a02a7d8c237544f1962732b55a9aebf1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/a0/a02a7d8c237544f1962732b55a9aebf1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a8/a81568144a775094bb6b92c7df9fcebe" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/a8/a81568144a775094bb6b92c7df9fcebe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a8/a88c225b69241164ab829bccf61d8845.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/a8/a88c225b69241164ab829bccf61d8845.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/a9/a9267223436693a4bb8e35161a24f8ba.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/a9/a9267223436693a4bb8e35161a24f8ba.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ab/abb6db587b6ecb944b3ee832196a5e6a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ab/abb6db587b6ecb944b3ee832196a5e6a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ad/adbd6564839db774ba3e73fbd3b1e307.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ad/adbd6564839db774ba3e73fbd3b1e307.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b0/b0fca12d4e61246cfa5f9a6d26e48004.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b0/b0fca12d4e61246cfa5f9a6d26e48004.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b9/b9ed12c68682d5b49bfa70ee9d71602d.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b9/b9ed12c68682d5b49bfa70ee9d71602d.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bc/bc1ede39bf3643ee8e493720e4259791" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bc/bc1ede39bf3643ee8e493720e4259791" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c0/c0f3bef2a67ae4e139538afec3e59b03" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c0/c0f3bef2a67ae4e139538afec3e59b03" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c1/c1ded68d068051d4f92650fcddaae5c7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c1/c1ded68d068051d4f92650fcddaae5c7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c7/c7270eefa8c2ddd48b5248be385cd03c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c7/c7270eefa8c2ddd48b5248be385cd03c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/cf/cf19ace87b12c2741979b9582691d60d.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/cf/cf19ace87b12c2741979b9582691d60d.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/cf/cf81c85f95fe47e1a27f6ae460cf182c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/cf/cf81c85f95fe47e1a27f6ae460cf182c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d2/d280736d6d14cce4c8d3b4637f94ee3a.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d2/d280736d6d14cce4c8d3b4637f94ee3a.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/dd/dd89cf5b9246416f84610a006f916af7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/dd/dd89cf5b9246416f84610a006f916af7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/dd/ddf6218b41e432c4cbb228fd636fd306" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/dd/ddf6218b41e432c4cbb228fd636fd306" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/dd/ddf6218b41e432c4cbb228fd636fd306.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/dd/ddf6218b41e432c4cbb228fd636fd306.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/de/de1593a16346ab045974f1cd34fd831f.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/de/de1593a16346ab045974f1cd34fd831f.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e1/e1b71250f49a0524ea117099eee2c575.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e1/e1b71250f49a0524ea117099eee2c575.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e5/e5581564ca4d5f2479d5f1694371ef2f.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e5/e5581564ca4d5f2479d5f1694371ef2f.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e7/e73a58f6e2794ae7b1b7e50b7fb811b0.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e7/e73a58f6e2794ae7b1b7e50b7fb811b0.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e8/e822de06b1e7abf4c9c199de2942c719.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e8/e822de06b1e7abf4c9c199de2942c719.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e9/e9dc61a799fb66b4f830683886a6d761.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e9/e9dc61a799fb66b4f830683886a6d761.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ec/ece1e865d1ad84587872fe8580ab5a20" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ec/ece1e865d1ad84587872fe8580ab5a20" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f0/f0719c91f22f5d7419c41adc09a8c75c.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f0/f0719c91f22f5d7419c41adc09a8c75c.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f1/f15954b9d272d504aa2fe5c80ab2ae08.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f1/f15954b9d272d504aa2fe5c80ab2ae08.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f3/f3e56f16b5e8b3049a03f980018b8cbf.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f3/f3e56f16b5e8b3049a03f980018b8cbf.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f4/f40623b353e2f1943b1b3ba42975db7a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f4/f40623b353e2f1943b1b3ba42975db7a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f7/f7ada0af4f174f0694ca6a487b8f543d" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f7/f7ada0af4f174f0694ca6a487b8f543d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f9/f9ca778f723894640a77eb95179d9bd9.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f9/f9ca778f723894640a77eb95179d9bd9.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/fc/fc373d9b39a416f438ca99ae10f8d3de.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/fc/fc373d9b39a416f438ca99ae10f8d3de.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NavMeshComponents.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NavMeshComponents.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NavMeshComponentsEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NavMeshComponentsEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.apk" beforeDir="false" afterPath="$PROJECT_DIR$/main.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" afterDir="false" />
@@ -163,14 +850,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="57" column="65" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="65" />
+            <state relative-caret-position="105">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
               <folding>
-                <marker date="1570295388569" expanded="false" signature="6:119" ph="..." />
                 <marker date="1570295388569" expanded="true" signature="218:3218" ph="{...}" />
                 <marker date="1570295388569" expanded="true" signature="283:506" ph="{...}" />
                 <marker date="1570295388569" expanded="true" signature="301:461" ph="{...}" />
@@ -196,6 +882,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <marker date="1570739802451" expanded="true" signature="87:371" ph="{...}" />
+                <marker date="1570739802451" expanded="true" signature="171:247" ph="{...}" />
+                <marker date="1570739802451" expanded="true" signature="293:369" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.ptc.vuforia.engine@8.3.9/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -203,6 +912,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/ActivateEntityCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/RotateEntityCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -210,6 +920,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/AlwaysOnPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ptc.vuforia.engine@8.3.9/Vuforia/Scripts/DefaultTrackableEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager/Level4Manager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -230,14 +941,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Command/RotateEntityCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Command/ICommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="131" />
-    <option name="width" value="1440" />
-    <option name="height" value="788" />
+    <option name="y" value="38" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -249,6 +960,7 @@
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -263,9 +975,7 @@
             </path>
             <path>
               <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="Command" type="1045f7f1:UnityExplorerNode" />
+              <item name="Packages" type="4e2708dd:PackagesRoot" />
             </path>
           </expand>
           <select />
@@ -273,7 +983,6 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,12 +1031,16 @@
       <workItem from="1570227102549" duration="15000" />
       <workItem from="1570230180977" duration="552000" />
       <workItem from="1570289949887" duration="107000" />
-      <workItem from="1570290287666" duration="4422000" />
+      <workItem from="1570290287666" duration="5427000" />
+      <workItem from="1570661066393" duration="2000" />
+      <workItem from="1570664481803" duration="576000" />
+      <workItem from="1570739362563" duration="216000" />
+      <workItem from="1570739636916" duration="769000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5096000" />
+    <option name="totallyTimeSpent" value="7664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,12 +1055,11 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16950959" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17590618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -363,6 +1075,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50053304" side_tool="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Unity" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -613,12 +1326,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.ptc.vuforia.engine@8.3.9/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="57" column="65" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="65" />
+        <state relative-caret-position="105">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
-            <marker date="1570295388569" expanded="false" signature="6:119" ph="..." />
             <marker date="1570295388569" expanded="true" signature="218:3218" ph="{...}" />
             <marker date="1570295388569" expanded="true" signature="283:506" ph="{...}" />
             <marker date="1570295388569" expanded="true" signature="301:461" ph="{...}" />
@@ -639,6 +1358,18 @@
             <marker date="1570295388569" expanded="true" signature="2717:3216" ph="{...}" />
             <marker date="1570295388569" expanded="true" signature="3004:3094" ph="{...}" />
             <marker date="1570295388569" expanded="true" signature="3125:3210" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <marker date="1570739802451" expanded="true" signature="87:371" ph="{...}" />
+            <marker date="1570739802451" expanded="true" signature="171:247" ph="{...}" />
+            <marker date="1570739802451" expanded="true" signature="293:369" ph="{...}" />
           </folding>
         </state>
       </provider>

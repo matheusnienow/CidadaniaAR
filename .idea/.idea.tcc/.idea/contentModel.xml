@@ -45,6 +45,7 @@
             <e p="Level4Manager.cs" t="Include" />
           </e>
           <e p="MenuScript.cs" t="Include" />
+          <e p="MyTrackableEventHandler.cs" t="Include" />
           <e p="Observer" t="Include">
             <e p="EventPlayerDestinationReached.cs" t="Include" />
             <e p="Message.cs" t="Include" />
