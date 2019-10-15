@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.016666668
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4366f3253a4a9eb4f8544fe320d6f7c8, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1001 &298082175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5604,7 +5604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &634233600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6950,6 +6950,66 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 879698467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &882033614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882033615}
+  - component: {fileID: 882033616}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882033615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882033614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0390625, y: 0.0390625, z: 0.0390625}
+  m_Children: []
+  m_Father: {fileID: 1517070220}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882033616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882033614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.016666668
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1001 &883306643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10269,6 +10329,7 @@ Transform:
   - {fileID: 634233601}
   - {fileID: 11727478}
   - {fileID: 47981314}
+  - {fileID: 882033615}
   m_Father: {fileID: 1852443691}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14301,7 +14362,7 @@ PrefabInstance:
     - target: {fileID: 7391845182052657866, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.39
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 7391845182052657866, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}
