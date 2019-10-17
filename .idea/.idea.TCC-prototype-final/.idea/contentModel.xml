@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\mathe\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mathe\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TCC-prototype-final.521464024.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mathe\Documents\Projects\tcc" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshComponents.asmdef" t="Include" />
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="ActuatorButtonScript.cs" t="Include" />
+          <e p="CameraScript.cs" t="Include" />
+          <e p="Command" t="Include">
+            <e p="ActivateEntityCommand.cs" t="Include" />
+            <e p="BuildNavmeshCommand.cs" t="Include" />
+            <e p="ICommand.cs" t="Include" />
+            <e p="RotateEntityCommand.cs" t="Include" />
+          </e>
+          <e p="Enum" t="Include">
+            <e p="DirectionEnum.cs" t="Include" />
+          </e>
+          <e p="GameManager.cs" t="Include" />
+          <e p="Knob" t="Include">
+            <e p="KnobTargetController.cs" t="Include" />
+            <e p="KnobTargetVirtualButtonManager.cs" t="Include" />
+            <e p="KnobTextManager.cs" t="Include" />
+          </e>
+          <e p="LevelManager" t="Include">
+            <e p="Level4Manager.cs" t="Include" />
+          </e>
+          <e p="MenuScript.cs" t="Include" />
+          <e p="MyTrackableEventHandler.cs" t="Include" />
+          <e p="Observer" t="Include">
+            <e p="EventLevelTargetFound.cs" t="Include" />
+            <e p="EventMessage.cs" t="Include" />
+            <e p="EventPlayerDestinationReached.cs" t="Include" />
+            <e p="Unsubscriber.cs" t="Include" />
+          </e>
+          <e p="PlayerMovementController.cs" t="Include" />
+          <e p="Puzzles" t="Include">
+            <e p="Base" t="Include">
+              <e p="AlwaysOnPuzzle.cs" t="Include" />
+              <e p="OneTimePuzzle.cs" t="Include" />
+              <e p="Puzzle.cs" t="Include" />
+            </e>
+            <e p="PuzzleBrokenObject.cs" t="Include" />
+            <e p="PuzzleIncompletePath.cs" t="Include" />
+          </e>
+          <e p="Util" t="Include">
+            <e p="VuforiaTools.cs" t="Include" />
+          </e>
+        </e>
+        <e p="StreamingAssets" t="Include">
+          <e p="Vuforia" t="Include">
+            <e p="tcc-device.xml" t="Include" />
+            <e p="tcc.xml" t="Include" />
+            <e p="VuforiaMars_Images.xml" t="Include" />
+            <e p="VuforiaMars_VuMark.xml" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="TCC-prototype-final.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

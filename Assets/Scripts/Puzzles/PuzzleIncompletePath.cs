@@ -26,30 +26,30 @@ namespace Puzzles
         public GameObject invisibleBlock;
         [FormerlySerializedAs("NavMesh")] public GameObject navMesh;
 
-        private Camera cam;
-        private Text text;    
-        private ICommand buildNavMeshCommand;
+        private Camera _cam;
+        private Text _text;    
+        private ICommand _buildNavMeshCommand;
 
-        private bool passageAllowed;
-        private bool wasPassageAllowed;
+        private bool _passageAllowed;
+        private bool _wasPassageAllowed;
 
         private new void Start()
         {
             base.Start();
-            cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-            text = GameObject.Find("DebugText").GetComponent<Text>();
+            _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+            _text = GameObject.Find("DebugText")?.GetComponent<Text>();
 
             var navMeshSurface = navMesh.GetComponent<NavMeshSurface>();
-            buildNavMeshCommand = new BuildNavMeshCommand(navMeshSurface);
+            _buildNavMeshCommand = new BuildNavMeshCommand(navMeshSurface);
         }
 
         private bool IsCameraDirectionCorrect()
         {
-            var camDirectionVector = cam.transform.forward;
+            var camDirectionVector = _cam.transform.forward;
             var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
 
             Debug.DrawRay(outOfPathBlock.transform.position, outOfPathBlockDirectionVector * 10, Color.red);
-            Debug.DrawRay(cam.transform.position, camDirectionVector * 10, Color.red);
+            Debug.DrawRay(_cam.transform.position, camDirectionVector * 10, Color.red);
 
             var dotAbs = Mathf.Abs(Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized));
 
@@ -78,7 +78,7 @@ namespace Puzzles
 
         private bool IsCameraPositionCorrect()
         {
-            var deltaY = outOfPathBlock.transform.position.y - cam.transform.position.y;
+            var deltaY = outOfPathBlock.transform.position.y - _cam.transform.position.y;
             var isYAxisCorrect = Mathf.Abs(deltaY) < cameraPositionThreshold;
 
             return isYAxisCorrect;
@@ -89,37 +89,37 @@ namespace Puzzles
             var camDirection = IsCameraDirectionCorrect();
             var camPosition = IsCameraPositionCorrect();
 
-            Debug.Log("DIRECTION: " + camDirection + " | POSITION: " + camPosition);
+            //Debug.Log("DIRECTION: " + camDirection + " | POSITION: " + camPosition);
 
             return camDirection && camPosition;
         }
 
         protected override void OnConditionMet()
         {
-            if (!wasPassageAllowed)
+            if (!_wasPassageAllowed)
             {
-                text.text = "PASSAGE ALLOWED";
+                if (_text!= null) _text.text = "PASSAGE ALLOWED";
                 BuildNavMesh(9);
             }
 
-            wasPassageAllowed = true;
+            _wasPassageAllowed = true;
         }
 
         protected override void OnConditionNotMet()
         {
-            if (wasPassageAllowed)
+            if (_wasPassageAllowed)
             {
-                text.text = "PASSAGE NOT ALLOWED";
+                if (_text!= null) _text.text = "PASSAGE NOT ALLOWED";
                 BuildNavMesh(0);
             }
 
-            wasPassageAllowed = false;
+            _wasPassageAllowed = false;
         }
 
         private void BuildNavMesh(int layer)
         {
             invisibleBlock.layer = layer;
-            buildNavMeshCommand.Execute();
+            _buildNavMeshCommand.Execute();
         }
 
         protected override Message GetOnNextMessage()

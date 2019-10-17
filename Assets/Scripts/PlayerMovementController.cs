@@ -1,30 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using Assets.Scripts.Observer;
+using Observer;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDestinationReached>
 {
-    private NavMeshAgent agent;
+    private NavMeshAgent _agent;
     private NavMeshAgent Agent
     {
         get
         {
-            if (agent == null)
+            if (_agent == null)
             {
-                agent = GetComponent<NavMeshAgent>();
+                _agent = GetComponent<NavMeshAgent>();
             }
 
-            return agent;
+            return _agent;
         }
         
-        set => agent = value;
+        set => _agent = value;
     }
 
     public GameObject Destination { private get; set; }
 
-    private List<IObserver<EventPlayerDestinationReached>> observers;
+    private List<IObserver<EventPlayerDestinationReached>> _observers;
 
     private void Start()
     {
@@ -39,10 +40,26 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
 
     public void Move()
     {
-
-        Debug.Log("PlayerMovementController: MOVING THE PLAYER TO DESTINATION: " + Destination.name);
         var destinationPosition = Destination.transform.position;
-        Agent.SetDestination(destinationPosition);
+        SetAgentDestination(destinationPosition);
+    }
+
+    private void SetAgentDestination(Vector3 destinationPosition)
+    {
+        var navMeshSurface = GameObject.Find("NavMeshSurface");
+        navMeshSurface.SetActive(true);
+        
+        var isOnNavMesh = Agent.isOnNavMesh;
+
+        if (isOnNavMesh)
+        {
+            Agent.SetDestination(destinationPosition);
+            Debug.Log("PlayerMovementController: MOVING THE PLAYER TO DESTINATION: " + Destination.name);
+        }
+        else
+        {
+            Debug.Log("PlayerMovementController: Agent is not active or is not in a NavMesh");
+        }
     }
 
     private void CheckDestination()
@@ -76,13 +93,13 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
     private void NotifyDestinationReached()
     {
         Debug.Log("PlayerMovementController: NOTIFYING DESTINATION REACHED");
-        if (observers == null || observers.Count == 0)
+        if (_observers == null || _observers.Count == 0)
         {
             Debug.Log("PlayerMovementController: OBSERVERS NULL");
             return;
         }
 
-        observers.ForEach(o =>
+        _observers.ForEach(o =>
         {
             o.OnNext(new EventPlayerDestinationReached(Destination));
             o.OnCompleted();
@@ -91,33 +108,16 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
 
     public IDisposable Subscribe(IObserver<EventPlayerDestinationReached> observer)
     {
-        if (observers == null)
+        if (_observers == null)
         {
-            observers = new List<IObserver<EventPlayerDestinationReached>>();
+            _observers = new List<IObserver<EventPlayerDestinationReached>>();
         }
 
-        if (!observers.Contains(observer))
+        if (!_observers.Contains(observer))
         {
-            observers.Add(observer);
+            _observers.Add(observer);
         }
 
-        return new Unsubscriber(observers, observer);
-    }
-
-    private class Unsubscriber : IDisposable
-    {
-        private List<IObserver<EventPlayerDestinationReached>> _observers;
-        private IObserver<EventPlayerDestinationReached> _observer;
-
-        public Unsubscriber(List<IObserver<EventPlayerDestinationReached>> observers, IObserver<EventPlayerDestinationReached> observer)
-        {
-            _observers = observers;
-            _observer = observer;
-        }
-
-        public void Dispose()
-        {
-            if (_observer != null) _observers.Remove(_observer);
-        }
+        return new Unsubscriber<EventPlayerDestinationReached>(_observers, observer);
     }
 }

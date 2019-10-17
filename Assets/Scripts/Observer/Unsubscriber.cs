@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Assets.Scripts.Observer
+namespace Observer
 {
-    public class Unsubscriber : IDisposable
+    public class Unsubscriber<T> : IDisposable
     {
-        private List<IObserver<Message>> _observers;
-        private IObserver<Message> _observer;
+        private readonly List<IObserver<T>> _observers;
+        private readonly IObserver<T> _observer;
 
-        public Unsubscriber(List<IObserver<Message>> observers, IObserver<Message> observer)
+        public Unsubscriber(List<IObserver<T>> observers, IObserver<T> observer)
         {
             _observers = observers;
             _observer = observer;
@@ -16,7 +16,7 @@ namespace Assets.Scripts.Observer
 
         public void Dispose()
         {
-            if (!(_observer == null)) _observers.Remove(_observer);
+            if (_observer != null) _observers.Remove(_observer);
         }
     }
 }

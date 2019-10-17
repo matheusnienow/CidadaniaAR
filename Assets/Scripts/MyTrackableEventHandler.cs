@@ -1,19 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Assets.Scripts.Observer;
+using Observer;
 using UnityEngine;
 
 public class MyTrackableEventHandler : DefaultTrackableEventHandler
 {
+    public GameObject map;
 
-    public GameObject player;
-    
     protected override void OnTrackingFound()
     {
         base.OnTrackingFound();
-        player.SetActive(true);
+        map.SetActive(true);
     }
 
     protected override void OnTrackingLost()
     {
         base.OnTrackingLost();
-        player.SetActive(false);
+        map.SetActive(false);
     }
 }

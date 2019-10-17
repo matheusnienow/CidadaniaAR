@@ -1,38 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using Assets.Scripts.Observer;
+using Observer;
 using UnityEngine;
 
 namespace Puzzles.Base
 {
     public abstract class Puzzle : MonoBehaviour, IObservable<Message>
     {
-        private List<IObserver<Message>> observers;
+        private List<IObserver<Message>> _observers;
 
         protected void Start()
         {
-            this.observers = new List<IObserver<Message>>();
+            this._observers = new List<IObserver<Message>>();
             
         }
 
         public IDisposable Subscribe(IObserver<Message> observer)
         {
-            if (!observers.Contains(observer))
-                observers.Add(observer);
+            if (!_observers.Contains(observer))
+                _observers.Add(observer);
 
-            return new Unsubscriber(observers, observer);
+            return new Unsubscriber<Message>(_observers, observer);
 
         }
 
         public void NotifyOnNext()
         {
-            if (observers == null)
+            if (_observers == null)
             {
                 return;
             }
 
             var onNextMessage = GetOnNextMessage();
-            observers.ForEach(o =>
+            _observers.ForEach(o =>
             {
                 o.OnNext(onNextMessage);
             });
@@ -40,7 +41,7 @@ namespace Puzzles.Base
 
         public void NotifyOnCompleted()
         {
-            observers?.ForEach(o =>
+            _observers?.ForEach(o =>
             {
                 o.OnCompleted();
             });
