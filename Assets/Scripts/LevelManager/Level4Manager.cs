@@ -29,9 +29,10 @@ namespace LevelManager
             {
                 return false;
             }
-            
-            Debug.Log("Level4Manager: SETTING CHECKPOINT " + ++checkPointIndex);
-            playerController.Destination = GameObject.Find("CheckPoint" + checkPointIndex);
+
+            checkPointIndex++;
+            Debug.Log("Level4Manager: SETTING CHECKPOINT " + checkPointIndex);
+            playerController.Destination = destination;
             playerController.Move();
             return true;
 

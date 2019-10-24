@@ -257,10 +257,10 @@ Transform:
   - {fileID: 1928669267}
   - {fileID: 299935300}
   - {fileID: 960911011}
+  - {fileID: 1483358565}
   - {fileID: 240744852}
   - {fileID: 72257931}
   - {fileID: 475780913}
-  - {fileID: 1483358565}
   - {fileID: 402882694}
   - {fileID: 649196585}
   - {fileID: 1515038508}
@@ -1087,7 +1087,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 3}
       propertyPath: m_Name
-      value: road_straight_mesh (23)
+      value: CheckPoint3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 3}
       propertyPath: m_Layer
@@ -5083,7 +5083,7 @@ Transform:
   m_LocalScale: {x: 151.6507, y: 4, z: 142.3}
   m_Children: []
   m_Father: {fileID: 11727478}
-  m_RootOrder: 34
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1483358566
 BoxCollider:
@@ -7264,6 +7264,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7391845182052266049, guid: bd145e29dc4e39e4db995286de0e3957,
+        type: 3}
+      propertyPath: destinationDistanceThreshold
+      value: 50.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391845182052266049, guid: bd145e29dc4e39e4db995286de0e3957,
+        type: 3}
+      propertyPath: distanceThreshold
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7391845182052657866, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7331,17 +7341,17 @@ PrefabInstance:
     - target: {fileID: 7391845182052266055, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}
       propertyPath: m_Speed
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7391845182052266055, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}
       propertyPath: m_Radius
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7391845182052266055, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7391845182052266055, guid: bd145e29dc4e39e4db995286de0e3957,
         type: 3}

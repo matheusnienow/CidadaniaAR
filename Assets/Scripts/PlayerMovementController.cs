@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using Assets.Scripts.Observer;
 using Observer;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDestinationReached>
 {
@@ -24,6 +26,8 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
     }
 
     public GameObject Destination { private get; set; }
+
+    public float distanceThreshold;
 
     private List<IObserver<EventPlayerDestinationReached>> _observers;
 
@@ -73,9 +77,9 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
         var destinationPosition = Destination.transform.position;
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        //Debug.Log("PlayerMovementController: Player to Destination distance: " + (distance < 0.5));
+        Debug.Log("PlayerMovementController: Player to Destination distance: " + distance);
 
-        if (distance < 0.5f)
+        if (distance < distanceThreshold)
         {
             OnDestinationReached();
         }
@@ -102,7 +106,6 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
         _observers.ForEach(o =>
         {
             o.OnNext(new EventPlayerDestinationReached(Destination));
-            o.OnCompleted();
         });
     }
 
