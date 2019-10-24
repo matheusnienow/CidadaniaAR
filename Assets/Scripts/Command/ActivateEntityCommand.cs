@@ -1,29 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Command;
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class ActivateEntityCommand : ICommand {
-    private GameObject Target { get; }
+namespace Command
+{
+    public class ActivateEntityCommand : ICommand {
+        private GameObject Target { get; }
 
-    public ActivateEntityCommand(GameObject target)
-    {
-        this.Target = target;
-    }
-
-    public void Execute()
-    {
-        if (Target != null)
+        public ActivateEntityCommand(GameObject target)
         {
-            Target.SetActive(true);
+            this.Target = target;
         }
-    }
 
-    public void Undo()
-    {
-        if (Target != null)
+        public void Execute()
         {
-            Target.SetActive(false);
+            if (Target != null)
+            {
+                Target.SetActive(true);
+            }
+        }
+
+        public void Undo()
+        {
+            if (Target != null)
+            {
+                Target.SetActive(false);
+            }
         }
     }
 }

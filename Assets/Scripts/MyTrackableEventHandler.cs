@@ -12,12 +12,12 @@ public class MyTrackableEventHandler : DefaultTrackableEventHandler
     protected override void OnTrackingFound()
     {
         base.OnTrackingFound();
-        map.SetActive(true);
+        //map.SetActive(true);
     }
 
     protected override void OnTrackingLost()
     {
         base.OnTrackingLost();
-        map.SetActive(false);
+        //map.SetActive(false);
     }
 }

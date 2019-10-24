@@ -1,6 +1,7 @@
 ﻿using System;
 using Assets.Scripts.Observer;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.Serialization;
 
 namespace LevelManager
@@ -10,13 +11,14 @@ namespace LevelManager
         [FormerlySerializedAs("EndPanel")] public GameObject endPanel;
         [FormerlySerializedAs("PlayerController")] public PlayerMovementController playerController;
         public MyTrackableEventHandler levelTargetHandler;
-
+        public Vector3 spawnPosition;
         public int checkPointIndex = 0;
         private IDisposable _unsubscriber;
 
         private void Start()
         {
             _unsubscriber = playerController.Subscribe(this);
+            //playerController.Warp(spawnPosition);
             SetNextCheckPoint(checkPointIndex);
         }
 

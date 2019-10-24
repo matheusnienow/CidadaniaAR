@@ -29,6 +29,7 @@
           <e p="Command" t="Include">
             <e p="ActivateEntityCommand.cs" t="Include" />
             <e p="BuildNavmeshCommand.cs" t="Include" />
+            <e p="DeactivateEntityCommand.cs" t="Include" />
             <e p="ICommand.cs" t="Include" />
             <e p="RotateEntityCommand.cs" t="Include" />
           </e>

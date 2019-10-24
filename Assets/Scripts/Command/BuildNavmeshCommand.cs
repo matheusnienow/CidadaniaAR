@@ -1,4 +1,7 @@
-﻿using UnityEngine.AI;
+﻿using System.Diagnostics;
+using UnityEngine.AI;
+using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace Command
 {
@@ -14,6 +17,7 @@ namespace Command
         {
             if (NavMeshSurface != null)
             {
+                Debug.Log("BUILDING NAVMESH!");
                 NavMeshSurface.BuildNavMesh();
             }
         }

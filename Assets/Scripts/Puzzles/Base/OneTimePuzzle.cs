@@ -2,11 +2,11 @@
 {
     public abstract class OneTimePuzzle : Puzzle
     {
-        private bool isCompleted;
+        private bool _isCompleted;
 
         protected void Update()
         {
-            if (isCompleted)
+            if (_isCompleted)
             {
                 return;
             }
@@ -17,7 +17,7 @@
                 return;
             }
             
-            isCompleted = true;
+            _isCompleted = true;
             OnConditionMet();
         }
     }

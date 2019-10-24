@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Observer;
+using Command;
 using Puzzles.Base;
 using UnityEngine;
 using UnityEngine.UI;

@@ -73,9 +73,9 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
         var destinationPosition = Destination.transform.position;
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        Debug.Log("PlayerMovementController: Player to Destination distance: " + (distance < 0.5));
+        //Debug.Log("PlayerMovementController: Player to Destination distance: " + (distance < 0.5));
 
-        if (distance < 0.5)
+        if (distance < 0.5f)
         {
             OnDestinationReached();
         }
@@ -119,5 +119,10 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
         }
 
         return new Unsubscriber<EventPlayerDestinationReached>(_observers, observer);
+    }
+
+    public void Warp(Vector3 position)
+    {
+        Agent.Warp(position);
     }
 }
