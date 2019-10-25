@@ -64,6 +64,7 @@
             <e p="PuzzleIncompletePath.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
+            <e p="PuzzleTools.cs" t="Include" />
             <e p="VuforiaTools.cs" t="Include" />
           </e>
         </e>

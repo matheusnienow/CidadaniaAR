@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\mathe\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\mathe\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_tcc.-746053261.00" t="ExcludeRecursive" />
-    <e p="C:\Users\mathe\Documents\Projects\Unity\tcc" t="IncludeRecursive">
+    <e p="C:\Users\mathe\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mathe\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_tcc.-1744034158.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mathe\Documents\Projects\backup\tcc" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="NavMeshComponents" t="Include">
@@ -29,6 +29,7 @@
           <e p="Command" t="Include">
             <e p="ActivateEntityCommand.cs" t="Include" />
             <e p="BuildNavmeshCommand.cs" t="Include" />
+            <e p="DeactivateEntityCommand.cs" t="Include" />
             <e p="ICommand.cs" t="Include" />
             <e p="RotateEntityCommand.cs" t="Include" />
           </e>
@@ -47,8 +48,9 @@
           <e p="MenuScript.cs" t="Include" />
           <e p="MyTrackableEventHandler.cs" t="Include" />
           <e p="Observer" t="Include">
+            <e p="EventLevelTargetFound.cs" t="Include" />
+            <e p="EventMessage.cs" t="Include" />
             <e p="EventPlayerDestinationReached.cs" t="Include" />
-            <e p="Message.cs" t="Include" />
             <e p="Unsubscriber.cs" t="Include" />
           </e>
           <e p="PlayerMovementController.cs" t="Include" />
@@ -62,6 +64,7 @@
             <e p="PuzzleIncompletePath.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
+            <e p="PuzzleTools.cs" t="Include" />
             <e p="VuforiaTools.cs" t="Include" />
           </e>
         </e>
@@ -99,15 +102,12 @@
           </e>
         </e>
       </e>
-      <e p="Library" t="ExcludeRecursive" />
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
       <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="tcc.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

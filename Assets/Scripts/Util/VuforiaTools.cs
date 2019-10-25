@@ -1,21 +1,22 @@
 ﻿using UnityEngine;
 using Vuforia;
 
-public static class VuforiaTools
+namespace Util
 {
-    public static bool IsBeingTracked(string imageTargetName)
+    public static class VuforiaTools
     {
-        var imageTarget = GameObject.Find(imageTargetName);
-
-        if (!imageTarget)
+        public static bool IsBeingTracked(string imageTargetName)
         {
-            return false;
+            var imageTarget = GameObject.Find(imageTargetName);
+            if (!imageTarget)
+            {
+                return false;
+            }
+
+            var trackable = imageTarget.GetComponent<TrackableBehaviour>();
+            var status = trackable.CurrentStatus;
+
+            return status == TrackableBehaviour.Status.TRACKED;
         }
-
-        var trackable = imageTarget.GetComponent<TrackableBehaviour>();
-
-        var status = trackable.CurrentStatus;
-
-        return status == TrackableBehaviour.Status.TRACKED;
     }
 }

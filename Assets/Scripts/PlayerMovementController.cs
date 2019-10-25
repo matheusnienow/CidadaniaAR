@@ -77,7 +77,7 @@ public class PlayerMovementController : MonoBehaviour, IObservable<EventPlayerDe
         var destinationPosition = Destination.transform.position;
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        Debug.Log("PlayerMovementController: Player to Destination distance: " + distance);
+        //Debug.Log("PlayerMovementController: Player to Destination distance: " + distance);
 
         if (distance < distanceThreshold)
         {
