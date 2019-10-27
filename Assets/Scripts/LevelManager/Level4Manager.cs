@@ -9,7 +9,7 @@ namespace LevelManager
     public class Level4Manager : MonoBehaviour, IObserver<EventPlayerDestinationReached>
     {
         [FormerlySerializedAs("EndPanel")] public GameObject endPanel;
-        [FormerlySerializedAs("PlayerController")] public PlayerMovementController playerController;
+        [FormerlySerializedAs("PlayerController")] public NavMeshAgentController playerController;
         public MyTrackableEventHandler levelTargetHandler;
         public Vector3 spawnPosition;
         public int checkPointIndex = 0;

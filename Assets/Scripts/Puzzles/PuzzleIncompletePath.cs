@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Transactions;
-using Assets.Scripts.Enum;
 using Assets.Scripts.Observer;
 using Command;
+using Enum;
 using Puzzles.Base;
 using UnityEngine;
 using UnityEngine.AI;
@@ -24,7 +24,7 @@ namespace Puzzles
         [SerializeField]
         public DirectionEnum outOfPathBlockDirection;
 
-        public GameObject invisibleBlock;
+        public GameObject obstacle;
 
         private Camera _cam;
         private Text _text;    
@@ -39,7 +39,6 @@ namespace Puzzles
             _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
             _text = GameObject.Find("DebugText")?.GetComponent<Text>();
 
-            var obstacle = invisibleBlock.transform.Find("Obstacle")?.gameObject;
             _command = new DeactivateEntityCommand(obstacle);
         }
 

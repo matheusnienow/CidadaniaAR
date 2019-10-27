@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Assets.Scripts.Observer;
+using LevelManager;
 using Observer;
 using UnityEngine;
 
@@ -18,6 +19,6 @@ public class MyTrackableEventHandler : DefaultTrackableEventHandler
     protected override void OnTrackingLost()
     {
         base.OnTrackingLost();
-        //map.SetActive(false);
+       // map.SetActive(false);
     }
 }

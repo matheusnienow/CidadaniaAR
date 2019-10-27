@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Enum;
+﻿using Enum;
 using UnityEngine;
 
 namespace Util
@@ -10,14 +10,18 @@ namespace Util
         {
             switch (direction)
             {
-                case DirectionEnum.FORWARD:
+                case DirectionEnum.Forward:
                     return target.transform.forward;
-                case DirectionEnum.BACKWARD:
+                case DirectionEnum.Backward:
                     return target.transform.forward * -1;
-                case DirectionEnum.RIGHT:
+                case DirectionEnum.Right:
                     return target.transform.right;
-                case DirectionEnum.LEFT:
+                case DirectionEnum.Left:
                     return target.transform.right * -1;
+                case DirectionEnum.Up:
+                    return target.transform.up;
+                case DirectionEnum.Down:
+                    return target.transform.up * -1;
                 default:
                     return target.transform.forward;
             }

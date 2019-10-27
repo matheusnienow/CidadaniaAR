@@ -1,7 +1,7 @@
 ﻿using System.Transactions;
-using Assets.Scripts.Enum;
 using Assets.Scripts.Observer;
 using Command;
+using Enum;
 using Puzzles.Base;
 using UnityEngine;
 using UnityEngine.UI;
