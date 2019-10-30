@@ -5,8 +5,7 @@ namespace Util
 {
     public static class PuzzleTools
     {
-        
-        public static Vector3 GetDirection(GameObject target, DirectionEnum direction)
+        private static Vector3 GetDirection(GameObject target, DirectionEnum direction)
         {
             switch (direction)
             {
@@ -45,7 +44,6 @@ namespace Util
             var camY = cam.transform.position.y;
             var blockY = outOfPathBlock.transform.position.y;
             var deltaY = blockY - camY;
-            Debug.Log("Block Y: "+blockY+", Cam Y: "+camY +" | Delta Y: "+deltaY);
             
             var isYAxisCorrect = Mathf.Abs(deltaY) < positionThreshold;
             return isYAxisCorrect;

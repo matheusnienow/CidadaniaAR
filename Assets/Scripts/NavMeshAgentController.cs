@@ -44,7 +44,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
 
     public void Move()
     {
-        var destinationPosition = Destination.transform.position;
+        var destinationPosition = Destination.GetComponent<Renderer>().bounds.center;
         SetAgentDestination(destinationPosition);
     }
 
@@ -74,10 +74,10 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         }
 
         var currentPosition = transform.position;
-        var destinationPosition = Destination.transform.position;
+        var destinationPosition = Destination.GetComponent<Renderer>().bounds.center;
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        //Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
+        Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
 
         if (distance < distanceThreshold)
         {
