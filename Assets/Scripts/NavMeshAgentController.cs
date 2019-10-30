@@ -4,10 +4,10 @@ using Assets.Scripts.Observer;
 using Observer;
 using UnityEngine;
 using UnityEngine.AI;
+using Util;
 
 public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDestinationReached>
 {
-   
     public GameObject Destination { private get; set; }
 
     public float distanceThreshold;
@@ -44,7 +44,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
 
     public void Move()
     {
-        var destinationPosition = Destination.GetComponent<Renderer>().bounds.center;
+        var destinationPosition = PuzzleTools.GetGameObjectBase(Destination);
         SetAgentDestination(destinationPosition);
     }
 
@@ -74,7 +74,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         }
 
         var currentPosition = transform.position;
-        var destinationPosition = Destination.GetComponent<Renderer>().bounds.center;
+        var destinationPosition = PuzzleTools.GetGameObjectBase(Destination);
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
         Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);

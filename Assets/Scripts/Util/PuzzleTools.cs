@@ -48,5 +48,13 @@ namespace Util
             var isYAxisCorrect = Mathf.Abs(deltaY) < positionThreshold;
             return isYAxisCorrect;
         }
+
+        public static Vector3 GetGameObjectBase(GameObject g)
+        {
+            var center = g.GetComponent<Renderer>().bounds.center;
+            var y = g.transform.position.y;
+
+            return new Vector3(center.x, y, center.z);
+        }
     }
 }
