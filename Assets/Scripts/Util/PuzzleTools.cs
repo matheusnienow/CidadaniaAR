@@ -31,7 +31,7 @@ namespace Util
             var camDirectionVector = cam.transform.forward;
             var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
 
-            var dotAbs = Mathf.Abs(Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized));
+            var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
 
             var maxValue = (1 + directionThreshold);
             var minValue = (1 - directionThreshold);
