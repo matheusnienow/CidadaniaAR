@@ -8,7 +8,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CheckPointInfo.cs" t="Include" />
+        <e p="FloatingBehaviour.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsEditor.asmdef" t="Include" />
@@ -26,7 +26,6 @@
             <e p="NavMeshSurface.cs" t="Include" />
           </e>
         </e>
-        <e p="PlayerMovementController.cs" t="Include" />
         <e p="SampleScenes" t="Include">
           <e p="Menu" t="Include">
             <e p="Scripts" t="Include">
@@ -49,6 +48,7 @@
         <e p="Scripts" t="Include">
           <e p="ActuatorButtonScript.cs" t="Include" />
           <e p="CameraScript.cs" t="Include" />
+          <e p="CheckPointInfo.cs" t="Include" />
           <e p="Command" t="Include">
             <e p="ActivateEntityCommand.cs" t="Include" />
             <e p="BuildNavmeshCommand.cs" t="Include" />
@@ -77,6 +77,7 @@
             <e p="EventPlayerDestinationReached.cs" t="Include" />
             <e p="Unsubscriber.cs" t="Include" />
           </e>
+          <e p="PlayerMovementController.cs" t="Include" />
           <e p="Puzzles" t="Include">
             <e p="Base" t="Include">
               <e p="AlwaysOnPuzzle.cs" t="Include" />
@@ -91,6 +92,23 @@
             <e p="VuforiaTools.cs" t="Include" />
           </e>
         </e>
+        <e p="Sketchfab For Unity" t="Include">
+          <e p="Dependencies" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="GLTFBumpToNormal.shader" t="Include" />
+              <e p="GLTFColorSpace.cginc" t="Include" />
+              <e p="GLTFFlipTexture.shader" t="Include" />
+              <e p="GLTFPackOccMetalRough.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="SketchfabApi.cs" t="Include" />
+            <e p="SketchfabExporter.cs" t="Include" />
+            <e p="SketchfabImporter.cs" t="Include" />
+            <e p="SketchfabPlugin.cs" t="Include" />
+          </e>
+        </e>
+        <e p="SpinningBehaviour.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
@@ -365,6 +383,8 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="TextTutorial.uss" t="Include" />
+        <e p="TextTutorial.uxml" t="Include" />
       </e>
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
       <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />

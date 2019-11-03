@@ -287,6 +287,18 @@
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="GLTFSerialization">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Unity">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityGLTF">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>

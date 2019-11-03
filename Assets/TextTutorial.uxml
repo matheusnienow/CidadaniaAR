@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="panel" style="height: 180px; -unity-background-image-tint-color: rgb(0, 0, 0); background-color: rgba(168, 168, 168, 255); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-color: rgba(0, 0, 0, 255); border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px;">
+        <Style path="Assets/TextTutorial.uss" />
+        <ui:Label text="Label" name="text" style="height: 155px; width: 735px; position: relative; left: 5px; top: 5px; right: 15px; bottom: 1px; overflow: visible; visibility: visible; display: flex; font-size: 20px; -unity-font-style: bold;" />
+    </ui:VisualElement>
+</ui:UXML>
