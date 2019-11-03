@@ -266,6 +266,18 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="GLTFSerialization">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Unity">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityGLTF">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
+ </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.ptc.vuforia.engine@8.3.9/Vuforia/Plugins/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
@@ -286,18 +298,6 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="GLTFSerialization">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
- </Reference>
- <Reference Include="Ionic.Zip.Unity">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
- </Reference>
- <Reference Include="UnityGLTF">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

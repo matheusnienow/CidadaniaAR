@@ -56,7 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FloatingBehaviour.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -66,25 +65,27 @@
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\ActuatorButtonScript.cs" />
-     <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\CameraTutorial.cs" />
      <Compile Include="Assets\Scripts\CheckPointInfo.cs" />
      <Compile Include="Assets\Scripts\Command\ActivateEntityCommand.cs" />
      <Compile Include="Assets\Scripts\Command\BuildNavmeshCommand.cs" />
      <Compile Include="Assets\Scripts\Command\DeactivateEntityCommand.cs" />
      <Compile Include="Assets\Scripts\Command\ICommand.cs" />
      <Compile Include="Assets\Scripts\Command\RotateEntityCommand.cs" />
+     <Compile Include="Assets\Scripts\DesktopCameraController.cs" />
      <Compile Include="Assets\Scripts\Enum\DirectionEnum.cs" />
+     <Compile Include="Assets\Scripts\FloatingBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Knob\KnobTargetController.cs" />
      <Compile Include="Assets\Scripts\Knob\KnobTargetVirtualButtonManager.cs" />
      <Compile Include="Assets\Scripts\Knob\KnobTextManager.cs" />
-     <Compile Include="Assets\Scripts\LevelManager\Level4Manager.cs" />
+     <Compile Include="Assets\Scripts\LevelManager\TrainingLevelManager.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MyTrackableEventHandler.cs" />
      <Compile Include="Assets\Scripts\NavMeshAgentController.cs" />
-     <Compile Include="Assets\Scripts\Observer\EventLevelTargetFound.cs" />
      <Compile Include="Assets\Scripts\Observer\EventMessage.cs" />
      <Compile Include="Assets\Scripts\Observer\EventPlayerDestinationReached.cs" />
+     <Compile Include="Assets\Scripts\Observer\EventTargetTracking.cs" />
      <Compile Include="Assets\Scripts\Observer\Unsubscriber.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\Puzzles\Base\AlwaysOnPuzzle.cs" />
@@ -92,15 +93,13 @@
      <Compile Include="Assets\Scripts\Puzzles\Base\Puzzle.cs" />
      <Compile Include="Assets\Scripts\Puzzles\PuzzleBrokenObject.cs" />
      <Compile Include="Assets\Scripts\Puzzles\PuzzleIncompletePath.cs" />
+     <Compile Include="Assets\Scripts\SpinningBehaviour.cs" />
      <Compile Include="Assets\Scripts\Util\PuzzleTools.cs" />
      <Compile Include="Assets\Scripts\Util\VuforiaTools.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
-     <Compile Include="Assets\SpinningBehaviour.cs" />
-     <None Include="Assets\TextTutorial.uss" />
-     <None Include="Assets\TextTutorial.uxml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
@@ -175,6 +174,9 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.UI.Builder.Editor">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/ScriptAssemblies/Unity.UI.Builder.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
@@ -189,9 +191,6 @@
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.UI.Builder.Editor">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/ScriptAssemblies/Unity.UI.Builder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -364,6 +363,18 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
+ <Reference Include="GLTFSerialization">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Unity">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityGLTF">
+ <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
+ </Reference>
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.ptc.vuforia.engine@8.3.9/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
@@ -375,18 +386,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="GLTFSerialization">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
- </Reference>
- <Reference Include="Ionic.Zip.Unity">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
- </Reference>
- <Reference Include="UnityGLTF">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

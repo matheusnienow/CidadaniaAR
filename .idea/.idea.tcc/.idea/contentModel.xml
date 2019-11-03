@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="FloatingBehaviour.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsEditor.asmdef" t="Include" />
@@ -47,7 +46,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ActuatorButtonScript.cs" t="Include" />
-          <e p="CameraScript.cs" t="Include" />
+          <e p="CameraTutorial.cs" t="Include" />
           <e p="CheckPointInfo.cs" t="Include" />
           <e p="Command" t="Include">
             <e p="ActivateEntityCommand.cs" t="Include" />
@@ -56,9 +55,11 @@
             <e p="ICommand.cs" t="Include" />
             <e p="RotateEntityCommand.cs" t="Include" />
           </e>
+          <e p="DesktopCameraController.cs" t="Include" />
           <e p="Enum" t="Include">
             <e p="DirectionEnum.cs" t="Include" />
           </e>
+          <e p="FloatingBehaviour.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Knob" t="Include">
             <e p="KnobTargetController.cs" t="Include" />
@@ -66,15 +67,15 @@
             <e p="KnobTextManager.cs" t="Include" />
           </e>
           <e p="LevelManager" t="Include">
-            <e p="Level4Manager.cs" t="Include" />
+            <e p="TrainingLevelManager.cs" t="Include" />
           </e>
           <e p="MenuScript.cs" t="Include" />
           <e p="MyTrackableEventHandler.cs" t="Include" />
           <e p="NavMeshAgentController.cs" t="Include" />
           <e p="Observer" t="Include">
-            <e p="EventLevelTargetFound.cs" t="Include" />
             <e p="EventMessage.cs" t="Include" />
             <e p="EventPlayerDestinationReached.cs" t="Include" />
+            <e p="EventTargetTracking.cs" t="Include" />
             <e p="Unsubscriber.cs" t="Include" />
           </e>
           <e p="PlayerMovementController.cs" t="Include" />
@@ -87,6 +88,7 @@
             <e p="PuzzleBrokenObject.cs" t="Include" />
             <e p="PuzzleIncompletePath.cs" t="Include" />
           </e>
+          <e p="SpinningBehaviour.cs" t="Include" />
           <e p="Util" t="Include">
             <e p="PuzzleTools.cs" t="Include" />
             <e p="VuforiaTools.cs" t="Include" />
@@ -108,7 +110,6 @@
             <e p="SketchfabPlugin.cs" t="Include" />
           </e>
         </e>
-        <e p="SpinningBehaviour.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
@@ -383,8 +384,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="TextTutorial.uss" t="Include" />
-        <e p="TextTutorial.uxml" t="Include" />
       </e>
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
       <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />

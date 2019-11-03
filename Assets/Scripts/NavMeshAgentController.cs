@@ -58,7 +58,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         if (isOnNavMesh)
         {
             Agent.SetDestination(destinationPosition);
-            //Debug.Log("NavMeshAgentController: MOVING THE PLAYER TO DESTINATION: " + Destination.name);
+            Debug.Log("NavMeshAgentController: MOVING THE PLAYER TO DESTINATION: " + Destination.name);
         }
         else
         {
@@ -77,7 +77,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         var destinationPosition = PuzzleTools.GetGameObjectBase(Destination);
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        //Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
+        Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
 
         if (distance < distanceThreshold)
         {
@@ -90,8 +90,8 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         Debug.Log("NavMeshAgentController: Destination reached");
         Agent.isStopped = true;
         Agent.ResetPath();
-        Destination = null;
         NotifyDestinationReached();
+        Destination = null;
     }
 
     private void NotifyDestinationReached()
