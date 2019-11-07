@@ -100,6 +100,7 @@
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
      <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
+     <Compile Include="Assets\ZoomBehaviour.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />

@@ -21,7 +21,7 @@ namespace LevelManager
         public NavMeshAgentController playerController;
 
         public MyTrackableEventHandler levelTargetHandler;
-        public int checkPointIndex;
+        private int _checkPointIndex;
         public GameObject objectiveObject;
 
         private IDisposable _playerControllerUnsubscriber;
@@ -33,7 +33,7 @@ namespace LevelManager
         private void Start()
         {
             _isTutorialStarted = false;
-            checkPointIndex = 0;
+            _checkPointIndex = 0;
             _playerControllerUnsubscriber = playerController.Subscribe(this);
             _targetUnsubscriber = levelTargetHandler.Subscribe(this);
 
@@ -106,11 +106,11 @@ namespace LevelManager
 
         private bool SetNextCheckPoint()
         {
-            var nextIndex = checkPointIndex + 1;
+            var nextIndex = _checkPointIndex + 1;
             var result = SetCheckPointDestination(nextIndex);
             if (result)
             {
-                checkPointIndex = nextIndex;
+                _checkPointIndex = nextIndex;
             }
 
             return result;
@@ -128,7 +128,7 @@ namespace LevelManager
             playerController.Destination = destination;
             playerController.Move();
 
-            checkPointIndex = index;
+            _checkPointIndex = index;
 
             return true;
         }
