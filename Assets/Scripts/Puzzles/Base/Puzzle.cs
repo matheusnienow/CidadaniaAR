@@ -6,36 +6,29 @@ using UnityEngine;
 
 namespace Puzzles.Base
 {
-    public abstract class Puzzle : MonoBehaviour, IObservable<Message>
+    public abstract class Puzzle : MonoBehaviour, IObservable<EventPuzzle>
     {
-        private List<IObserver<Message>> _observers;
+        private List<IObserver<EventPuzzle>> _observers;
 
         protected void Start()
         {
-            this._observers = new List<IObserver<Message>>();
-            
+            _observers = new List<IObserver<EventPuzzle>>();
         }
 
-        public IDisposable Subscribe(IObserver<Message> observer)
+        public IDisposable Subscribe(IObserver<EventPuzzle> observer)
         {
             if (!_observers.Contains(observer))
                 _observers.Add(observer);
 
-            return new Unsubscriber<Message>(_observers, observer);
+            return new Unsubscriber<EventPuzzle>(_observers, observer);
 
         }
 
-        public void NotifyOnNext()
+        protected void NotifyOnNext(EventPuzzle eventPuzzle)
         {
-            if (_observers == null)
+            _observers?.ForEach(o =>
             {
-                return;
-            }
-
-            var onNextMessage = GetOnNextMessage();
-            _observers.ForEach(o =>
-            {
-                o.OnNext(onNextMessage);
+                o.OnNext(eventPuzzle);
             });
         }
 
@@ -46,8 +39,6 @@ namespace Puzzles.Base
                 o.OnCompleted();
             });
         }
-
-        protected abstract Message GetOnNextMessage();
 
         protected abstract bool IsConditionMet();
 

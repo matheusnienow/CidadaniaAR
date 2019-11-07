@@ -2,6 +2,7 @@
 using Assets.Scripts.Observer;
 using Command;
 using Enum;
+using Observer;
 using Puzzles.Base;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,11 +39,6 @@ namespace Puzzles
             TimeThreshold = 2f;
         }
 
-        protected override Message GetOnNextMessage()
-        {
-            throw new System.NotImplementedException();
-        }
-
         protected override bool IsConditionMet()
         {
 
@@ -62,6 +58,7 @@ namespace Puzzles
             {
                 _text.text = "PUZZLE UNLOCKED";
                 _command.Execute();
+                NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved, true));
             }
             
             _wasOk = true;
@@ -72,6 +69,7 @@ namespace Puzzles
             if (_wasOk)
             {
                 _text.text = "MONKEY NOT VISIBLE";
+                NotifyOnNext(new EventPuzzle(EPuzzleStatus.NotSolved));
             }
             
             _wasOk = false;
@@ -79,6 +77,7 @@ namespace Puzzles
 
         protected override void OnIsConditionMet(float timer)
         {
+            NotifyOnNext(new EventPuzzle(EPuzzleStatus.InProgress));
             _text.text = "MONKEY VISIBLE ("+timer+")";
         }
     }

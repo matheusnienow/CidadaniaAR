@@ -3,6 +3,7 @@ using System.Transactions;
 using Assets.Scripts.Observer;
 using Command;
 using Enum;
+using Observer;
 using Puzzles.Base;
 using UnityEngine;
 using UnityEngine.AI;
@@ -60,6 +61,7 @@ namespace Puzzles
             {
                 if (_text != null) _text.text = "PASSAGE ALLOWED";
                 _command.Execute();
+                NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved));
             }
 
             _wasPassageAllowed = true;
@@ -70,14 +72,10 @@ namespace Puzzles
             if (_wasPassageAllowed)
             {
                 _command.Undo();
+                NotifyOnNext(new EventPuzzle(EPuzzleStatus.NotSolved));
             }
 
             _wasPassageAllowed = false;
-        }
-
-        protected override Message GetOnNextMessage()
-        {
-            throw new NotImplementedException();
         }
     }
 }

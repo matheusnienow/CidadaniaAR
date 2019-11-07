@@ -58,6 +58,7 @@
           <e p="DesktopCameraController.cs" t="Include" />
           <e p="Enum" t="Include">
             <e p="DirectionEnum.cs" t="Include" />
+            <e p="EPuzzleStatus.cs" t="Include" />
           </e>
           <e p="FloatingBehaviour.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
@@ -73,8 +74,8 @@
           <e p="MyTrackableEventHandler.cs" t="Include" />
           <e p="NavMeshAgentController.cs" t="Include" />
           <e p="Observer" t="Include">
-            <e p="EventMessage.cs" t="Include" />
             <e p="EventPlayerDestinationReached.cs" t="Include" />
+            <e p="EventPuzzle.cs" t="Include" />
             <e p="EventTargetTracking.cs" t="Include" />
             <e p="Unsubscriber.cs" t="Include" />
           </e>

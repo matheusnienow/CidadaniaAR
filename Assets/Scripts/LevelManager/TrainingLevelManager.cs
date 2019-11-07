@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Threading;
 using Assets.Scripts.Observer;
+using Enum;
 using Observer;
+using Puzzles;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -11,22 +13,28 @@ using UnityEngine.UI;
 
 namespace LevelManager
 {
+    [RequireComponent(typeof(PuzzleBrokenObject))]
     public class TrainingLevelManager : MonoBehaviour, IObserver<EventPlayerDestinationReached>,
-        IObserver<EventTargetTracking>
+        IObserver<EventTargetTracking>, IObserver<EventPuzzle>
     {
         [FormerlySerializedAs("EndPanel")] public GameObject endPanel;
-        public GameObject UI;
 
         [FormerlySerializedAs("PlayerController")]
-        public NavMeshAgentController playerController;
+        [SerializeField] private NavMeshAgentController playerController;
 
-        public MyTrackableEventHandler levelTargetHandler;
-        private int _checkPointIndex;
-        public GameObject objectiveObject;
+        [SerializeField] private MyTrackableEventHandler levelTargetHandler;
+        [SerializeField] private GameObject objectiveObject;
 
+        [SerializeField] private PuzzleIncompletePath puzzleIncompletePath;
+        [SerializeField] private PuzzleBrokenObject puzzleMonkey;
+
+        [SerializeField] private GameObject greenPanel;
+        [SerializeField] private GameObject yellowPanel;
+        
         private IDisposable _playerControllerUnsubscriber;
         private IDisposable _targetUnsubscriber;
         private TextMeshProUGUI _objectiveText;
+        private int _checkPointIndex;
 
         private bool _isTutorialStarted;
 
@@ -38,6 +46,9 @@ namespace LevelManager
             _targetUnsubscriber = levelTargetHandler.Subscribe(this);
 
             _objectiveText = objectiveObject != null ? objectiveObject.GetComponent<TextMeshProUGUI>() : null;
+
+            if (puzzleIncompletePath != null) puzzleIncompletePath.Subscribe(this);
+            if (puzzleMonkey != null) puzzleMonkey.Subscribe(this);
         }
 
         private IEnumerator StartTutorial()
@@ -168,7 +179,7 @@ namespace LevelManager
             var result = SetNextCheckPoint();
             if (!result)
             {
-                GameManager.OnLevelCompleted(endPanel, UI);
+                GameManager.OnLevelCompleted(endPanel);
             }
         }
 
@@ -180,6 +191,42 @@ namespace LevelManager
             }
         }
 
+        public void OnNext(EventPuzzle puzzleEvent)
+        {
+            bool showGreenPane;
+            bool showYellowPane;
+            
+            switch (puzzleEvent.Status)
+            {
+                case EPuzzleStatus.InProgress:
+                    showGreenPane = false;
+                    showYellowPane = true;
+                    break;
+                case EPuzzleStatus.Solved:
+                    showYellowPane = false;
+                    showGreenPane = true;
+                    break;
+                default:
+                    showGreenPane = false;
+                    showYellowPane = false;
+                    break;
+            }
+            
+            greenPanel.SetActive(showGreenPane);
+            yellowPanel.SetActive(showYellowPane);
+
+            if (puzzleEvent.IsTimed)
+            {
+                StartCoroutine(DisableAfterSeconds(greenPanel, 3));
+            }
+        }
+
+        private IEnumerator DisableAfterSeconds(GameObject target, int seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            target.SetActive(false);
+        }
+
         void IObserver<EventPlayerDestinationReached>.OnCompleted()
         {
             _playerControllerUnsubscriber.Dispose();
@@ -189,7 +236,7 @@ namespace LevelManager
         {
             _targetUnsubscriber.Dispose();
         }
-
+        
         void IObserver<EventPlayerDestinationReached>.OnError(Exception error)
         {
             throw new NotImplementedException();

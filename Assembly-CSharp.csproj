@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\Command\RotateEntityCommand.cs" />
      <Compile Include="Assets\Scripts\DesktopCameraController.cs" />
      <Compile Include="Assets\Scripts\Enum\DirectionEnum.cs" />
+     <Compile Include="Assets\Scripts\Enum\EPuzzleStatus.cs" />
      <Compile Include="Assets\Scripts\FloatingBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Knob\KnobTargetController.cs" />
@@ -83,8 +84,8 @@
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MyTrackableEventHandler.cs" />
      <Compile Include="Assets\Scripts\NavMeshAgentController.cs" />
-     <Compile Include="Assets\Scripts\Observer\EventMessage.cs" />
      <Compile Include="Assets\Scripts\Observer\EventPlayerDestinationReached.cs" />
+     <Compile Include="Assets\Scripts\Observer\EventPuzzle.cs" />
      <Compile Include="Assets\Scripts\Observer\EventTargetTracking.cs" />
      <Compile Include="Assets\Scripts\Observer\Unsubscriber.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
