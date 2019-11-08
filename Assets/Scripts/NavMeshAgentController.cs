@@ -77,7 +77,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         var destinationPosition = PuzzleTools.GetGameObjectBase(Destination);
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
-        Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
+        //Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
 
         if (distance < distanceThreshold)
         {

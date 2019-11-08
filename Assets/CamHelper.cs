@@ -22,12 +22,7 @@ public class CamHelper : MonoBehaviour
         var deltaZ = PuzzleTools.GetDirectionDifference(gameObject, target, targetDirection);
 
         var blockCenter = target.GetComponent<Renderer>().bounds.center;
-        var camPosition = transform.position;
-        
-        var deltaX = PuzzleTools.GetXDifference(camPosition, blockCenter);
-        var deltaY = PuzzleTools.GetYDifference(camPosition, blockCenter);
-        
-        var desiredLocation = new Vector3(deltaX, deltaY, deltaZ);
+        var desiredLocation = new Vector3(blockCenter.x, blockCenter.y, blockCenter.z - 1000);
         arrow.transform.LookAt(desiredLocation);
     }
 }

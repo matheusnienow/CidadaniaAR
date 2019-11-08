@@ -21,6 +21,7 @@ namespace Puzzles.Base
             if (!isResolved)
             {
                 _timer = 0;
+                OnConditionNotMet();
                 return;
             }
             

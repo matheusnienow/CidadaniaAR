@@ -15,17 +15,15 @@ namespace Puzzles
         private Camera _cam;
 
         public GameObject brokenObject;
-        [SerializeField]
-        public DirectionEnum brokenObjectDirection;
+        [SerializeField] public DirectionEnum brokenObjectDirection;
         public GameObject obstacle;
-        public float secondsToUnlock;
-        [SerializeField, Range(0, 1f)]
-        public float directionThreshold;
-        [SerializeField, Range(0, 500f)]
-        public float positionThreshold;
-        
+        [SerializeField, Range(0, 1f)] public float directionThreshold;
+        [SerializeField, Range(0, 5000f)] public float positionXThreshold;
+        [SerializeField, Range(0, 500f)] public float positionYThreshold;
+
         private bool _isOk;
         private bool _wasOk;
+        private bool _wasVisible;
         private Text _text;
 
         private ICommand _command;
@@ -41,13 +39,13 @@ namespace Puzzles
 
         protected override bool IsConditionMet()
         {
-
             //var camDirection = IsCameraDirectionCorrect();
             var camDirection = PuzzleTools.IsCameraDirectionCorrect(_cam, brokenObject, brokenObjectDirection,
                 directionThreshold);
-            var camPosition = PuzzleTools.IsCameraPositionCorrect(_cam, brokenObject, positionThreshold);
+            var camPosition =
+                PuzzleTools.IsCameraPositionCorrect(_cam, brokenObject, positionXThreshold, positionYThreshold);
 
-            if (_text != null) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
+            //if (_text != null) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
 
             return camDirection && camPosition;
         }
@@ -60,13 +58,13 @@ namespace Puzzles
                 _command.Execute();
                 NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved, true));
             }
-            
+
             _wasOk = true;
         }
 
         protected override void OnConditionNotMet()
         {
-            if (_wasOk)
+            if (_wasVisible)
             {
                 _text.text = "MONKEY NOT VISIBLE";
                 NotifyOnNext(new EventPuzzle(EPuzzleStatus.NotSolved));
@@ -77,8 +75,9 @@ namespace Puzzles
 
         protected override void OnIsConditionMet(float timer)
         {
+            _wasVisible = true;
             NotifyOnNext(new EventPuzzle(EPuzzleStatus.InProgress));
-            _text.text = "MONKEY VISIBLE ("+timer+")";
+            _text.text = "MONKEY VISIBLE (" + timer + ")";
         }
     }
 }

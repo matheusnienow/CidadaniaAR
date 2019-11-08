@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b430f5f-ffcc-4460-8b13-9267ec594cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CamHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CamHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/arrow.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/arrow.obj.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/arrow_centered.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/arrow_centered.obj.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CamHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CamHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TrainingLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TrainingLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshAgentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NavMeshAgentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/ab/abb6db587b6ecb944b3ee832196a5e6a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ab/abb6db587b6ecb944b3ee832196a5e6a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,18 +83,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/EventTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MyTrackableEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/EventTargetTracking.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NavMeshAgentController.cs" />
         <option value="$PROJECT_DIR$/Assets/ZoomBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/EventMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enum/EPuzzleStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager/TrainingLevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NavMeshAgentController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/OneTimePuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" />
         <option value="$PROJECT_DIR$/Assets/CamHelper.cs" />
       </list>
     </option>
@@ -170,7 +173,8 @@
       <workItem from="1572715877805" duration="11557000" />
       <workItem from="1572793687759" duration="8685000" />
       <workItem from="1572989228299" duration="590000" />
-      <workItem from="1573163195123" duration="8797000" />
+      <workItem from="1573163195123" duration="8946000" />
+      <workItem from="1573247839966" duration="3009000" />
     </task>
     <servers />
   </component>

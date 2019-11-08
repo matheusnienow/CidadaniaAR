@@ -15,11 +15,13 @@ namespace Puzzles
 {
     public class PuzzleIncompletePath : AlwaysOnPuzzle
     {
-        [FormerlySerializedAs("CameraDirectionThreshold")] [SerializeField, Range(0, 1f)]
+        [SerializeField, Range(0, 1f)]
         public float cameraDirectionThreshold;
 
-        [FormerlySerializedAs("CameraPositionThreshold")] [SerializeField, Range(0, 500f)]
-        public float cameraPositionThreshold;
+        [SerializeField, Range(0, 500f)]
+        public float cameraYThreshold;
+        [SerializeField, Range(0, 500f)]
+        public float cameraXThreshold;
 
         public GameObject outOfPathBlock;
         [SerializeField]
@@ -48,7 +50,7 @@ namespace Puzzles
             //var camDirection = IsCameraDirectionCorrect();
             var camDirection = PuzzleTools.IsCameraDirectionCorrect(_cam, outOfPathBlock, outOfPathBlockDirection,
                 cameraDirectionThreshold);
-            var camPosition = PuzzleTools.IsCameraPositionCorrect(_cam, outOfPathBlock, cameraPositionThreshold);
+            var camPosition = PuzzleTools.IsCameraPositionCorrect(_cam, outOfPathBlock, cameraXThreshold, cameraYThreshold);
 
             if (_text != null) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
 

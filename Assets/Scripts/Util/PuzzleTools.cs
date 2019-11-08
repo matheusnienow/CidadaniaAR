@@ -49,15 +49,30 @@ namespace Util
             return dotAbs;
         }
 
-        public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float positionThreshold)
+        public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float cameraXThreshold,
+            float cameraYThreshold)
         {
             var camPosition = cam.gameObject.transform.position;
-            var blockPosition = outOfPathBlock.transform.position;
-            
-            var isYAxisCorrect = GetXDifference(camPosition, blockPosition) < positionThreshold;
-            var isXAxisCorrect = GetYDifference(camPosition, blockPosition) < positionThreshold;
+            var blockPosition = GetPosition(outOfPathBlock);
+
+            var deltaX = GetXDifference(camPosition, blockPosition);
+            var deltaY = GetYDifference(camPosition, blockPosition);
+
+            if (outOfPathBlock.name.Contains("AR"))
+            {
+                Debug.Log("PuzzleTools - deltaY: "+deltaY+"| deltaX: "+deltaX);    
+            }
+
+            var isYAxisCorrect = deltaY < cameraYThreshold;
+            var isXAxisCorrect = deltaX < cameraXThreshold;
 
             return isYAxisCorrect && isXAxisCorrect;
+        }
+
+        private static Vector3 GetPosition(GameObject gameObject)
+        {
+            var renderer = gameObject.GetComponent<Renderer>();
+            return renderer != null ? renderer.bounds.center : gameObject.transform.position;
         }
 
         public static float GetXDifference(Vector3 cam, Vector3 block)
