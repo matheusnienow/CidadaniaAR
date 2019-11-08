@@ -5,7 +5,7 @@ namespace Util
 {
     public static class PuzzleTools
     {
-        private static Vector3 GetDirection(GameObject target, DirectionEnum direction)
+        public static Vector3 GetDirection(GameObject target, DirectionEnum direction)
         {
             switch (direction)
             {
@@ -25,8 +25,9 @@ namespace Util
                     return target.transform.forward;
             }
         }
-        
-        public static bool IsCameraDirectionCorrect(Camera cam, GameObject outOfPathBlock, DirectionEnum outOfPathBlockDirection, float directionThreshold)
+
+        public static bool IsCameraDirectionCorrect(Camera cam, GameObject outOfPathBlock,
+            DirectionEnum outOfPathBlockDirection, float directionThreshold)
         {
             var camDirectionVector = cam.transform.forward;
             var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
@@ -38,15 +39,47 @@ namespace Util
 
             return dotAbs < maxValue && dotAbs > minValue;
         }
-        
+
+        public static float GetDirectionDifference(GameObject cam, GameObject block, DirectionEnum direction)
+        {
+            var camDirectionVector = cam.transform.forward;
+            var outOfPathBlockDirectionVector = GetDirection(block, direction);
+
+            var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized);
+            return dotAbs;
+        }
+
         public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float positionThreshold)
         {
-            var camY = cam.transform.position.y;
-            var blockY = outOfPathBlock.transform.position.y;
-            var deltaY = blockY - camY;
+            var camPosition = cam.gameObject.transform.position;
+            var blockPosition = outOfPathBlock.transform.position;
             
-            var isYAxisCorrect = Mathf.Abs(deltaY) < positionThreshold;
-            return isYAxisCorrect;
+            var isYAxisCorrect = GetXDifference(camPosition, blockPosition) < positionThreshold;
+            var isXAxisCorrect = GetYDifference(camPosition, blockPosition) < positionThreshold;
+
+            return isYAxisCorrect && isXAxisCorrect;
+        }
+
+        public static float GetXDifference(Vector3 cam, Vector3 block)
+        {
+            var camX = cam.x;
+            var blockX = block.x;
+
+            return AbsDifference(blockX, camX);
+        }
+
+        public static float GetYDifference(Vector3 cam, Vector3 block)
+        {
+            var camY = cam.y;
+            var blockY = block.y;
+
+            return AbsDifference(blockY, camY);
+        }
+
+        private static float AbsDifference(float n1, float n2)
+        {
+            var delta = n1 - n2;
+            return Mathf.Abs(delta);
         }
 
         public static Vector3 GetGameObjectBase(GameObject g)

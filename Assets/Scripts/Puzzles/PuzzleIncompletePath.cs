@@ -18,7 +18,7 @@ namespace Puzzles
         [FormerlySerializedAs("CameraDirectionThreshold")] [SerializeField, Range(0, 1f)]
         public float cameraDirectionThreshold;
 
-        [FormerlySerializedAs("CameraPositionThreshold")] [SerializeField, Range(0, 100f)]
+        [FormerlySerializedAs("CameraPositionThreshold")] [SerializeField, Range(0, 500f)]
         public float cameraPositionThreshold;
 
         public GameObject outOfPathBlock;
