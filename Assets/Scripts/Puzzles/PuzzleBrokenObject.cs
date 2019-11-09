@@ -1,5 +1,4 @@
 ﻿using System.Transactions;
-using Assets.Scripts.Observer;
 using Command;
 using Enum;
 using Observer;

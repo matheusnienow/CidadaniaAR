@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.Scripts.Observer;
 using Observer;
 using UnityEngine;
 

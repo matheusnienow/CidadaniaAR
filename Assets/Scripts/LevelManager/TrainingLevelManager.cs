@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Threading;
-using Assets.Scripts.Observer;
 using Enum;
 using Observer;
 using Puzzles;
@@ -19,8 +18,8 @@ namespace LevelManager
     {
         [FormerlySerializedAs("EndPanel")] public GameObject endPanel;
 
-        [FormerlySerializedAs("PlayerController")]
-        [SerializeField] private NavMeshAgentController playerController;
+        [FormerlySerializedAs("PlayerController")] [SerializeField]
+        private NavMeshAgentController playerController;
 
         [SerializeField] private MyTrackableEventHandler levelTargetHandler;
         [SerializeField] private GameObject objectiveObject;
@@ -30,12 +29,13 @@ namespace LevelManager
 
         [SerializeField] private GameObject greenPanel;
         [SerializeField] private GameObject yellowPanel;
-        
+
+        [SerializeField] private CamHelper camHelper;
+
         private IDisposable _playerControllerUnsubscriber;
         private IDisposable _targetUnsubscriber;
         private TextMeshProUGUI _objectiveText;
         private int _checkPointIndex;
-
         private bool _isTutorialStarted;
 
         private void Start()
@@ -73,7 +73,9 @@ namespace LevelManager
             yield return new WaitForSeconds(10);
 
             SetHelperMessage(
-                "Tente mover seu dispositivo de forma que seu ponto de perspectiva crie um caminho para o personagem.");
+                "Tente mover seu dispositivo de forma que seu ponto de perspectiva crie um caminho para o personagem. " +
+                "A flecha na parte superior da tela aponta para o objeto que deve ser visualizado");
+            camHelper.Init();
         }
 
         private IEnumerator StartPart2()
@@ -86,6 +88,7 @@ namespace LevelManager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage("Visualize o letreiro com o nome do jogo para permitir a passagem do personagem!");
+            camHelper.FocusOnSign();
             yield return new WaitForSeconds(5);
         }
 
@@ -100,6 +103,7 @@ namespace LevelManager
             SetHelperMessage(
                 "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, né?");
             SetNextCheckPoint();
+            camHelper.FocusOnBridge();
             yield return new WaitForSeconds(5);
         }
 
@@ -195,7 +199,7 @@ namespace LevelManager
         {
             bool showGreenPane;
             bool showYellowPane;
-            
+
             switch (puzzleEvent.Status)
             {
                 case EPuzzleStatus.InProgress:
@@ -211,7 +215,7 @@ namespace LevelManager
                     showYellowPane = false;
                     break;
             }
-            
+
             greenPanel.SetActive(showGreenPane);
             yellowPanel.SetActive(showYellowPane);
 
@@ -236,7 +240,7 @@ namespace LevelManager
         {
             _targetUnsubscriber.Dispose();
         }
-        
+
         void IObserver<EventPlayerDestinationReached>.OnError(Exception error)
         {
             throw new NotImplementedException();

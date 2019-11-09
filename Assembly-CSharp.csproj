@@ -78,9 +78,6 @@
      <Compile Include="Assets\Scripts\Enum\EPuzzleStatus.cs" />
      <Compile Include="Assets\Scripts\FloatingBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Knob\KnobTargetController.cs" />
-     <Compile Include="Assets\Scripts\Knob\KnobTargetVirtualButtonManager.cs" />
-     <Compile Include="Assets\Scripts\Knob\KnobTextManager.cs" />
      <Compile Include="Assets\Scripts\LevelManager\TrainingLevelManager.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MyTrackableEventHandler.cs" />

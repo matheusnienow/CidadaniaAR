@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.Scripts.Observer;
 using Observer;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using Util;
 
 public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDestinationReached>
 {
     public GameObject Destination { private get; set; }
 
-    public float distanceThreshold;
+    [SerializeField] private float distanceThreshold;
 
     private List<IObserver<EventPlayerDestinationReached>> _observers;
-
     private NavMeshAgent _agent;
+    private Text _text;
+
     private NavMeshAgent Agent
     {
         get
@@ -26,12 +27,13 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
 
             return _agent;
         }
-        
+
         set => _agent = value;
     }
-    
+
     private void Start()
     {
+        _text = GameObject.Find("DistanceText")?.GetComponent<Text>();
         Agent = GetComponent<NavMeshAgent>();
         Agent.updatePosition = true;
     }
@@ -52,13 +54,13 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
     {
         var navMeshSurface = GameObject.Find("NavMeshSurface");
         navMeshSurface.SetActive(true);
-        
-        var isOnNavMesh = Agent.isOnNavMesh;
 
+        var isOnNavMesh = Agent.isOnNavMesh;
         if (isOnNavMesh)
         {
             Agent.SetDestination(destinationPosition);
-            Debug.Log("NavMeshAgentController: MOVING THE PLAYER TO DESTINATION: " + Destination.name);
+            Debug.Log("NavMeshAgentController: MOVING THE PLAYER TO DESTINATION: " + Destination.name + "(" +
+                      destinationPosition + ")");
         }
         else
         {
@@ -70,6 +72,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
     {
         if (Destination == null)
         {
+            _text.text = "Destination null";
             return;
         }
 
@@ -78,6 +81,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
 
         var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
         //Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
+        _text.text = distance.ToString();
 
         if (distance < distanceThreshold)
         {
@@ -91,11 +95,12 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
         Agent.isStopped = true;
         Agent.ResetPath();
         NotifyDestinationReached();
-        Destination = null;
     }
 
     private void NotifyDestinationReached()
     {
+        var destinationToNotify = Destination;
+        Destination = null;
         Debug.Log("NavMeshAgentController: NOTIFYING DESTINATION REACHED");
         if (_observers == null || _observers.Count == 0)
         {
@@ -103,10 +108,7 @@ public class NavMeshAgentController : MonoBehaviour, IObservable<EventPlayerDest
             return;
         }
 
-        _observers.ForEach(o =>
-        {
-            o.OnNext(new EventPlayerDestinationReached(Destination));
-        });
+        _observers.ForEach(o => { o.OnNext(new EventPlayerDestinationReached(destinationToNotify)); });
     }
 
     public IDisposable Subscribe(IObserver<EventPlayerDestinationReached> observer)

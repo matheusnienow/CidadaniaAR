@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Assets.Scripts.Observer;
 using LevelManager;
 using Observer;
 using UnityEngine;

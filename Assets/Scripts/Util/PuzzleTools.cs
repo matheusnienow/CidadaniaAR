@@ -5,7 +5,7 @@ namespace Util
 {
     public static class PuzzleTools
     {
-        public static Vector3 GetDirection(GameObject target, DirectionEnum direction)
+        private static Vector3 GetDirection(GameObject target, DirectionEnum direction)
         {
             switch (direction)
             {
@@ -58,24 +58,19 @@ namespace Util
             var deltaX = GetXDifference(camPosition, blockPosition);
             var deltaY = GetYDifference(camPosition, blockPosition);
 
-            if (outOfPathBlock.name.Contains("AR"))
-            {
-                Debug.Log("PuzzleTools - deltaY: "+deltaY+"| deltaX: "+deltaX);    
-            }
-
             var isYAxisCorrect = deltaY < cameraYThreshold;
             var isXAxisCorrect = deltaX < cameraXThreshold;
 
             return isYAxisCorrect && isXAxisCorrect;
         }
 
-        private static Vector3 GetPosition(GameObject gameObject)
+        public static Vector3 GetPosition(GameObject gameObject)
         {
             var renderer = gameObject.GetComponent<Renderer>();
             return renderer != null ? renderer.bounds.center : gameObject.transform.position;
         }
 
-        public static float GetXDifference(Vector3 cam, Vector3 block)
+        private static float GetXDifference(Vector3 cam, Vector3 block)
         {
             var camX = cam.x;
             var blockX = block.x;
@@ -83,7 +78,7 @@ namespace Util
             return AbsDifference(blockX, camX);
         }
 
-        public static float GetYDifference(Vector3 cam, Vector3 block)
+        private static float GetYDifference(Vector3 cam, Vector3 block)
         {
             var camY = cam.y;
             var blockY = block.y;
