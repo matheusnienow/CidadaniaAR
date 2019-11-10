@@ -56,7 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CamHelper.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -67,6 +66,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\ActuatorButtonScript.cs" />
      <Compile Include="Assets\Scripts\CameraTutorial.cs" />
+     <Compile Include="Assets\Scripts\CamHelper.cs" />
      <Compile Include="Assets\Scripts\CheckPointInfo.cs" />
      <Compile Include="Assets\Scripts\Command\ActivateEntityCommand.cs" />
      <Compile Include="Assets\Scripts\Command\BuildNavmeshCommand.cs" />
@@ -95,14 +95,9 @@
      <Compile Include="Assets\Scripts\SpinningBehaviour.cs" />
      <Compile Include="Assets\Scripts\Util\PuzzleTools.cs" />
      <Compile Include="Assets\Scripts\Util\VuforiaTools.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
-     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
-     <Compile Include="Assets\ZoomBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ZoomBehaviour.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
      <None Include="Assets\StreamingAssets\Vuforia\tcc-device.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -110,18 +105,15 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\tcc.xml" />
@@ -362,18 +354,6 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="GLTFSerialization">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
- </Reference>
- <Reference Include="Ionic.Zip.Unity">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="UnityGLTF">
- <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/PackageCache/com.ptc.vuforia.engine@8.3.9/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>

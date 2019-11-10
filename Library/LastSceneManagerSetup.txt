@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TrainingLevel.unity
+- path: Assets/Scenes/MonkeyLevel.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
