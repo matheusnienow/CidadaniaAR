@@ -38,8 +38,11 @@ namespace LevelManager
         private int _checkPointIndex;
         private bool _isTutorialStarted;
 
+        private float _levelTime;
+
         private void Start()
         {
+            _levelTime = 0f;
             _isTutorialStarted = false;
             _checkPointIndex = 0;
             _playerControllerUnsubscriber = playerController.Subscribe(this);
