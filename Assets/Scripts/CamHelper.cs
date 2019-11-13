@@ -12,7 +12,7 @@ public class CamHelper : MonoBehaviour, IObserver<EventTargetTracking>
 
     private GameObject _gameObject;
     private bool _isTargetVisible;
-    private bool _isActive;
+    private bool _hasStarted;
 
     private void Start()
     {
@@ -23,25 +23,17 @@ public class CamHelper : MonoBehaviour, IObserver<EventTargetTracking>
 
     public void Init()
     {
-        _isActive = true;
+        _hasStarted = true;
         arrow.SetActive(true);
     }
 
     private void Update()
     {
-        if (!_isTargetVisible || !arrow.activeSelf || !_isActive) return;
+        if (!_isTargetVisible || !arrow.activeSelf || !_hasStarted) return;
 
         var blockCenter = PuzzleTools.GetPosition(_gameObject);
         var desiredLocation = new Vector3(blockCenter.x, blockCenter.y, blockCenter.z);
         arrow.transform.LookAt(desiredLocation);
-    }
-
-    private Vector3 GetPosition(GameObject g)
-    {
-        var blockCenter = PuzzleTools.GetPosition(_gameObject);
-        var desiredLocation = new Vector3(blockCenter.x, blockCenter.y, blockCenter.z - 10000);
-
-        return desiredLocation;
     }
 
     public void FocusOnBridge()
@@ -57,6 +49,8 @@ public class CamHelper : MonoBehaviour, IObserver<EventTargetTracking>
     public void OnNext(EventTargetTracking value)
     {
         _isTargetVisible = value.IsVisible;
+        if (!_hasStarted) return;
+        
         arrow.SetActive(value.IsVisible);
     }
 

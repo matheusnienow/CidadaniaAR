@@ -26,6 +26,7 @@
       <Path>.vs</Path>
       <Path>Library</Path>
       <Path>QCAR</Path>
+      <Path>Temp</Path>
       <Path>_EcosAR</Path>
       <Path>_package</Path>
       <Path>build</Path>

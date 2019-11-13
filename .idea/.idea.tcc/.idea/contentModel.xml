@@ -46,36 +46,44 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ActuatorButtonScript.cs" t="Include" />
+          <e p="Behaviour" t="Include">
+            <e p="FloatingBehaviour.cs" t="Include" />
+            <e p="SpinningBehaviour.cs" t="Include" />
+            <e p="ZoomBehaviour.cs" t="Include" />
+          </e>
           <e p="CameraTutorial.cs" t="Include" />
           <e p="CamHelper.cs" t="Include" />
-          <e p="CheckPointInfo.cs" t="Include" />
           <e p="Command" t="Include">
             <e p="ActivateEntityCommand.cs" t="Include" />
             <e p="BuildNavmeshCommand.cs" t="Include" />
             <e p="DeactivateEntityCommand.cs" t="Include" />
             <e p="ICommand.cs" t="Include" />
+            <e p="ITypeCommand.cs" t="Include" />
             <e p="RotateEntityCommand.cs" t="Include" />
           </e>
-          <e p="DesktopCameraController.cs" t="Include" />
+          <e p="Controller" t="Include">
+            <e p="DesktopCameraController.cs" t="Include" />
+            <e p="NavMeshAgentController.cs" t="Include" />
+            <e p="PlayerMovementController.cs" t="Include" />
+          </e>
           <e p="Enum" t="Include">
             <e p="DirectionEnum.cs" t="Include" />
             <e p="EPuzzleStatus.cs" t="Include" />
           </e>
-          <e p="FloatingBehaviour.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
-          <e p="LevelManager" t="Include">
+          <e p="Manager" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="MonkeyLevelManager.cs" t="Include" />
             <e p="TrainingLevelManager.cs" t="Include" />
           </e>
           <e p="MenuScript.cs" t="Include" />
           <e p="MyTrackableEventHandler.cs" t="Include" />
-          <e p="NavMeshAgentController.cs" t="Include" />
           <e p="Observer" t="Include">
             <e p="EventPlayerDestinationReached.cs" t="Include" />
             <e p="EventPuzzle.cs" t="Include" />
             <e p="EventTargetTracking.cs" t="Include" />
             <e p="Unsubscriber.cs" t="Include" />
           </e>
-          <e p="PlayerMovementController.cs" t="Include" />
           <e p="Puzzles" t="Include">
             <e p="Base" t="Include">
               <e p="AlwaysOnPuzzle.cs" t="Include" />
@@ -85,12 +93,10 @@
             <e p="PuzzleBrokenObject.cs" t="Include" />
             <e p="PuzzleIncompletePath.cs" t="Include" />
           </e>
-          <e p="SpinningBehaviour.cs" t="Include" />
           <e p="Util" t="Include">
             <e p="PuzzleTools.cs" t="Include" />
             <e p="VuforiaTools.cs" t="Include" />
           </e>
-          <e p="ZoomBehaviour.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
