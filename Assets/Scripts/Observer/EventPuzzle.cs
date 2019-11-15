@@ -1,4 +1,5 @@
 ﻿using Enum;
+using UnityEngine;
 
 namespace Observer
 {
@@ -8,17 +9,20 @@ namespace Observer
 
         public bool IsTimed { get; set; }
 
-        public EventPuzzle(EPuzzleStatus status, bool isTimed)
+        public string GameObjectName { get; set; }
+
+        public EventPuzzle(EPuzzleStatus status, bool isTimed, string brokenObjectName)
         {
             Status = status;
             IsTimed = isTimed;
+            GameObjectName = brokenObjectName;
         }
 
         public EventPuzzle(EPuzzleStatus status)
         {
             Status = status;
             IsTimed = false;
+            GameObjectName = null;
         }
     }
-
 }

@@ -25,7 +25,7 @@ namespace Manager
         private IDisposable _targetUnsubscriber;
         private int _checkPointIndex;
 
-        private void Start()
+        protected virtual void Start()
         {
             _isLevelStarted = false;
             Init();
@@ -43,7 +43,10 @@ namespace Manager
 
         protected void SetHelperMessage(string message)
         {
-            _objectiveText = objectiveGameObject.GetComponent<TextMeshProUGUI>();
+            if (_objectiveText == null)
+            {
+                _objectiveText = objectiveGameObject.GetComponent<TextMeshProUGUI>();    
+            }
             _objectiveText.SetText(message);
         }
 
@@ -83,7 +86,7 @@ namespace Manager
             panel.SetActive(false);
         }
 
-        public void OnNext(EventPuzzle puzzleEvent)
+        public virtual void OnNext(EventPuzzle puzzleEvent)
         {
             switch (puzzleEvent.Status)
             {
@@ -128,8 +131,8 @@ namespace Manager
                     ? destinationReachedEvent.Destination.name
                     : null;
 
-                var isTutorialCheckPoint = HandleSpecialCheckPoint(destinationName);
-                if (isTutorialCheckPoint)
+                var isSpecialCheckPoint = HandleSpecialCheckPoint(destinationName);
+                if (isSpecialCheckPoint)
                 {
                     return;
                 }

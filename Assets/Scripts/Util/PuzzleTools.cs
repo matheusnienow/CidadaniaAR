@@ -34,19 +34,12 @@ namespace Util
 
             var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
 
+            //Debug.Log("Direction abs: " + dotAbs);
+
             var maxValue = (1 + directionThreshold);
             var minValue = (1 - directionThreshold);
 
             return dotAbs < maxValue && dotAbs > minValue;
-        }
-
-        public static float GetDirectionDifference(GameObject cam, GameObject block, DirectionEnum direction)
-        {
-            var camDirectionVector = cam.transform.forward;
-            var outOfPathBlockDirectionVector = GetDirection(block, direction);
-
-            var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized);
-            return dotAbs;
         }
 
         public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float cameraXThreshold,

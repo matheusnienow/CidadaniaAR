@@ -11,15 +11,15 @@ namespace Puzzles
 {
     public class PuzzleBrokenObject : OneTimePuzzle
     {
-        private Camera _cam;
-
         public GameObject brokenObject;
-        [SerializeField] public DirectionEnum brokenObjectDirection;
         public GameObject obstacle;
+        
+        [SerializeField] public DirectionEnum brokenObjectDirection;
         [SerializeField, Range(0, 1f)] public float directionThreshold;
         [SerializeField, Range(0, 5000f)] public float positionXThreshold;
         [SerializeField, Range(0, 500f)] public float positionYThreshold;
 
+        private Camera _cam;
         private bool _isOk;
         private bool _wasOk;
         private bool _wasVisible;
@@ -55,7 +55,7 @@ namespace Puzzles
             {
                 _text.text = "PUZZLE UNLOCKED";
                 _command.Execute();
-                NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved, true));
+                NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved, true, brokenObject.name));
             }
 
             _wasOk = true;
