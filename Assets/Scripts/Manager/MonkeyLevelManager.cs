@@ -130,8 +130,14 @@ namespace Manager
         private IEnumerator FinalScript()
         {
             SetHelperMessage(
-                "O personagem chegou na lixeira vermelha. Que produtos devem ser jogados nessa leixeira?");
+                "Muito bem, você já sabe as cores para reciclar metais e plásticos.");
             yield return new WaitForSeconds(1);
+
+            SetHelperMessage(
+                "Vamos para a próxima fase!");
+            yield return new WaitForSeconds(1);
+
+            SetNextCheckPoint();
         }
 
         private void ActivateScorePanel()
@@ -146,7 +152,7 @@ namespace Manager
                 case "CheckPoint5":
                     StartCoroutine(MetalGarbageScript());
                     return true;
-                case "CheckPoint11":
+                case "CheckPoint9":
                     StartCoroutine(PlasticGarbageScript());
                     return true;
                 default:
@@ -198,8 +204,8 @@ namespace Manager
         {
             Score = GetScore();
             Debug.Log("Score: " + Score);
-            
-            _scoreText.SetText(Score.ToString());
+
+            _scoreText.SetText(Score + "/2");
         }
 
         private int GetScore()

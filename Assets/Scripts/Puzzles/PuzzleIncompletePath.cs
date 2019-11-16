@@ -14,22 +14,16 @@ namespace Puzzles
 {
     public class PuzzleIncompletePath : AlwaysOnPuzzle
     {
-        [SerializeField, Range(0, 1f)]
-        public float cameraDirectionThreshold;
-
-        [SerializeField, Range(0, 500f)]
-        public float cameraYThreshold;
-        [SerializeField, Range(0, 500f)]
-        public float cameraXThreshold;
-
-        public GameObject outOfPathBlock;
-        [SerializeField]
-        public DirectionEnum outOfPathBlockDirection;
-
-        public GameObject obstacle;
+        [SerializeField, Range(0, 1f)] private float cameraDirectionThreshold;
+        [SerializeField, Range(0, 500f)] private float cameraYThreshold;
+        [SerializeField, Range(0, 500f)] private float cameraLengthThreshold;
+        [SerializeField] private GameObject outOfPathBlock;
+        [SerializeField] private DirectionEnum outOfPathBlockDirection;
+        [SerializeField] private Axis distanceAxis;
+        [SerializeField] private  GameObject obstacle;
 
         private Camera _cam;
-        private Text _text;    
+        private Text _text;
         private ICommand _command;
 
         private bool _passageAllowed;
@@ -49,7 +43,8 @@ namespace Puzzles
             //var camDirection = IsCameraDirectionCorrect();
             var camDirection = PuzzleTools.IsCameraDirectionCorrect(_cam, outOfPathBlock, outOfPathBlockDirection,
                 cameraDirectionThreshold);
-            var camPosition = PuzzleTools.IsCameraPositionCorrect(_cam, outOfPathBlock, cameraXThreshold, cameraYThreshold);
+            var camPosition = PuzzleTools.IsCameraPositionCorrect(_cam, outOfPathBlock, cameraLengthThreshold,
+                cameraYThreshold, distanceAxis);
 
             if (_text != null) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
 
@@ -80,4 +75,3 @@ namespace Puzzles
         }
     }
 }
-

@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\Controller\DesktopCameraController.cs" />
      <Compile Include="Assets\Scripts\Controller\NavMeshAgentController.cs" />
      <Compile Include="Assets\Scripts\Controller\PlayerMovementController.cs" />
+     <Compile Include="Assets\Scripts\Enum\Axis.cs" />
      <Compile Include="Assets\Scripts\Enum\DirectionEnum.cs" />
      <Compile Include="Assets\Scripts\Enum\EPuzzleStatus.cs" />
      <Compile Include="Assets\Scripts\Manager\GameManager.cs" />

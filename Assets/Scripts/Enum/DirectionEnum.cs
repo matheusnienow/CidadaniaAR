@@ -1,4 +1,6 @@
-﻿namespace Enum
+﻿using System;
+
+namespace Enum
 {
     public enum DirectionEnum
     {

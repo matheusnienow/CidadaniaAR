@@ -2,66 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b430f5f-ffcc-4460-8b13-9267ec594cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_glass.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_glass.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_metal.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_metal.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_paper.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_paper.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_plastic.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Dumpsters/dumpster_mesh_plastic.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MessagePanel.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MessagePanel.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/EndPanel.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/EndPanel.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GreenPanel.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GreenPanel.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ScorePanel.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ScorePanel.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/YellowPanel.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/YellowPanel.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Models/Garbage/Plastic/cone-fractured.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Models/Garbage/Plastic/cone-fractured.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_glass.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_glass.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_metal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_metal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_paper.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_paper.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_plastic.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/dumpster_mesh_plastic.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/EndPanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/EndPanel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/GreenPanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/GreenPanel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/YellowPanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/YellowPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MonkeyLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MonkeyLevel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MonkeyLevel/NavMesh-NavMeshSurface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MonkeyLevel/NavMesh-NavMeshSurface.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TrainingLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TrainingLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/MonkeyLevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/MonkeyLevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_corner_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_corner_mesh.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_straight_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_straight_mesh.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_t_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_t_mesh.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/grass_square_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/grass_square_mesh.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/hydrant_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/hydrant_mesh.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_cornerLines_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_cornerLines_mesh.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_crossing_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Environemnt/road_crossing_mesh.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/lamp_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/lamp_mesh.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/path_straight_mesh.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleTown/Prefabs/Props/path_straight_mesh.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/AnnotationManager" beforeDir="false" afterPath="$PROJECT_DIR$/Library/AnnotationManager" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/2D.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EF28F193-EAB6-4E49-B44B-3FB27EAB4F75/ec/b020f285/IObserver`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/AlwaysOnPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -133,7 +98,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Command/RotateEntityCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerMovementController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs" />
         <option value="$PROJECT_DIR$/Assets/CheckPointInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/FloatingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/SpinningBehaviour.cs" />
@@ -161,11 +125,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CamHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/NavMeshAgentController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/MonkeyLevelManager.cs" />
       </list>
     </option>
@@ -256,6 +222,8 @@
       <workItem from="1573767247781" duration="335000" />
       <workItem from="1573770337672" duration="8643000" />
       <workItem from="1573822886041" duration="4418000" />
+      <workItem from="1573858166741" duration="11473000" />
+      <workItem from="1573914854930" duration="652000" />
     </task>
     <servers />
   </component>

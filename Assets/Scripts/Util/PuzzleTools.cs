@@ -1,4 +1,5 @@
-﻿using Enum;
+﻿using System;
+using Enum;
 using UnityEngine;
 
 namespace Util
@@ -32,9 +33,9 @@ namespace Util
             var camDirectionVector = cam.transform.forward;
             var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
 
-            var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
+            Debug.DrawRay(outOfPathBlock.transform.position, outOfPathBlockDirectionVector * 1000, Color.magenta);
 
-            //Debug.Log("Direction abs: " + dotAbs);
+            var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
 
             var maxValue = (1 + directionThreshold);
             var minValue = (1 - directionThreshold);
@@ -43,40 +44,29 @@ namespace Util
         }
 
         public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float cameraXThreshold,
-            float cameraYThreshold)
+            float cameraYThreshold, Axis axis)
         {
             var camPosition = cam.gameObject.transform.position;
             var blockPosition = GetPosition(outOfPathBlock);
 
-            var deltaX = GetXDifference(camPosition, blockPosition);
-            var deltaY = GetYDifference(camPosition, blockPosition);
+            var deltaLength = axis == Axis.X
+                ? AbsDifference(camPosition.z, blockPosition.z)
+                : AbsDifference(camPosition.x, blockPosition.x);
+
+            Debug.Log("deltaLength: " + deltaLength);
+
+            var deltaY = AbsDifference(camPosition.y, blockPosition.y);
 
             var isYAxisCorrect = deltaY < cameraYThreshold;
-            var isXAxisCorrect = deltaX < cameraXThreshold;
+            var isLengthAxisCorrect = deltaLength < cameraXThreshold;
 
-            return isYAxisCorrect && isXAxisCorrect;
+            return isYAxisCorrect && isLengthAxisCorrect;
         }
 
         public static Vector3 GetPosition(GameObject gameObject)
         {
             var renderer = gameObject.GetComponent<Renderer>();
             return renderer != null ? renderer.bounds.center : gameObject.transform.position;
-        }
-
-        private static float GetXDifference(Vector3 cam, Vector3 block)
-        {
-            var camX = cam.x;
-            var blockX = block.x;
-
-            return AbsDifference(blockX, camX);
-        }
-
-        private static float GetYDifference(Vector3 cam, Vector3 block)
-        {
-            var camY = cam.y;
-            var blockY = block.y;
-
-            return AbsDifference(blockY, camY);
         }
 
         private static float AbsDifference(float n1, float n2)

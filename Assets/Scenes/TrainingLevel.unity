@@ -827,9 +827,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraDirectionThreshold: 0.3
   cameraYThreshold: 250
-  cameraXThreshold: 400
+  cameraLengthThreshold: 500
   outOfPathBlock: {fileID: 327384089}
   outOfPathBlockDirection: 3
+  distanceAxis: 2
   obstacle: {fileID: 581231277}
 --- !u!21 &139223990
 Material:
@@ -2524,10 +2525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenObject: {fileID: 729631888}
-  brokenObjectDirection: 4
   obstacle: {fileID: 1723669382}
+  brokenObjectDirection: 4
+  distanceAxis: 0
   directionThreshold: 0.3
-  positionXThreshold: 3000
+  positionLengthThreshold: 3000
   positionYThreshold: 250
 --- !u!1001 &397557138
 PrefabInstance:

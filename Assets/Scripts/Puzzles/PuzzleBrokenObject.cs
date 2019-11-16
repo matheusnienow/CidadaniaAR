@@ -13,11 +13,15 @@ namespace Puzzles
     {
         public GameObject brokenObject;
         public GameObject obstacle;
-        
+
         [SerializeField] public DirectionEnum brokenObjectDirection;
+        [SerializeField] private Axis distanceAxis;
+
         [SerializeField, Range(0, 1f)] public float directionThreshold;
-        [SerializeField, Range(0, 5000f)] public float positionXThreshold;
+        [SerializeField, Range(0, 5000f)] public float positionLengthThreshold;
         [SerializeField, Range(0, 500f)] public float positionYThreshold;
+
+        [SerializeField] public bool log;
 
         private Camera _cam;
         private bool _isOk;
@@ -38,13 +42,13 @@ namespace Puzzles
 
         protected override bool IsConditionMet()
         {
-            //var camDirection = IsCameraDirectionCorrect();
             var camDirection = PuzzleTools.IsCameraDirectionCorrect(_cam, brokenObject, brokenObjectDirection,
                 directionThreshold);
             var camPosition =
-                PuzzleTools.IsCameraPositionCorrect(_cam, brokenObject, positionXThreshold, positionYThreshold);
+                PuzzleTools.IsCameraPositionCorrect(_cam, brokenObject, positionLengthThreshold, positionYThreshold,
+                    distanceAxis);
 
-            //if (_text != null) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
+            if (_text != null && log) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
 
             return camDirection && camPosition;
         }
@@ -65,10 +69,10 @@ namespace Puzzles
         {
             if (_wasVisible)
             {
-                _text.text = "MONKEY NOT VISIBLE";
+                //_text.text = "MONKEY NOT VISIBLE";
                 NotifyOnNext(new EventPuzzle(EPuzzleStatus.NotSolved));
             }
-            
+
             _wasOk = false;
         }
 
