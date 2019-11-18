@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using Observer;
-using UnityEngine;
 
 public class MyTrackableEventHandler : DefaultTrackableEventHandler, IObservable<EventTargetTracking>
 {

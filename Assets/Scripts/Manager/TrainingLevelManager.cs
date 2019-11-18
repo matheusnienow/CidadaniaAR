@@ -34,18 +34,18 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage("A posição do personagem está indicada pelo diamante verde.");
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(8);
 
             SetHelperMessage(
                 "Seu objetivo é fazer com que o personagem consiga chegar na loja vermelha do outro lado da cidade.");
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(8);
 
             SetNextCheckPoint(1);
             SetHelperMessage("Veja, o personagem se move sozinho.");
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage("Parece que há um problema, não existe um caminho para o outro lado da cidade.");
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(8);
 
             SetHelperMessage(
                 "Tente mover seu dispositivo de forma que seu ponto de perspectiva crie um caminho para o personagem. " +

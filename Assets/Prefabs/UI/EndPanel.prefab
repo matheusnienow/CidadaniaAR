@@ -586,7 +586,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4217364429211349330}
         m_MethodName: LoadMenuScene
         m_Mode: 1
         m_Arguments:
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4217364429211349330}
         m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 91379373575389667}
   - component: {fileID: 91379373575389666}
   - component: {fileID: 91379373575389665}
+  - component: {fileID: 4217364429211349330}
   m_Layer: 0
   m_Name: EndPanel
   m_TagString: UIPanel
@@ -802,3 +803,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4217364429211349330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91379373575389664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee60f2be4ad96544189a0568cd99bd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -72,10 +72,10 @@ namespace Manager
         protected override IEnumerator StartLevel()
         {
             SetHelperMessage("Olá novamente!");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
 
             SetHelperMessage("Seu objetivo nesse nível é ajudar o personagem na separação do lixo.");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage("Veja, o personagem está andando até a primeira lixeira.");
             SetNextCheckPoint(1);
@@ -84,18 +84,15 @@ namespace Manager
         private IEnumerator MetalGarbageScript()
         {
             SetHelperMessage(
-                "O personagem chegou na lixeira amarela. Que produtos devem ser jogados na lixeira amarela?");
-            yield return new WaitForSeconds(1);
+                "O personagem chegou na lixeira AMARELA. Que tipos de produtos devem ser jogados nessa leixeira?");
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage(
-                "Para poder avançar, visualize dois produtos que devem ser jogados nessa lixeira, os produtos estão espalhados ao redor do mapa.");
-            yield return new WaitForSeconds(1);
-            ActivateScorePanel();
-
-            SetHelperMessage(
+                "Para poder avançar, visualize dois produtos feitos do material que devem ser jogados nessa lixeira, " +
+                "os produtos estão espalhados ao redor do mapa. " +
                 "O painel superior direito indica a quantidade de produtos encontrados.");
-            yield return new WaitForSeconds(1);
 
+            ActivateScorePanel();
             ActivateMetalPuzzle();
         }
 
@@ -103,25 +100,24 @@ namespace Manager
         {
             SetHelperMessage(
                 "Muito bem, você consegiu!");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(4);
 
             SetHelperMessage("Na lixeira amarela vão os produtos feitos de METAL.");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(5);
 
             SetNextCheckPoint();
             SetHelperMessage(
-                "O personagem irá até a próxima lixeira. Faça a mesma coisa e ajude-o a encontrar os produtos corretos!");
+                "Certo, agora O personagem irá até a próxima lixeira. Faça a mesma coisa e ajude-o a encontrar os produtos corretos!");
         }
 
         private IEnumerator PlasticGarbageScript()
         {
             SetHelperMessage(
-                "O personagem chegou na lixeira vermelha. Que produtos devem ser jogados nessa leixeira?");
-            yield return new WaitForSeconds(1);
+                "O personagem chegou na lixeira vermelha. Os produtos feitos de que material devem ser jogados nessa leixeira?");
+            yield return new WaitForSeconds(4);
 
             SetHelperMessage(
                 "Para poder avançar, visualize dois produtos que devem ser jogados nessa lixeira, os produtos estão espalhados ao redor do mapa.");
-            yield return new WaitForSeconds(1);
 
             ActivatePlasticPuzzle();
             UpdateScorePanel();
@@ -131,12 +127,10 @@ namespace Manager
         {
             SetHelperMessage(
                 "Muito bem, você já sabe as cores para reciclar metais e plásticos.");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage(
                 "Vamos para a próxima fase!");
-            yield return new WaitForSeconds(1);
-
             SetNextCheckPoint();
         }
 

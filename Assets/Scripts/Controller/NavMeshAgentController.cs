@@ -74,7 +74,7 @@ namespace Controller
         {
             if (Destination == null)
             {
-                _text.text = "Destination null";
+                if (_text != null) _text.text = "Destination null";
                 return;
             }
 
@@ -83,7 +83,7 @@ namespace Controller
 
             var distance = Mathf.Abs(Vector3.Distance(currentPosition, destinationPosition));
             //Debug.Log("NavMeshAgentController: Player to Destination distance: " + distance);
-            _text.text = distance.ToString();
+            if (_text != null) _text.text = distance.ToString();
 
             if (distance < distanceThreshold)
             {

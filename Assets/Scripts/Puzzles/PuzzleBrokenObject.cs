@@ -57,7 +57,7 @@ namespace Puzzles
         {
             if (!_wasOk)
             {
-                _text.text = "PUZZLE UNLOCKED";
+                if (_text != null) _text.text = "PUZZLE UNLOCKED";
                 _command.Execute();
                 NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved, true, brokenObject.name));
             }
@@ -80,7 +80,7 @@ namespace Puzzles
         {
             _wasVisible = true;
             NotifyOnNext(new EventPuzzle(EPuzzleStatus.InProgress));
-            _text.text = "MONKEY VISIBLE (" + timer + ")";
+            if (_text != null) _text.text = "MONKEY VISIBLE (" + timer + ")";
         }
     }
 }

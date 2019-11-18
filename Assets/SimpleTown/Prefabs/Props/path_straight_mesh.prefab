@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 6424861853975480948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: path_straight_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,5 +90,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.79599, y: 0.19479579, z: 10.000002}
-  m_Center: {x: -1.3979948, y: -0.004235603, z: -4.999999}
+  m_Size: {x: 2.79599, y: 1, z: 10.000002}
+  m_Center: {x: -1.3979948, y: -0.5, z: -4.999999}

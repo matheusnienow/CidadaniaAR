@@ -71,13 +71,14 @@
             <e p="DirectionEnum.cs" t="Include" />
             <e p="EPuzzleStatus.cs" t="Include" />
           </e>
+          <e p="MainMenuController.cs" t="Include" />
           <e p="Manager" t="Include">
+            <e p="BridgeLevelManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="MonkeyLevelManager.cs" t="Include" />
             <e p="TrainingLevelManager.cs" t="Include" />
           </e>
-          <e p="MenuScript.cs" t="Include" />
           <e p="MyTrackableEventHandler.cs" t="Include" />
           <e p="Observer" t="Include">
             <e p="EventPlayerDestinationReached.cs" t="Include" />
@@ -94,6 +95,7 @@
             <e p="PuzzleBrokenObject.cs" t="Include" />
             <e p="PuzzleIncompletePath.cs" t="Include" />
           </e>
+          <e p="SceneLoader.cs" t="Include" />
           <e p="Util" t="Include">
             <e p="PuzzleTools.cs" t="Include" />
             <e p="VuforiaTools.cs" t="Include" />
