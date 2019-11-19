@@ -5,20 +5,20 @@ namespace Observer
 {
     public class EventPuzzle
     {
-        public EPuzzleStatus Status { get; set; }
+        public PuzzleStatus Status { get; set; }
 
         public bool IsTimed { get; set; }
 
         public string GameObjectName { get; set; }
 
-        public EventPuzzle(EPuzzleStatus status, bool isTimed, string brokenObjectName)
+        public EventPuzzle(PuzzleStatus status, bool isTimed, string brokenObjectName)
         {
             Status = status;
             IsTimed = isTimed;
             GameObjectName = brokenObjectName;
         }
 
-        public EventPuzzle(EPuzzleStatus status)
+        public EventPuzzle(PuzzleStatus status)
         {
             Status = status;
             IsTimed = false;

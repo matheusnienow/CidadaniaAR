@@ -6,21 +6,21 @@ namespace Util
 {
     public static class PuzzleTools
     {
-        private static Vector3 GetDirection(GameObject target, DirectionEnum direction)
+        private static Vector3 GetDirection(GameObject target, Direction direction)
         {
             switch (direction)
             {
-                case DirectionEnum.Forward:
+                case Direction.Forward:
                     return target.transform.forward;
-                case DirectionEnum.Backward:
+                case Direction.Backward:
                     return target.transform.forward * -1;
-                case DirectionEnum.Right:
+                case Direction.Right:
                     return target.transform.right;
-                case DirectionEnum.Left:
+                case Direction.Left:
                     return target.transform.right * -1;
-                case DirectionEnum.Up:
+                case Direction.Up:
                     return target.transform.up;
-                case DirectionEnum.Down:
+                case Direction.Down:
                     return target.transform.up * -1;
                 default:
                     return target.transform.forward;
@@ -28,7 +28,7 @@ namespace Util
         }
 
         public static bool IsCameraDirectionCorrect(Camera cam, GameObject outOfPathBlock,
-            DirectionEnum outOfPathBlockDirection, float directionThreshold)
+            Direction outOfPathBlockDirection, float directionThreshold)
         {
             var camDirectionVector = cam.transform.forward;
             var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);

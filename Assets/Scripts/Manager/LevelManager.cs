@@ -90,15 +90,15 @@ namespace Manager
         {
             switch (puzzleEvent.Status)
             {
-                case EPuzzleStatus.InProgress:
+                case PuzzleStatus.InProgress:
                     yellowPanel.SetActive(true);
                     greenPanel.SetActive(false);
                     break;
-                case EPuzzleStatus.Solved:
+                case PuzzleStatus.Solved:
                     yellowPanel.SetActive(false);
                     greenPanel.SetActive(true);
                     break;
-                case EPuzzleStatus.NotSolved:
+                case PuzzleStatus.NotSolved:
                     yellowPanel.SetActive(false);
                     greenPanel.SetActive(false);
                     break;

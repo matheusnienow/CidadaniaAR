@@ -68,8 +68,9 @@
           </e>
           <e p="Enum" t="Include">
             <e p="Axis.cs" t="Include" />
-            <e p="DirectionEnum.cs" t="Include" />
-            <e p="EPuzzleStatus.cs" t="Include" />
+            <e p="Direction.cs" t="Include" />
+            <e p="GarbageType.cs" t="Include" />
+            <e p="PuzzleStatus.cs" t="Include" />
           </e>
           <e p="MainMenuController.cs" t="Include" />
           <e p="Manager" t="Include">
@@ -78,6 +79,9 @@
             <e p="LevelManager.cs" t="Include" />
             <e p="MonkeyLevelManager.cs" t="Include" />
             <e p="TrainingLevelManager.cs" t="Include" />
+          </e>
+          <e p="Model" t="Include">
+            <e p="GarbageImage.cs" t="Include" />
           </e>
           <e p="MyTrackableEventHandler.cs" t="Include" />
           <e p="Observer" t="Include">

@@ -14,7 +14,7 @@ namespace Puzzles
         public GameObject brokenObject;
         public GameObject obstacle;
 
-        [SerializeField] public DirectionEnum brokenObjectDirection;
+        [SerializeField] public Direction brokenObjectDirection;
         [SerializeField] private Axis distanceAxis;
 
         [SerializeField, Range(0, 1f)] public float directionThreshold;
@@ -59,7 +59,7 @@ namespace Puzzles
             {
                 if (_text != null) _text.text = "PUZZLE UNLOCKED";
                 _command.Execute();
-                NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved, true, brokenObject.name));
+                NotifyOnNext(new EventPuzzle(PuzzleStatus.Solved, true, brokenObject.name));
             }
 
             _wasOk = true;
@@ -70,7 +70,7 @@ namespace Puzzles
             if (_wasVisible)
             {
                 //_text.text = "MONKEY NOT VISIBLE";
-                NotifyOnNext(new EventPuzzle(EPuzzleStatus.NotSolved));
+                NotifyOnNext(new EventPuzzle(PuzzleStatus.NotSolved));
             }
 
             _wasOk = false;
@@ -79,7 +79,7 @@ namespace Puzzles
         protected override void OnIsConditionMet(float timer)
         {
             _wasVisible = true;
-            NotifyOnNext(new EventPuzzle(EPuzzleStatus.InProgress));
+            NotifyOnNext(new EventPuzzle(PuzzleStatus.InProgress));
             if (_text != null) _text.text = "MONKEY VISIBLE (" + timer + ")";
         }
     }

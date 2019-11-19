@@ -18,7 +18,7 @@ namespace Puzzles
         [SerializeField, Range(0, 500f)] private float cameraYThreshold;
         [SerializeField, Range(0, 500f)] private float cameraLengthThreshold;
         [SerializeField] private GameObject outOfPathBlock;
-        [SerializeField] private DirectionEnum outOfPathBlockDirection;
+        [SerializeField] private Direction outOfPathBlockDirection;
         [SerializeField] private Axis distanceAxis;
         [SerializeField] private  GameObject obstacle;
 
@@ -57,7 +57,7 @@ namespace Puzzles
             {
                 if (_text != null) _text.text = "PASSAGE ALLOWED";
                 _command.Execute();
-                NotifyOnNext(new EventPuzzle(EPuzzleStatus.Solved));
+                NotifyOnNext(new EventPuzzle(PuzzleStatus.Solved));
             }
 
             _wasPassageAllowed = true;
@@ -68,7 +68,7 @@ namespace Puzzles
             if (_wasPassageAllowed)
             {
                 _command.Undo();
-                NotifyOnNext(new EventPuzzle(EPuzzleStatus.NotSolved));
+                NotifyOnNext(new EventPuzzle(PuzzleStatus.NotSolved));
             }
 
             _wasPassageAllowed = false;

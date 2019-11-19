@@ -1577,11 +1577,11 @@ Transform:
   - {fileID: 968036139}
   - {fileID: 287278462}
   - {fileID: 1425885460}
+  - {fileID: 2048673348}
   - {fileID: 2080783623}
   - {fileID: 1729255626}
   - {fileID: 53122415}
   - {fileID: 1603756583}
-  - {fileID: 2048673348}
   - {fileID: 1167995258}
   - {fileID: 254991882}
   - {fileID: 1967005243}
@@ -23387,7 +23387,7 @@ Transform:
   - {fileID: 695566784}
   - {fileID: 1540819189}
   m_Father: {fileID: 131508874}
-  m_RootOrder: 33
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2052947295
 PrefabInstance:
@@ -24540,6 +24540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716053418365353852, guid: 6ddbb99078c35d442822fce629b156da,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ddbb99078c35d442822fce629b156da, type: 3}

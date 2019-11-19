@@ -157,7 +157,7 @@ namespace Manager
         public override void OnNext(EventPuzzle puzzleEvent)
         {
             base.OnNext(puzzleEvent);
-            if (puzzleEvent.Status != EPuzzleStatus.Solved)
+            if (puzzleEvent.Status != PuzzleStatus.Solved)
             {
                 return;
             }
