@@ -24429,7 +24429,7 @@ PrefabInstance:
     - target: {fileID: 2582021593051571606, guid: 6ddbb99078c35d442822fce629b156da,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2582021593051571605, guid: 6ddbb99078c35d442822fce629b156da,
         type: 3}
@@ -24536,6 +24536,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2582021593051571604, guid: 6ddbb99078c35d442822fce629b156da,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6716053418365353852, guid: 6ddbb99078c35d442822fce629b156da,
         type: 3}
       propertyPath: m_Sprite
@@ -24545,6 +24550,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716053418365353852, guid: 6ddbb99078c35d442822fce629b156da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716053418365353852, guid: 6ddbb99078c35d442822fce629b156da,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716053418365353852, guid: 6ddbb99078c35d442822fce629b156da,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582021593051571607, guid: 6ddbb99078c35d442822fce629b156da,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ddbb99078c35d442822fce629b156da, type: 3}

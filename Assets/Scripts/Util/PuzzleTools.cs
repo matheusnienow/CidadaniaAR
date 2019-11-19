@@ -53,7 +53,7 @@ namespace Util
                 ? AbsDifference(camPosition.z, blockPosition.z)
                 : AbsDifference(camPosition.x, blockPosition.x);
 
-            Debug.Log("deltaLength: " + deltaLength);
+            //Debug.Log("deltaLength: " + deltaLength);
 
             var deltaY = AbsDifference(camPosition.y, blockPosition.y);
 

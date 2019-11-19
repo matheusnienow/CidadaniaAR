@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using Enum;
 using Model;
 using Observer;
@@ -28,38 +26,33 @@ namespace Manager
         private bool _isImageQueueReady;
 
         private const string ResourcesPrefix = "/Resources/";
-        private const string GlassFolderPath = "Glass/";
-        private const string PaperFolderPath = "Paper/";
+        private const string GlassFolderPath = "Glass";
+        private const string PaperFolderPath = "Paper";
 
         protected override void Start()
         {
             base.Start();
-            _image = imagePanel.GetComponentInChildren<Image>();
+            _image = imagePanel.transform.GetChild(0).GetComponent<Image>();
             LoadImages();
         }
 
         private void LoadImages()
         {
-            Debug.Log("Manager: Loading sprites");
             _glassImagesQueue = new Queue<GarbageImage>();
             _paperImagesQueue = new Queue<GarbageImage>();
 
-            var glassSprites = LoadSprites(GlassFolderPath);
-            glassSprites.ToList().ForEach(s => _glassImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Glass)));
+            var glassSprites = LoadSprites(GlassFolderPath).ToList();
+            glassSprites.ForEach(s => _glassImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Glass)));
 
-            var paperSprites = LoadSprites(PaperFolderPath);
-            paperSprites.ToList().ForEach(s => _paperImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Paper)));
+            var paperSprites = LoadSprites(PaperFolderPath).ToList();
+            paperSprites.ForEach(s => _paperImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Paper)));
 
             _isImageQueueReady = true;
-            Debug.Log("Manager: Done loading sprites");
         }
 
         private static IEnumerable<Sprite> LoadSprites(string path)
         {
-            var files = Directory.GetFiles(Application.dataPath + ResourcesPrefix + path);
-            var imageFiles = files.Where(f => f.EndsWith(".png"));
-            var filesWithoutExtension = imageFiles.ToList().Select(Path.GetFileNameWithoutExtension);
-            return filesWithoutExtension.Select(f => Resources.Load<Sprite>(path + f));
+            return Resources.LoadAll<Sprite>(path);
         }
 
         protected override void SubscribeOnPuzzleEvents()
@@ -106,12 +99,17 @@ namespace Manager
 
         private IEnumerator SetSprites()
         {
-            Debug.Log("Manager: setting sprites");
+            Debug.Log($"Manager: setting sprites {_glassImagesQueue.Count}");
             while (_glassImagesQueue.Count > 0)
             {
                 var image = _glassImagesQueue.Dequeue();
                 Debug.Log($"Manager: sprite loaded({image.Sprite})");
+
+                _image.sprite = image.Sprite;
                 _image.overrideSprite = image.Sprite;
+                _image.type = Image.Type.Simple;
+                _image.preserveAspect = true;
+
                 yield return new WaitForSeconds(5);
             }
         }

@@ -2,53 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b430f5f-ffcc-4460-8b13-9267ec594cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass/bowl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass/bowl.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass/glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass/glass.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass/marinex.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Glass/marinex.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper/books.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper/books.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper/cardboard-box.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper/cardboard-box.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/GarbageType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/GarbageType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/GarbageImage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/GarbageImage.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass/bowl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass/bowl.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass/glass.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass/glass.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass/marinex.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Glass/marinex.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Paper.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Paper/books.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Paper/books.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Paper/cardboard-box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Paper/cardboard-box.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BridgeLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BridgeLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/Direction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/Direction.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/EPuzzleStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/PuzzleStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/EPuzzleStatus.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/PuzzleStatus.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/MonkeyLevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/MonkeyLevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf841ed2c9d55ea47a580161b54a7255" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Observer/EventTargetTracking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplanePropellerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C254D6BD-DEE2-4EDB-8742-CD1C78B0DB19/51/e93b18fe/PhotoCaptureFrame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/2D.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EF28F193-EAB6-4E49-B44B-3FB27EAB4F75/ec/b020f285/IObserver`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,6 +60,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleBrokenObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/BuildNavmeshCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonCharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/658271AA-00D0-42A5-A887-5350393FEE96/22/8b5de3c1/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonUserControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/DeactivateEntityCommand.cs" root0="FORCE_HIGHLIGHTING" />
@@ -154,7 +116,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enum/DirectionEnum.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/MonkeyLevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TrainingLevelManager.cs" />
@@ -169,6 +130,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enum/PuzzleStatus.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/UnityTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/GarbageImage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/PuzzleTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" />
       </list>
     </option>
@@ -263,7 +225,8 @@
       <workItem from="1573914854930" duration="5166000" />
       <workItem from="1573996317569" duration="932000" />
       <workItem from="1574002335708" duration="1636000" />
-      <workItem from="1574036155168" duration="8861000" />
+      <workItem from="1574036155168" duration="9460000" />
+      <workItem from="1574178637160" duration="3108000" />
     </task>
     <servers />
   </component>
