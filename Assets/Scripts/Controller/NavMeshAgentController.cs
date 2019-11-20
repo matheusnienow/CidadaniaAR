@@ -58,16 +58,12 @@ namespace Controller
             navMeshSurface.SetActive(true);
 
             var isOnNavMesh = Agent.isOnNavMesh;
-            if (isOnNavMesh)
-            {
-                Agent.SetDestination(destinationPosition);
-                Debug.Log("NavMeshAgentController: MOVING THE PLAYER TO DESTINATION: " + Destination.name + "(" +
-                          destinationPosition + ")");
-            }
-            else
-            {
-                Debug.Log("NavMeshAgentController: Agent is not active or is not in a NavMesh");
-            }
+            if (!isOnNavMesh) return;
+
+            Agent.SetDestination(destinationPosition);
+            Agent.isStopped = false;
+            Debug.Log("NavMeshAgentController: MOVING THE PLAYER TO DESTINATION: " + Destination.name + "(" +
+                      destinationPosition + ")");
         }
 
         private void CheckDestination()
@@ -94,8 +90,7 @@ namespace Controller
         private void OnDestinationReached()
         {
             Debug.Log("NavMeshAgentController: Destination reached");
-            Agent.isStopped = true;
-            Agent.ResetPath();
+            Stop();
             NotifyDestinationReached();
         }
 
@@ -126,6 +121,12 @@ namespace Controller
             }
 
             return new Unsubscriber<EventPlayerDestinationReached>(_observers, observer);
+        }
+
+        public void Stop()
+        {
+            Agent.isStopped = true;
+            Agent.ResetPath();
         }
     }
 }

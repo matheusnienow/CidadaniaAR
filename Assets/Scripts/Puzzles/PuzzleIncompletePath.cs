@@ -57,7 +57,7 @@ namespace Puzzles
             {
                 if (_text != null) _text.text = "PASSAGE ALLOWED";
                 _command.Execute();
-                NotifyOnNext(new EventPuzzle(PuzzleStatus.Solved));
+                NotifyOnNext(new EventPuzzle(PuzzleStatus.Solved, outOfPathBlock.name));
             }
 
             _wasPassageAllowed = true;
@@ -68,7 +68,7 @@ namespace Puzzles
             if (_wasPassageAllowed)
             {
                 _command.Undo();
-                NotifyOnNext(new EventPuzzle(PuzzleStatus.NotSolved));
+                NotifyOnNext(new EventPuzzle(PuzzleStatus.NotSolved, outOfPathBlock.name));
             }
 
             _wasPassageAllowed = false;

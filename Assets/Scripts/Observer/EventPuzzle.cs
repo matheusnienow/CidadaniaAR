@@ -18,6 +18,12 @@ namespace Observer
             GameObjectName = brokenObjectName;
         }
 
+        public EventPuzzle(PuzzleStatus status, string gameObjectName)
+        {
+            Status = status;
+            GameObjectName = gameObjectName;
+        }
+
         public EventPuzzle(PuzzleStatus status)
         {
             Status = status;

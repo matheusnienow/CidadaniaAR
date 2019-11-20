@@ -20,10 +20,11 @@ namespace Manager
         [SerializeField] protected GameObject yellowPanel;
         [SerializeField] protected GameObject endPanel;
 
+        protected int CheckPointIndex;
+
         private TextMeshProUGUI _objectiveText;
         private bool _isLevelStarted;
         private IDisposable _targetUnsubscriber;
-        private int _checkPointIndex;
 
         protected virtual void Start()
         {
@@ -45,18 +46,19 @@ namespace Manager
         {
             if (_objectiveText == null)
             {
-                _objectiveText = objectiveGameObject.GetComponent<TextMeshProUGUI>();    
+                _objectiveText = objectiveGameObject.GetComponent<TextMeshProUGUI>();
             }
+
             _objectiveText.SetText(message);
         }
 
         protected bool SetNextCheckPoint()
         {
-            var nextIndex = _checkPointIndex + 1;
+            var nextIndex = CheckPointIndex + 1;
             var result = SetNextCheckPoint(nextIndex);
             if (result)
             {
-                _checkPointIndex = nextIndex;
+                CheckPointIndex = nextIndex;
             }
 
             return result;
@@ -73,7 +75,7 @@ namespace Manager
             Debug.Log("Level4Manager: SETTING CHECKPOINT " + index);
             playerController.Destination = destination;
             playerController.Move();
-            _checkPointIndex = index;
+            CheckPointIndex = index;
 
             return true;
         }
@@ -141,8 +143,13 @@ namespace Manager
             var result = SetNextCheckPoint();
             if (!result)
             {
-                endPanel.SetActive(true);
+                EndGame();
             }
+        }
+
+        protected void EndGame()
+        {
+            endPanel.SetActive(true);
         }
 
         protected abstract bool HandleSpecialCheckPoint(string destinationName);
