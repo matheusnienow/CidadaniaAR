@@ -173,7 +173,10 @@ namespace Manager
 
             playerController.Destination = null;
             playerController.Stop();
-            playerController.gameObject.transform.position = new Vector3(15f, 2f, -150f);
+
+            var position = new Vector3(15f, 5f, -150f);
+            playerController.Teleport(position);
+            Debug.Log($"BridgeLevelManager: Resetting player position to {position.ToString()}");
         }
 
         private GarbageImage DequeueGarbageImage()
