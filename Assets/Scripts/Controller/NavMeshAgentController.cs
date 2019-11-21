@@ -131,12 +131,9 @@ namespace Controller
 
         public void Teleport(Vector3 position)
         {
-            var rb = gameObject.GetComponent<Rigidbody>();
-            Agent.enabled = false;
-            rb.detectCollisions = false;
-            transform.position = position;
-            Agent.enabled = true;
-            rb.detectCollisions = true;
+            Agent.isStopped = true;
+            Agent.ResetPath();
+            Agent.Warp(position);
         }
     }
 }

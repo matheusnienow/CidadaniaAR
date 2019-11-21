@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b430f5f-ffcc-4460-8b13-9267ec594cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper/news.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Paper/news.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Paper/books.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Paper/books.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BridgeLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BridgeLevel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/NavMeshAgentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/NavMeshAgentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/ab/abb6db587b6ecb944b3ee832196a5e6a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ab/abb6db587b6ecb944b3ee832196a5e6a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/2D.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EF28F193-EAB6-4E49-B44B-3FB27EAB4F75/ec/b020f285/IObserver`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/Axis.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EF28F193-EAB6-4E49-B44B-3FB27EAB4F75/db/e390c89a/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/Puzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Base/AlwaysOnPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -131,8 +141,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/EventPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleIncompletePath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/NavMeshAgentController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/BridgeLevelManager.cs" />
       </list>
     </option>
   </component>
@@ -227,7 +237,9 @@
       <workItem from="1573996317569" duration="932000" />
       <workItem from="1574002335708" duration="1636000" />
       <workItem from="1574036155168" duration="9460000" />
-      <workItem from="1574178637160" duration="16232000" />
+      <workItem from="1574178637160" duration="19624000" />
+      <workItem from="1574284746327" duration="5285000" />
+      <workItem from="1574301203746" duration="2626000" />
     </task>
     <servers />
   </component>

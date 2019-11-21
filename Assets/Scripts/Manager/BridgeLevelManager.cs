@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enum;
 using Model;
 using Observer;
-using Puzzles;
 using Puzzles.Base;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 namespace Manager
 {
     public class BridgeLevelManager : LevelManager
     {
         [SerializeField] private GameObject imagePanel;
+        [SerializeField] private GameObject scorePanel;
+
         [SerializeField] private GameObject glassCheckPoint;
         [SerializeField] private GameObject paperCheckPoint;
 
@@ -38,9 +40,11 @@ namespace Manager
 
         private GarbageImage _currentGarbageImage;
 
-        private Vector3 _playerCheckPointPosition;
         private int _score;
         private bool _isSolved;
+        private bool _firstTime;
+        private bool _isReturning;
+        private int _maxScorePossible;
 
         protected override void Start()
         {
@@ -58,10 +62,9 @@ namespace Manager
 
         private void Init()
         {
-            //_playerCheckPointPosition = new Vector3(15f, 0.5f, -150f);
             _imageGameObject = imagePanel.transform.GetChild(0).gameObject;
             _image = _imageGameObject.GetComponent<Image>();
-            _playerCheckPointPosition = Vector3.zero;
+            _firstTime = true;
         }
 
         private void LoadImages()
@@ -69,13 +72,21 @@ namespace Manager
             _glassImagesQueue = new Queue<GarbageImage>();
             _paperImagesQueue = new Queue<GarbageImage>();
 
-            var glassSprites = LoadSprites(GlassFolderPath).ToList();
-            glassSprites.ForEach(s => _glassImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Glass)));
+            var glassSprites = LoadSprites(GlassFolderPath);
+            var glassSpriteList = Shuffle(glassSprites);
+            glassSpriteList.ForEach(s => _glassImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Glass)));
 
-            var paperSprites = LoadSprites(PaperFolderPath).ToList();
-            paperSprites.ForEach(s => _paperImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Paper)));
+            var paperSprites = LoadSprites(PaperFolderPath);
+            var paperSpriteList = Shuffle(paperSprites);
+            paperSpriteList.ForEach(s => _paperImagesQueue.Enqueue(new GarbageImage(s, GarbageType.Paper)));
 
             _isImageQueueReady = true;
+            _maxScorePossible = _glassImagesQueue.Count + _paperImagesQueue.Count;
+        }
+
+        private List<Sprite> Shuffle(IEnumerable<Sprite> glassSprites)
+        {
+            return glassSprites.OrderBy(l => new Random().Next()).ToList();
         }
 
         private static IEnumerable<Sprite> LoadSprites(string path)
@@ -92,13 +103,13 @@ namespace Manager
         protected override IEnumerator StartLevel()
         {
             SetHelperMessage("Olá novamente!");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(4);
 
             SetHelperMessage("Nesse nível continuaremos a ajudar o personagem na separação do lixo.");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage("Dessa vez vamos classificar algumas imagens!");
-            ActivateImagePanel();
+            ActivateImagePanel(true);
             SetNextCheckPoint(1);
         }
 
@@ -114,14 +125,14 @@ namespace Manager
                 "No painel superior direito será mostrada a imagem de um produto que deve ser reciclado. " +
                 "Você deve indicar em que lixo esse " +
                 "produto deve ser jogado");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(10);
 
             SetHelperMessage("Existem duas ilhas, cada uma com um tipo de lixeira. Um verde e outro azul.");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage(
                 "Para indicar o lixeiro a ser usado, crie o caminho para o personagem chegar até a lixeira.");
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(5);
 
             DoGarbageGameLoop();
         }
@@ -132,15 +143,28 @@ namespace Manager
             SetHelperMessage(text);
             yield return new WaitForSeconds(5);
 
-            DoGarbageGameLoop();
+            _isReturning = true;
+            SetHelperMessage("Ajude o personagem a voltar à ilha principal!");
+            SetNextCheckPoint(3);
         }
 
         private IEnumerator FinalScript()
         {
+            ActivateImagePanel(false);
+            SetScore();
             SetHelperMessage("Fim do jogo. Veja sua pontuação no painel ao lado.");
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
 
             EndGame();
+        }
+
+        private void SetScore()
+        {
+            var scoreText = _score + "/" + _maxScorePossible;
+
+            scorePanel.SetActive(true);
+            var scoreTextComponent = scorePanel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            scoreTextComponent.SetText(scoreText);
         }
 
         private void DoGarbageGameLoop()
@@ -152,7 +176,9 @@ namespace Manager
                 return;
             }
 
-            ResetPlayerPosition();
+            SetHelperMessage(
+                "Em qual lixeira esse produto deve ser jogado? Ajude o personagem!");
+
             ShowNextImage();
             EnablePuzzles(true);
         }
@@ -161,22 +187,6 @@ namespace Manager
         {
             _currentGarbageImage = DequeueGarbageImage();
             SetGarbageImage(_currentGarbageImage);
-        }
-
-        private void ResetPlayerPosition()
-        {
-            if (_playerCheckPointPosition == Vector3.zero)
-            {
-                _playerCheckPointPosition = playerController.transform.position;
-                return;
-            }
-
-            playerController.Destination = null;
-            playerController.Stop();
-
-            var position = new Vector3(15f, 5f, -150f);
-            playerController.Teleport(position);
-            Debug.Log($"BridgeLevelManager: Resetting player position to {position.ToString()}");
         }
 
         private GarbageImage DequeueGarbageImage()
@@ -193,9 +203,9 @@ namespace Manager
             }
             else
             {
-                var rnd = new System.Random();
-                var index = rnd.Next(1, 3);
-
+                var rnd = new Random();
+                var index = rnd.Next(0, 3);
+                Debug.Log($"BridgeLevelManager: random generated ({index})");
                 queue = index == 1 ? _paperImagesQueue : _glassImagesQueue;
             }
 
@@ -216,16 +226,26 @@ namespace Manager
             _image.preserveAspect = true;
         }
 
-        private void ActivateImagePanel()
+        private void ActivateImagePanel(bool active)
         {
-            if (imagePanel != null) imagePanel.SetActive(true);
+            if (imagePanel != null) imagePanel.SetActive(active);
         }
 
         protected override bool HandleSpecialCheckPoint(string destinationName)
         {
             if (destinationName == "CheckPoint3")
             {
-                StartCoroutine(GarbageStartScript());
+                _isReturning = false;
+                if (_firstTime)
+                {
+                    _firstTime = false;
+                    StartCoroutine(GarbageStartScript());
+                }
+                else
+                {
+                    DoGarbageGameLoop();
+                }
+
                 return true;
             }
 
@@ -282,6 +302,11 @@ namespace Manager
 
         private void OnPuzzleSolved(EventPuzzle puzzleEvent)
         {
+            if (_isReturning)
+            {
+                return;
+            }
+
             _isSolved = true;
 
             if (puzzleEvent.GameObjectName == glassBridge.name)
