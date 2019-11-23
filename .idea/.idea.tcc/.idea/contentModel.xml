@@ -75,7 +75,6 @@
           <e p="MainMenuController.cs" t="Include" />
           <e p="Manager" t="Include">
             <e p="BridgeLevelManager.cs" t="Include" />
-            <e p="GameManager.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="MonkeyLevelManager.cs" t="Include" />
             <e p="TrainingLevelManager.cs" t="Include" />

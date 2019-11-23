@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/BridgeLevel.unity
+- path: Assets/Scenes/TrainingLevel.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

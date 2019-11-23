@@ -76,7 +76,7 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage(
-                "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, né?");
+                "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, certo?");
             SetNextCheckPoint();
             camHelper.FocusOnBridge();
             yield return new WaitForSeconds(5);
@@ -84,7 +84,7 @@ namespace Manager
 
         private IEnumerator StartPart4()
         {
-            SetHelperMessage("Você aprendeu muito bem e já pode seguir para as próximas fases!");
+            SetHelperMessage("Você aprendeu muito bem e já pode seguir para os próximos níveis!");
             SetNextCheckPoint();
             yield return new WaitForSeconds(1);
         }

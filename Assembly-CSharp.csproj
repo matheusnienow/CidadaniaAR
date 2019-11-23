@@ -85,7 +85,6 @@
      <Compile Include="Assets\Scripts\Enum\PuzzleStatus.cs" />
      <Compile Include="Assets\Scripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\Manager\BridgeLevelManager.cs" />
-     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
      <Compile Include="Assets\Scripts\Manager\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Manager\MonkeyLevelManager.cs" />
      <Compile Include="Assets\Scripts\Manager\TrainingLevelManager.cs" />

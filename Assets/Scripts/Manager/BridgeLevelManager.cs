@@ -14,6 +14,9 @@ namespace Manager
 {
     public class BridgeLevelManager : LevelManager
     {
+        private const string GlassFolderPath = "Glass";
+        private const string PaperFolderPath = "Paper";
+
         [SerializeField] private GameObject imagePanel;
         [SerializeField] private GameObject scorePanel;
 
@@ -34,10 +37,6 @@ namespace Manager
         private Queue<GarbageImage> _glassImagesQueue;
         private Queue<GarbageImage> _paperImagesQueue;
         private bool _isImageQueueReady;
-
-        private const string GlassFolderPath = "Glass";
-        private const string PaperFolderPath = "Paper";
-
         private GarbageImage _currentGarbageImage;
 
         private int _score;

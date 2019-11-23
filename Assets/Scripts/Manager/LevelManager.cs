@@ -15,16 +15,15 @@ namespace Manager
         [SerializeField] protected NavMeshAgentController playerController;
         [SerializeField] protected MyTrackableEventHandler levelTargetHandler;
         [SerializeField] protected GameObject objectiveGameObject;
-
         [SerializeField] protected GameObject greenPanel;
         [SerializeField] protected GameObject yellowPanel;
         [SerializeField] protected GameObject endPanel;
-
-        protected int CheckPointIndex;
+        [SerializeField] protected GameObject messagePanel;
 
         private TextMeshProUGUI _objectiveText;
-        private bool _isLevelStarted;
         private IDisposable _targetUnsubscriber;
+        private bool _isLevelStarted;
+        private int _checkPointIndex;
 
         protected virtual void Start()
         {
@@ -48,17 +47,16 @@ namespace Manager
             {
                 _objectiveText = objectiveGameObject.GetComponent<TextMeshProUGUI>();
             }
-
             _objectiveText.SetText(message);
         }
 
         protected bool SetNextCheckPoint()
         {
-            var nextIndex = CheckPointIndex + 1;
+            var nextIndex = _checkPointIndex + 1;
             var result = SetNextCheckPoint(nextIndex);
             if (result)
             {
-                CheckPointIndex = nextIndex;
+                _checkPointIndex = nextIndex;
             }
 
             return result;
@@ -75,7 +73,7 @@ namespace Manager
             Debug.Log("Level4Manager: SETTING CHECKPOINT " + index);
             playerController.Destination = destination;
             playerController.Move();
-            CheckPointIndex = index;
+            _checkPointIndex = index;
 
             return true;
         }
@@ -149,6 +147,7 @@ namespace Manager
 
         protected void EndGame()
         {
+            if (messagePanel != null) messagePanel.SetActive(false);
             endPanel.SetActive(true);
         }
 
@@ -156,12 +155,10 @@ namespace Manager
 
         public void OnCompleted()
         {
-            throw new NotImplementedException();
         }
 
         public void OnError(Exception error)
         {
-            throw new NotImplementedException();
         }
     }
 }
