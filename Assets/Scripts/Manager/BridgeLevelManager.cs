@@ -108,7 +108,6 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage("Dessa vez vamos classificar algumas imagens!");
-            ActivateImagePanel(true);
             SetNextCheckPoint(1);
         }
 
@@ -120,11 +119,16 @@ namespace Manager
                 yield return new WaitForSeconds(0.3f);
             }
 
+            ActivateImagePanel(true);
             SetHelperMessage(
-                "No painel superior direito será mostrada a imagem de um produto que deve ser reciclado. " +
+                "No painel superior esquerdo será mostrada a imagem de um produto que deve ser reciclado. " +
                 "Você deve indicar em que lixo esse " +
                 "produto deve ser jogado");
             yield return new WaitForSeconds(10);
+
+            UpdateScore();
+            SetHelperMessage("O painel superior direito indica seus pontos.");
+            yield return new WaitForSeconds(5);
 
             SetHelperMessage("Existem duas ilhas, cada uma com um tipo de lixeira. Um verde e outro azul.");
             yield return new WaitForSeconds(5);
@@ -138,6 +142,7 @@ namespace Manager
 
         private IEnumerator ResultScript(bool correctResponse)
         {
+            UpdateScore();
             var text = correctResponse ? "Parabéns! Você acertou." : "Que pena! Você errou.";
             SetHelperMessage(text);
             yield return new WaitForSeconds(5);
@@ -150,18 +155,19 @@ namespace Manager
         private IEnumerator FinalScript()
         {
             ActivateImagePanel(false);
-            SetScore();
+            UpdateScore();
             SetHelperMessage("Fim do jogo. Veja sua pontuação no painel ao lado.");
             yield return new WaitForSeconds(5);
-
+            
+            ActivateScorePanel(false);
             EndGame();
         }
 
-        private void SetScore()
+        private void UpdateScore()
         {
             var scoreText = _score + "/" + _maxScorePossible;
 
-            scorePanel.SetActive(true);
+            ActivateScorePanel(true);
             var scoreTextComponent = scorePanel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
             scoreTextComponent.SetText(scoreText);
         }
@@ -203,7 +209,7 @@ namespace Manager
             else
             {
                 var rnd = new Random();
-                var index = rnd.Next(0, 3);
+                var index = rnd.Next(1, 3);
                 Debug.Log($"BridgeLevelManager: random generated ({index})");
                 queue = index == 1 ? _paperImagesQueue : _glassImagesQueue;
             }
@@ -228,6 +234,11 @@ namespace Manager
         private void ActivateImagePanel(bool active)
         {
             if (imagePanel != null) imagePanel.SetActive(active);
+        }
+
+        private void ActivateScorePanel(bool active)
+        {
+            if (scorePanel != null) scorePanel.SetActive(active);
         }
 
         protected override bool HandleSpecialCheckPoint(string destinationName)
