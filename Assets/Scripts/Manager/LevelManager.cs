@@ -145,7 +145,7 @@ namespace Manager
             }
         }
 
-        protected void EndGame()
+        protected virtual void EndGame()
         {
             if (messagePanel != null) messagePanel.SetActive(false);
             endPanel.SetActive(true);
