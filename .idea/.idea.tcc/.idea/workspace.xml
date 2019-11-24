@@ -2,18 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b430f5f-ffcc-4460-8b13-9267ec594cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AnimationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AnimationController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-hdpi.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-hdpi/ic_launcher.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-mdpi.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-mdpi/ic_launcher.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xhdpi.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xhdpi/ic_launcher.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xxhdpi.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xxhdpi/ic_launcher.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xxxhdpi.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/res/mipmap-xxxhdpi/ic_launcher.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/web_hi_res_512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/ic_launcher/web_hi_res_512.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tcc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TCC-prototype-final/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TCC-prototype-final/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TCC-prototype-final/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TCC-prototype-final/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TCC-prototype-final/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TCC-prototype-final/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Models/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Models/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BridgeLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BridgeLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimplePeople/Animations/SimpleCharacter_5.0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimplePeople/Animations/SimpleCharacter_5.0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/NavMeshComponents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/NavMeshComponents.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.SpatialTracking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.SpatialTracking.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/UnityEngine.UI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/VuforiaScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/Managed/VuforiaScripts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/boot.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/c41005c129ba4d66911b75229fd70b45" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/c41005c129ba4d66911b75229fd70b45" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/f952c082cb03451daed3ee968ac6c63e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/f952c082cb03451daed3ee968ac6c63e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/globalgamemanagers.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/level0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/Android/Data/sharedassets0.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponents.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponentsEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/NavMeshComponentsEditor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaEditorScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaEditorScripts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaScripts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/VuforiaScripts.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCC-prototype-final.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TCC-prototype-final.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.apk" beforeDir="false" afterPath="$PROJECT_DIR$/main.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponents.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/NavMeshComponentsEditor.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +204,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Diagrams" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -242,6 +287,8 @@
       <workItem from="1574369214468" duration="595000" />
       <workItem from="1574376611941" duration="705000" />
       <workItem from="1574460690497" duration="11624000" />
+      <workItem from="1574609095491" duration="678000" />
+      <workItem from="1574625298675" duration="54000" />
     </task>
     <servers />
   </component>
