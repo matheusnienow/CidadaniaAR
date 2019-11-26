@@ -107,7 +107,7 @@ namespace Manager
             SetHelperMessage("Nesse nível continuaremos a ajudar o personagem na separação do lixo.");
             yield return new WaitForSeconds(5);
 
-            SetHelperMessage("Dessa vez vamos classificar algumas imagens!");
+            SetHelperMessage("Dessa vez vamos classificar algumas imagens.");
             SetNextCheckPoint(1);
         }
 
@@ -122,8 +122,7 @@ namespace Manager
             ActivateImagePanel(true);
             SetHelperMessage(
                 "No painel superior esquerdo será mostrada a imagem de um produto que deve ser reciclado. " +
-                "Você deve indicar em que lixo esse " +
-                "produto deve ser jogado");
+                "Você deve indicar em que lixo esse produto deve ser jogado.");
             yield return new WaitForSeconds(10);
 
             UpdateScore();
@@ -148,7 +147,7 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             _isReturning = true;
-            SetHelperMessage("Ajude o personagem a voltar à ilha principal!");
+            SetHelperMessage("Ajude o personagem a voltar à ilha principal.");
             SetNextCheckPoint(3);
         }
 

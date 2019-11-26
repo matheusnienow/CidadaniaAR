@@ -13,7 +13,6 @@ namespace Manager
     [RequireComponent(typeof(PuzzleBrokenObject))]
     public class TrainingLevelManager : LevelManager
     {
-
         [SerializeField] private PuzzleIncompletePath puzzleIncompletePath;
         [SerializeField] private PuzzleBrokenObject puzzleMonkey;
 
@@ -49,20 +48,21 @@ namespace Manager
 
             SetHelperMessage(
                 "Tente mover seu dispositivo de forma que seu ponto de perspectiva crie um caminho para o personagem. " +
-                "A flecha na parte superior da tela aponta para o objeto que deve ser visualizado");
+                "A flecha na parte superior da tela aponta para o objeto que deve ser visualizado.");
             camHelper.Init();
         }
 
         private IEnumerator StartPart2()
         {
-            SetHelperMessage("Muito bem, o personagem conseguiu chegar no outro lado da cidade!");
+            SetHelperMessage("Muito bem, o personagem conseguiu chegar no outro lado da cidade.");
             yield return new WaitForSeconds(5);
 
             SetNextCheckPoint();
-            SetHelperMessage("Agora precisamos fazer com que ele chegue até a loja vermelha!");
+            SetHelperMessage("Agora precisamos fazer com que ele chegue até a loja vermelha.");
             yield return new WaitForSeconds(5);
 
-            SetHelperMessage("Visualize o letreiro com o nome do jogo para permitir a passagem do personagem!");
+            SetHelperMessage("Para permitir a passagem do personagem visualize o letreiro com o nome do jogo que " +
+                             "está localizado na praia.");
             camHelper.FocusOnSign();
             yield return new WaitForSeconds(5);
         }

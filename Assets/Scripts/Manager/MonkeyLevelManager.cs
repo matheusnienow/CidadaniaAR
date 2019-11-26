@@ -77,6 +77,10 @@ namespace Manager
             SetHelperMessage("Seu objetivo nesse nível é ajudar o personagem na separação do lixo.");
             yield return new WaitForSeconds(5);
 
+            SetHelperMessage("O personagem irá até duas lixeiras e você terá que ajudá-lo a encontrar os " +
+                             "produtos corretos para cada uma delas.");
+            yield return new WaitForSeconds(7);
+
             SetHelperMessage("Veja, o personagem está andando até a primeira lixeira.");
             SetNextCheckPoint(1);
         }
