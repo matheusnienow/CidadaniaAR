@@ -15820,7 +15820,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 6ae40ec86237c2c489ddbf99b8375c68,
         type: 3}
       propertyPath: m_Name
-      value: water-bottle-fractured
+      value: Garrafa PET
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6ae40ec86237c2c489ddbf99b8375c68,
         type: 3}
@@ -20730,7 +20730,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 36d9a94dcae144545a45563edf8e66e4,
         type: 3}
       propertyPath: m_Name
-      value: spinafre-can-fractured
+      value: Lata de conserva
       objectReference: {fileID: 0}
     - target: {fileID: -4366745292077076646, guid: 36d9a94dcae144545a45563edf8e66e4,
         type: 3}
@@ -25621,7 +25621,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 3f69b1c35a4c0dc4fa2c487b384b803d,
         type: 3}
       propertyPath: m_Name
-      value: soda-can-fractured
+      value: Latinha de refrigerante
       objectReference: {fileID: 0}
     - target: {fileID: -8414209041572060233, guid: 3f69b1c35a4c0dc4fa2c487b384b803d,
         type: 3}
@@ -39367,7 +39367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5006512735402427828}
   m_Layer: 0
-  m_Name: cone-fractured
+  m_Name: "Cone pl\xE1stico"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

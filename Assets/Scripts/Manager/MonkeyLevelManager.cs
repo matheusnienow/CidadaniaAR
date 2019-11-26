@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enum;
@@ -7,7 +6,6 @@ using Observer;
 using Puzzles.Base;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 
 namespace Manager
 {
@@ -103,6 +101,8 @@ namespace Manager
 
         private IEnumerator MoveToPlasticScript()
         {
+            yield return new WaitForSeconds(5);
+
             SetHelperMessage("Muito bem, você conseguiu!");
             yield return new WaitForSeconds(4);
 
@@ -129,6 +129,8 @@ namespace Manager
 
         private IEnumerator FinalScript()
         {
+            yield return new WaitForSeconds(5);
+
             SetHelperMessage("Muito bem, você já sabe as cores para reciclar metais e plásticos.");
             yield return new WaitForSeconds(5);
 
@@ -165,9 +167,15 @@ namespace Manager
                 return;
             }
 
+            SetProductFoundMessage(puzzleEvent.GameObjectName);
             RegisterObjectAsSolved(puzzleEvent.GameObjectName);
             UpdateScorePanel();
             CheckScore();
+        }
+
+        private void SetProductFoundMessage(string productName)
+        {
+            SetHelperMessage($"Produto encontrado: {productName}");
         }
 
         private void CheckScore()
