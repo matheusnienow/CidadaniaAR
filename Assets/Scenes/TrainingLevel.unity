@@ -13166,6 +13166,31 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2256141248590387711, guid: 0e6e6b2256ecd3a4899d70b07462eb50,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256141248590387711, guid: 0e6e6b2256ecd3a4899d70b07462eb50,
+        type: 3}
+      propertyPath: m_text
+      value: 'Objetivo: atravessar a ponte'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256141248590387711, guid: 0e6e6b2256ecd3a4899d70b07462eb50,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256141248590387711, guid: 0e6e6b2256ecd3a4899d70b07462eb50,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256141248590387711, guid: 0e6e6b2256ecd3a4899d70b07462eb50,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6e6b2256ecd3a4899d70b07462eb50, type: 3}
 --- !u!1 &4825324432899437860 stripped
