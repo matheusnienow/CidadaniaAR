@@ -33,14 +33,12 @@ namespace Util
             var camDirectionVector = cam.transform.forward;
             var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
 
-            Debug.DrawRay(outOfPathBlock.transform.position, outOfPathBlockDirectionVector * 1000, Color.magenta);
-
-            var dotAbs = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
+            var dotResult = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
 
             var maxValue = (1 + directionThreshold);
             var minValue = (1 - directionThreshold);
 
-            return dotAbs < maxValue && dotAbs > minValue;
+            return dotResult < maxValue && dotResult > minValue;
         }
 
         public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float cameraXThreshold,
@@ -53,8 +51,6 @@ namespace Util
                 ? AbsDifference(camPosition.z, blockPosition.z)
                 : AbsDifference(camPosition.x, blockPosition.x);
 
-            //Debug.Log("deltaLength: " + deltaLength);
-
             var deltaY = AbsDifference(camPosition.y, blockPosition.y);
 
             var isYAxisCorrect = deltaY < cameraYThreshold;
@@ -63,16 +59,16 @@ namespace Util
             return isYAxisCorrect && isLengthAxisCorrect;
         }
 
-        public static Vector3 GetPosition(GameObject gameObject)
-        {
-            var renderer = gameObject.GetComponent<Renderer>();
-            return renderer != null ? renderer.bounds.center : gameObject.transform.position;
-        }
-
         private static float AbsDifference(float n1, float n2)
         {
             var delta = n1 - n2;
             return Mathf.Abs(delta);
+        }
+
+        public static Vector3 GetPosition(GameObject gameObject)
+        {
+            var renderer = gameObject.GetComponent<Renderer>();
+            return renderer != null ? renderer.bounds.center : gameObject.transform.position;
         }
 
         public static Vector3 GetGameObjectBase(GameObject g)

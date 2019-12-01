@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Manager.BridgeLevelManager" Collapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>h+AQCAAVSCAAAgACQABCIAigCACAwJQwIwACAQiYEAI=</HashCode>
+      <FileName>Assets\Scripts\Manager\BridgeLevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Manager.LevelManager" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAQIAgAACCAAAIEwAAAAQCCCAAAAMgAAQBCAAASAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\LevelManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Manager.MonkeyLevelManager" Collapsed="true">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AsBQBECAACAAUE8AQIBAAAEAAEIAAAgQCQAAgCAaEAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\MonkeyLevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Manager.TrainingLevelManager" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAABAAQBgAEQAAAAAAQAAAAAAAABQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Manager\TrainingLevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

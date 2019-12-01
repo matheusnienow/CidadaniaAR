@@ -76,7 +76,7 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage(
-                "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, certo?");
+                "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, certo?2");
             SetNextCheckPoint();
             camHelper.FocusOnBridge();
             yield return new WaitForSeconds(5);

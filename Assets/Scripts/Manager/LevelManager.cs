@@ -25,6 +25,10 @@ namespace Manager
         private bool _isLevelStarted;
         private int _checkPointIndex;
 
+        protected abstract void SubscribeOnPuzzleEvents();
+        protected abstract IEnumerator StartLevel();
+        protected abstract bool HandleSpecialCheckPoint(string destinationName);
+
         protected virtual void Start()
         {
             _isLevelStarted = false;
@@ -33,8 +37,6 @@ namespace Manager
             playerController.Subscribe(this);
             SubscribeOnPuzzleEvents();
         }
-
-        protected abstract void SubscribeOnPuzzleEvents();
 
         private void Init()
         {
@@ -58,7 +60,6 @@ namespace Manager
             {
                 _checkPointIndex = nextIndex;
             }
-
             return result;
         }
 
@@ -69,16 +70,11 @@ namespace Manager
             {
                 return false;
             }
-
-            Debug.Log("Level4Manager: SETTING CHECKPOINT " + index);
             playerController.Destination = destination;
             playerController.Move();
             _checkPointIndex = index;
-
             return true;
         }
-
-        protected abstract IEnumerator StartLevel();
 
         private static IEnumerator DisableAfter(GameObject panel, int seconds)
         {
@@ -137,7 +133,6 @@ namespace Manager
                     return;
                 }
             }
-
             var result = SetNextCheckPoint();
             if (!result)
             {
@@ -150,8 +145,6 @@ namespace Manager
             if (messagePanel != null) messagePanel.SetActive(false);
             endPanel.SetActive(true);
         }
-
-        protected abstract bool HandleSpecialCheckPoint(string destinationName);
 
         public void OnCompleted()
         {

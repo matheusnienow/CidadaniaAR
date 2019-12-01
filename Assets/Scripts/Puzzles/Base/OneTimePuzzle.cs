@@ -4,8 +4,8 @@ namespace Puzzles.Base
 {
     public abstract class OneTimePuzzle : Puzzle
     {
-        private bool _isCompleted;
         protected float TimeThreshold = 2f;
+        private bool _isCompleted;
         private float _timer;
 
         protected abstract void OnIsConditionMet(float timer);

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AnimationController" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\AnimationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActuatorButtonScript" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAACAAAAABAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActuatorButtonScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloatingBehaviour" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABCAAAAAAAAAAAAAEAAAAAACAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Behaviour\FloatingBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpinningBehaviour" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Behaviour\SpinningBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraTutorial" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraTutorial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamHelper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEQAAAAAACCAAAIAAAAwEAAgCAAAAAAAAAAKAACIAAA=</HashCode>
+      <FileName>Assets\Scripts\CamHelper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CameraScript" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAgAKAAAIIEBAEAAAgAAEABgAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\DesktopCameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovementController" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACEAAAAAAAAAAAABAAAAAACAIAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\PlayerMovementController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenuController" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAACAAQAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTrackableEventHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQBAAAAAAAAAAAAAAAAAIAACAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\MyTrackableEventHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SceneLoader" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SceneLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Behaviour.ZoomBehaviour" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAACAgAAAEBAEAAAAAAIBAAAAAAAgACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Behaviour\ZoomBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Command.ActivateEntityCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command\ActivateEntityCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Command.BuildNavMeshCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command\BuildNavmeshCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Command.DeactivateEntityCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command\DeactivateEntityCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Command.RotateEntityCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACBAQAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command\RotateEntityCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Controller.NavMeshAgentController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAKCAAEAAACEAAABAAAACAAAMIAAABASAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controller\NavMeshAgentController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Model.GarbageImage" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Model\GarbageImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.EventPlayerDestinationReached" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer\EventPlayerDestinationReached.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.EventPuzzle" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer\EventPuzzle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.EventTargetTracking" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer\EventTargetTracking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.Unsubscriber&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer\Unsubscriber.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Util.PuzzleTools" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAIAAAAAAAAAAIAAAAAAAAAAgIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Util\PuzzleTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Util.VuforiaTools" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Util\VuforiaTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Command.ICommand" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Command.ICommand&lt;T&gt;" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command\ITypeCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Enum.Axis" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAE=</HashCode>
+      <FileName>Assets\Scripts\Enum\Axis.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enum.Direction" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Enum\Direction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enum.GarbageType" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAABAAAIAAAAAAAAAgAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Enum\GarbageType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enum.PuzzleStatus" Collapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enum\PuzzleStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

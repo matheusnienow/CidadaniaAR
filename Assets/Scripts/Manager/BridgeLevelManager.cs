@@ -157,7 +157,7 @@ namespace Manager
             UpdateScore();
             SetHelperMessage("Fim do jogo. Veja sua pontuação no painel ao lado.");
             yield return new WaitForSeconds(5);
-            
+
             ActivateScorePanel(false);
             EndGame();
         }
@@ -285,13 +285,20 @@ namespace Manager
 
         private void CheckResult(GarbageType garbageType)
         {
+            if (_currentGarbageImage == null)
+            {
+                return;
+            }
+
             if (garbageType == _currentGarbageImage.GarbageType)
             {
                 _score++;
+                _currentGarbageImage = null;
                 StartCoroutine(ResultScript(true));
             }
             else
             {
+                _currentGarbageImage = null;
                 StartCoroutine(ResultScript(false));
             }
         }

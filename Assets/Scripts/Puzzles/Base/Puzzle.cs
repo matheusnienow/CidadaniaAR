@@ -9,14 +9,15 @@ namespace Puzzles.Base
     {
         private List<IObserver<EventPuzzle>> _observers;
 
+        protected abstract bool IsConditionMet();
+
+        protected abstract void OnConditionMet();
+
+        protected abstract void OnConditionNotMet();
+
         protected void Start()
         {
-            if (_observers != null)
-            {
-                return;
-            }
-
-            _observers = new List<IObserver<EventPuzzle>>();
+            if (_observers == null) _observers = new List<IObserver<EventPuzzle>>();
         }
 
         public IDisposable Subscribe(IObserver<EventPuzzle> observer)
@@ -38,16 +39,5 @@ namespace Puzzles.Base
         {
             _observers?.ForEach(o => { o.OnNext(eventPuzzle); });
         }
-
-        public void NotifyOnCompleted()
-        {
-            _observers?.ForEach(o => { o.OnCompleted(); });
-        }
-
-        protected abstract bool IsConditionMet();
-
-        protected abstract void OnConditionMet();
-
-        protected abstract void OnConditionNotMet();
     }
 }

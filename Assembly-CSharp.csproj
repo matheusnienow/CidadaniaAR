@@ -57,14 +57,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AnimationController.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\CubeControllerTest.cs" />
      <Compile Include="Assets\Scripts\ActuatorButtonScript.cs" />
      <Compile Include="Assets\Scripts\Behaviour\FloatingBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviour\SpinningBehaviour.cs" />
@@ -124,7 +117,6 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\tcc.xml" />
-     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/mathe/Documents/Projects/backup/tcc/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

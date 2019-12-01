@@ -25,7 +25,7 @@ namespace Puzzles
 
         private Camera _cam;
         private bool _isOk;
-        private bool _wasOk;
+        private bool _wasConditionMet;
         private bool _wasVisible;
         private Text _text;
 
@@ -44,9 +44,8 @@ namespace Puzzles
         {
             var camDirection = PuzzleTools.IsCameraDirectionCorrect(_cam, brokenObject, brokenObjectDirection,
                 directionThreshold);
-            var camPosition =
-                PuzzleTools.IsCameraPositionCorrect(_cam, brokenObject, positionLengthThreshold, positionYThreshold,
-                    distanceAxis);
+            var camPosition = PuzzleTools.IsCameraPositionCorrect(_cam, brokenObject, positionLengthThreshold,
+                positionYThreshold, distanceAxis);
 
             if (_text != null && log) _text.text = "DIRECTION: " + camDirection + " | POSITION: " + camPosition;
 
@@ -55,25 +54,19 @@ namespace Puzzles
 
         protected override void OnConditionMet()
         {
-            if (!_wasOk)
+            if (!_wasConditionMet)
             {
                 if (_text != null) _text.text = "PUZZLE UNLOCKED";
                 _command.Execute();
                 NotifyOnNext(new EventPuzzle(PuzzleStatus.Solved, true, brokenObject.name));
             }
-
-            _wasOk = true;
+            _wasConditionMet = true;
         }
 
         protected override void OnConditionNotMet()
         {
-            if (_wasVisible)
-            {
-                //_text.text = "MONKEY NOT VISIBLE";
-                NotifyOnNext(new EventPuzzle(PuzzleStatus.NotSolved));
-            }
-
-            _wasOk = false;
+            if (_wasVisible) NotifyOnNext(new EventPuzzle(PuzzleStatus.NotSolved));
+            _wasConditionMet = false;
         }
 
         protected override void OnIsConditionMet(float timer)
