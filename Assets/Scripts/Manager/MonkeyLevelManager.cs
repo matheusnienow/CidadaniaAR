@@ -86,7 +86,7 @@ namespace Manager
         private IEnumerator MetalGarbageScript()
         {
             SetHelperMessage("O personagem chegou na lixeira AMARELA. Que tipos de produtos devem ser jogados " +
-                             "nessa leixeira?");
+                             "nessa lixeira?");
             yield return new WaitForSeconds(5);
 
             SetHelperMessage("Existem diversos produtos espalhados ao redor do mapa.");
@@ -110,14 +110,13 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetNextCheckPoint();
-            SetHelperMessage("Certo, agora O personagem irá até a próxima lixeira. Faça a mesma coisa e " +
-                             "ajude-o a encontrar os produtos corretos!");
+            SetHelperMessage("Certo, agora o personagem irá até a próxima lixeira.");
         }
 
         private IEnumerator PlasticGarbageScript()
         {
             SetHelperMessage("O personagem chegou na lixeira vermelha. Os produtos feitos de que material devem ser " +
-                             "jogados nessa leixeira?");
+                             "jogados nessa lixeira?");
             yield return new WaitForSeconds(4);
 
             SetHelperMessage("Para poder avançar, visualize dois produtos que devem ser jogados nessa lixeira, " +

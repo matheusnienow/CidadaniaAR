@@ -133,7 +133,7 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage(
-                "Para indicar o lixeiro a ser usado, crie o caminho para o personagem chegar até a lixeira.");
+                "Para indicar a lixeira a ser usado, crie o caminho para o personagem chegar até a lixeira.");
             yield return new WaitForSeconds(5);
 
             DoGarbageGameLoop();

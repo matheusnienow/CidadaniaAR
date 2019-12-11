@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Puzzles.Base.AlwaysOnPuzzle">
-    <Position X="1.25" Y="2.5" Width="1.75" />
+    <Position X="1.25" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Puzzles\Base\AlwaysOnPuzzle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Puzzles.Base.OneTimePuzzle">
-    <Position X="6.5" Y="2.5" Width="1.75" />
+    <Position X="6.5" Y="0.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAgAAAAAAAAABCAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Puzzles\Base\OneTimePuzzle.cs</FileName>
@@ -22,15 +25,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Puzzles.PuzzleBrokenObject" Collapsed="true">
-    <Position X="6.5" Y="5.75" Width="1.75" />
+  <Class Name="Puzzles.PuzzleBrokenObject">
+    <Position X="6.5" Y="3.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AEAAAAAAADAIAAAAACAACAAIACAAAACIAAABBRIAAEA=</HashCode>
       <FileName>Assets\Scripts\Puzzles\PuzzleBrokenObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Puzzles.PuzzleIncompletePath" Collapsed="true">
-    <Position X="1.25" Y="5.75" Width="1.75" />
+  <Class Name="Puzzles.PuzzleIncompletePath">
+    <Position X="1.25" Y="3.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AEIAgIQAADAIAAAAACAAAAAKAAQAABAIAAAAABIAAAA=</HashCode>
       <FileName>Assets\Scripts\Puzzles\PuzzleIncompletePath.cs</FileName>

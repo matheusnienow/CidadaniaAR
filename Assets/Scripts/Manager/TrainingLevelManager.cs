@@ -29,14 +29,14 @@ namespace Manager
 
         protected override IEnumerator StartLevel()
         {
-            SetHelperMessage("Oi, vamos aprender a jogar?");
+            SetHelperMessage("Olá, vamos aprender a jogar?");
             yield return new WaitForSeconds(5);
 
             SetHelperMessage("A posição do personagem está indicada pelo diamante verde.");
             yield return new WaitForSeconds(8);
 
             SetHelperMessage(
-                "Seu objetivo é fazer com que o personagem consiga chegar na loja vermelha do outro lado da cidade.");
+                "Seu objetivo é fazer com que o personagem chegue na loja vermelha do outro lado da cidade.");
             yield return new WaitForSeconds(8);
 
             SetNextCheckPoint(1);
@@ -76,7 +76,7 @@ namespace Manager
             yield return new WaitForSeconds(5);
 
             SetHelperMessage(
-                "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, certo?2");
+                "Para isso será necessário atravessar a ponte novamente. Porém, você já sabe como resolver isso, certo?");
             SetNextCheckPoint();
             camHelper.FocusOnBridge();
             yield return new WaitForSeconds(5);
