@@ -31,9 +31,11 @@ namespace Util
             Direction outOfPathBlockDirection, float directionThreshold)
         {
             var camDirectionVector = cam.transform.forward;
-            var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, outOfPathBlockDirection);
+            var outOfPathBlockDirectionVector = GetDirection(outOfPathBlock, 
+                outOfPathBlockDirection);
 
-            var dotResult = Vector3.Dot(outOfPathBlockDirectionVector.normalized, camDirectionVector.normalized) * -1;
+            var dotResult = Vector3.Dot(outOfPathBlockDirectionVector.normalized, 
+                                camDirectionVector.normalized) * -1;
 
             var maxValue = (1 + directionThreshold);
             var minValue = (1 - directionThreshold);
@@ -41,8 +43,8 @@ namespace Util
             return dotResult < maxValue && dotResult > minValue;
         }
 
-        public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, float cameraXThreshold,
-            float cameraYThreshold, Axis axis)
+        public static bool IsCameraPositionCorrect(Camera cam, GameObject outOfPathBlock, 
+            float cameraXThreshold, float cameraYThreshold, Axis axis)
         {
             var camPosition = cam.gameObject.transform.position;
             var blockPosition = GetPosition(outOfPathBlock);

@@ -85,15 +85,20 @@ namespace Manager
 
         private IEnumerator MetalGarbageScript()
         {
-            SetHelperMessage("O personagem chegou na lixeira AMARELA. Que tipos de produtos devem ser jogados " +
+            SetHelperMessage("O personagem chegou na lixeira AMARELA. " +
+                             "Que tipos de produtos devem ser jogados " +
                              "nessa lixeira?");
             yield return new WaitForSeconds(5);
 
-            SetHelperMessage("Existem diversos produtos espalhados ao redor do mapa.");
+            SetHelperMessage("Existem diversos " +
+                             "produtos espalhados ao redor do mapa.");
             yield return new WaitForSeconds(5);
 
-            SetHelperMessage("Para poder avançar, visualize dois produtos feitos do material que devem ser jogados " +
-                             "nessa lixeira. O painel superior direito indica a quantidade de produtos encontrados.");
+            SetHelperMessage("Para poder avançar, visualize dois " +
+                             "produtos feitos do material que devem " +
+                             "ser jogados nessa lixeira. O painel " +
+                             "superior direito indica a quantidade " +
+                             "de produtos encontrados.");
 
             ActivateScorePanel();
             ActivateMetalPuzzle();
